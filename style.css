@@ -27,12 +27,16 @@ header {
 }
 
 header .header-title {
-    background-color: #663399;
     padding: 40px;
     margin: 0;
 
-    font-size: 29px;
+    font-size: 40px;
     font-weight: 100;
     color: white;
     text-align: center;
+}
+
+header .header-image{
+    border-radius: 100%;
+    width: 25%;
 }

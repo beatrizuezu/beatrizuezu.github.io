@@ -1,0 +1,50 @@
+html {
+    height: 100%;
+
+    background: #C33764;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+main.container {
+    position: relative;
+    display: block;
+    width: 95%;
+    max-width:  500px;
+    margin: 10% auto;
+}
+
+header {
+    text-align: center;
+}
+
+header .header-title {
+    padding: 40px;
+    margin: 0;
+
+    font-size: 40px;
+    font-weight: 100;
+    color: white;
+    text-align: center;
+}
+
+header .header-image{
+    border: 2px solid white;
+    border-radius: 100%;
+    width: 25%;
+}
+.container p{
+  color: white;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 0;
+  font-size: 30px;
+  font-weight: 100;
+}

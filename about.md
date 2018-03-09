@@ -4,7 +4,7 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>Formada em Análise e Desenvolvimendo de Sistemas pela FATEC-SP, co-organizadora do PyLadies São Paulo, fundadora e co-organizadora do Django Girls São Paulo e desenvolvedora back-end em Python no luizalabs. Gosta de compartilhar conhecimento, participar de comunidades, tirar fotografias e comer coxinhas ¯\_(ツ)_/¯</p>
+<p>Formada em Análise e Desenvolvimendo de Sistemas pela FATEC-SP,<br>co-organizadora do PyLadies São Paulo, fundadora e co-organizadora do Django Girls São Paulo e desenvolvedora back-end em Python no luizalabs. Gosta de compartilhar conhecimento, participar de comunidades, tirar fotografias e comer coxinhas ¯\_(ツ)_/¯</p>
 
 <h2>Skills</h2>
 

@@ -76,3 +76,6 @@ Hoje sou uma das organizadoras do Django Girls São Paulo e a quantidade de insc
 Um pouco mais de um ano, fui de aluna para a co-organização do PyLadies São Paulo e Django Girls São Paulo, esse texto é para contar um pouco da minha trajetória na programação e na comunidade Python. Também é a forma que encontrei para agradecer à coordenação do PyLadies e do Django Girls por terem acreditado em mim e no meu trabalho dentro da comunidade, cada pessoa que pude ajudar, incentivar, que me ajudou a chegar até aqui e a você que leu esse texto.
 
 Obrigada ❤
+
+
+esse post foi originalmente escrito no [Medium](https://medium.com/@beatrizuezu/pyladies-django-girls-do-medo-ao-incentivo-e23c0f8bad38) no dia 28/03/2017

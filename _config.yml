@@ -113,3 +113,5 @@ jekyll_admin:
     - staticfiles
     - datafiles
     - configuration
+
+oogle_analytics: UA-120268498-1

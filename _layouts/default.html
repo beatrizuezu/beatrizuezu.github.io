@@ -43,8 +43,10 @@ layout: compress
     </div>
 
     {% include icons.html %}
+    {% if site.google_analytics and jekyll.environment == 'production' %}
+        {% include analytics-google.html %}
+    {% endif %}
 
-    {% include analytics-google.html %}
 
 </body>
 </html>

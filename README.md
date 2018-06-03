@@ -2,9 +2,30 @@
 
 I used Jekyll and the theme is [Indigo theme](https://github.com/sergiokopplin/indigo)
 
+
+
+
+
 ### How to install
 
+#### install RVM
 ```shell
+\curl -sSL https://get.rvm.io | bash -s stable
+```
+
+#### Add in bash file
+```shell
+source ~/.profile
+```
+
+#### Install Ruby Version (2.5.1) on RVM
+```shell
+rvm install 2.5.1
+```
+
+#### Install Bundler and install dependencies
+```
+gem install bundler
 bundle install
 ```
 

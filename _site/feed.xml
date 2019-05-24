@@ -1,4 +1,525 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-11T21:16:50-02:00</updated><id>http://localhost:4000/</id><title type="html">Beatriz Uezu Page</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">PyLadies &amp;amp; Django Girls: do medo ao incentivo</title><link href="http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo/" rel="alternate" type="text/html" title="PyLadies &amp; Django Girls: do medo ao incentivo" /><published>2018-03-16T22:44:00-03:00</published><updated>2018-03-16T22:44:00-03:00</updated><id>http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo</id><content type="html" xml:base="http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo/">&lt;p&gt;Na época que fazia faculdade gostava de mexer com HTML e CSS até que eu cheguei a estagiar como Front-End. Chegou um momento do estágio que eu não me via naquilo e queria entrar na área de Banco de dados e Big Data. Como eu gostava de ler sobre o tema de Big Data ouvia falar sobre as linguagens Python e Java. Porém tinha dificuldade em programar e achava difícil, só queria entrar em Banco de Dados e Big Data porque não iria programar. (Sabe de nada, inocente).&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-23T22:28:29-03:00</updated><id>http://localhost:4000/</id><title type="html">Beatriz Uezu Page</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Visualizando query SQL a partir do ORM Django</title><link href="http://localhost:4000/visualizando-query-sql-a-partir-do-orm-django/" rel="alternate" type="text/html" title="Visualizando query SQL a partir do ORM Django" /><published>2019-02-27T22:58:00-03:00</published><updated>2019-02-27T22:58:00-03:00</updated><id>http://localhost:4000/visualizando-query-sql-a-partir-do-orm-django</id><content type="html" xml:base="http://localhost:4000/visualizando-query-sql-a-partir-do-orm-django/">&lt;p&gt;Falei sobre esse assunto na palestra que fiz na TDC 2017 (The Developer’s Conference) e vou mostrar como visualizar query SQL do ORM do Django.&lt;/p&gt;
+
+&lt;p&gt;Um dos motivos para falar sobre esse assunto foi a dificuldade que tive para entender como funcionava a ORM do Django. Em uma das minhas primeiras experiências com Django precisei gerar um relatório e como já tinha trabalhado com SQL resolvi fazer com SQL mesmo e posteriormente e passaria a query pra ORM pra entender. Uma maneira simples para o meu entendimento foi associar o que eu sabia de SQL para entender o ORM.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;orm-o-que&quot;&gt;ORM o que?&lt;/h2&gt;
+
+&lt;p&gt;ORM significa Object Relational Mapper e é uma biblioteca que automatiza a transferência de dados do banco de dados relacional entre objetos do model. O legal de se usar é que pode acelerar a velocidade do desenvolvimento permitindo ler, escrever, atualizar e deletar dados do banco, além de ser compatível com diferentes banco de dados (MySQL, SQLite, PostgreSQL…) e ser nativa no Django.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/relacao-tabela-vs-classes.png&quot; alt=&quot;Relação tabela vs classes&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;https://www.fullstackpython.com/object-relational-mappers-orms.html&lt;/figcaption&gt;
+
+&lt;h2 id=&quot;model-vs-tabela&quot;&gt;Model vs Tabela&lt;/h2&gt;
+
+&lt;p&gt;Criei um exemplo (e você pode conferir nesse repositório &lt;a href=&quot;https://github.com/beatrizuezu/de-sql-para-orm-django&quot;&gt;aqui&lt;/a&gt; e fazer na sua máquina para entender também) para mostrar como fica no model e na tabela do banco de dados (estou usando mysql).&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;#categorias/model.py
+class Categoria(models.Model):
+    nome = models.CharField(&amp;#39;Nome&amp;#39;, max_length=128)&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/beatrizuezu/92faae7b82cbf932c3983e14e3717ea9.js&quot;&gt; &lt;/script&gt;
+
+&lt;noscript&gt;&lt;pre&gt;#produtos/models.py
+class Produto(models.Model):
+    nome = models.CharField(
+        &amp;#39;Nome&amp;#39;,
+        max_length=128
+    )
+    valor = models.DecimalField(
+        &amp;#39;Valor&amp;#39;,
+        max_digits=10,
+        decimal_places=2,
+        blank=True,
+        null=True
+    )
+    categoria = models.ForeignKey(Categoria)
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/beatrizuezu/5ec77ef4799a3d1b5e8a178e5d9fa6de.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Enquanto no banco de dados temos:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;mysql&amp;gt; desc categorias_categoria;
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | int(11)      | NO   | PRI | NULL    | auto_increment |
+| nome  | varchar(128) | NO   |     | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/beatrizuezu/dfbe3a002291767f2e3d0d8b3ed3432b.js&quot;&gt; &lt;/script&gt;
+
+&lt;noscript&gt;&lt;pre&gt;mysql&amp;gt; desc produtos_produto;
++--------------+---------------+------+-----+---------+----------------+
+| Field        | Type          | Null | Key | Default | Extra          |
++--------------+---------------+------+-----+---------+----------------+
+| id           | int(11)       | NO   | PRI | NULL    | auto_increment |
+| nome         | varchar(128)  | NO   |     | NULL    |                |
+| valor        | decimal(10,2) | YES  |     | NULL    |                |
+| categoria_id | int(11)       | NO   | MUL | NULL    |                |
++--------------+---------------+------+-----+---------+----------------+
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/beatrizuezu/20a162167367e2fed3171404bc251c67.js&quot;&gt; &lt;/script&gt;
+
+&lt;h2 id=&quot;como-funciona&quot;&gt;Como Funciona?&lt;/h2&gt;
+
+&lt;p&gt;Tenho uma determinada ORM, vou utilizar essa abaixo como exemplo:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Produto.objects.all()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Vamos entender o fluxo para obtermos o script SQL:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/fluxo-script-sql.png&quot; alt=&quot;Fluxo para obtermos o script SQL&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;Fluxo parar obtermos o script SQL &lt;/figcaption&gt;
+
+&lt;h3 id=&quot;model&quot;&gt;Model&lt;/h3&gt;
+&lt;p&gt;É a representação dos dados, contém os campos e os métodos. No nosso exemplo, o nosso model é Produto.&lt;/p&gt;
+
+&lt;h3 id=&quot;manager&quot;&gt;Manager&lt;/h3&gt;
+&lt;p&gt;O manager está acoplado ao Model, para acessar qualquer objeto salvo no banco é preciso acessar o Manager, isto é o objects presente em todo Model.&lt;/p&gt;
+
+&lt;h3 id=&quot;queryset&quot;&gt;QuerySet&lt;/h3&gt;
+&lt;p&gt;É o conjunto de ações quer serão realizadas no banco (select, insert, update, delete). Representado pelo &lt;code class=&quot;highlighter-rouge&quot;&gt;all()&lt;/code&gt; no nosso exemplo.&lt;/p&gt;
+
+&lt;h3 id=&quot;query&quot;&gt;Query&lt;/h3&gt;
+&lt;p&gt;Cria uma estrutura de dados complexa com todos os elementos presentes em uma consulta. É gerado uma representação SQL de um QuerySet, ou seja, é através desse método que conseguimos ver as conversões do ORM para SQL (MySQL, PostgreSQL, SQLite).&lt;/p&gt;
+
+&lt;h3 id=&quot;sqlcompiler&quot;&gt;SQLCompiler&lt;/h3&gt;
+&lt;p&gt;Recebe o SQL da Query e executa de acordo com as regras específicas do backend escolhido.&lt;/p&gt;
+
+&lt;h2 id=&quot;métodos&quot;&gt;Métodos&lt;/h2&gt;
+&lt;p&gt;Vou abordar alguns métodos da ORM, você pode visualizar todos os métodos &lt;a href=&quot;https://docs.djangoproject.com/en/dev/ref/models/querysets/&quot;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;all&quot;&gt;.all()&lt;/h3&gt;
+&lt;p&gt;O método &lt;code class=&quot;highlighter-rouge&quot;&gt;.all()&lt;/code&gt; retornará todos os produtos.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]:from core.produtos.models import Produto
+In [2]:Produto.objects.all()
+Out [2]:&amp;lt;QuerySet [&amp;lt;Produto: Produto 1 da Categoria 1&amp;gt;,
+&amp;lt;Produto: Produto 2 da Categoria 1&amp;gt;, &amp;lt;Produto: Produto 3 da Categoria 1&amp;gt;,
+&amp;lt;Produto: Produto 4 da Categoria 1&amp;gt;, &amp;lt;Produto: Produto 5 da Categoria 1&amp;gt;,
+&amp;lt;Produto: Produto 1 da Categoria 2&amp;gt;, &amp;lt;Produto: Produto 2 da Categoria 2&amp;gt;,
+&amp;lt;Produto: Produto 3 da Categoria 2&amp;gt;, &amp;lt;Produto: Produto 4 da Categoria 2&amp;gt;,
+&amp;lt;Produto: Produto 5 da Categoria 2&amp;gt;, &amp;lt;Produto: Produto 1 da Categoria 3&amp;gt;,
+&amp;lt;Produto: Produto 2 da Categoria 3&amp;gt;, &amp;lt;Produto: Produto 3 da Categoria 3&amp;gt;,
+&amp;lt;Produto: Produto 4 da Categoria 3&amp;gt;, &amp;lt;Produto: Produto 5 da Categoria 3&amp;gt;,
+&amp;lt;Produto: Produto 1 da Categoria 4&amp;gt;, &amp;lt;Produto: Produto 2 da Categoria 4&amp;gt;,
+&amp;lt;Produto: Produto 3 da Categoria 4&amp;gt;, &amp;lt;Produto: Produto 4 da Categoria 4&amp;gt;,
+&amp;lt;Produto: Produto 5 da Categoria 4&amp;gt;, ‘…(remaining elements truncated)…’]&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;e para visualizarmos o script SQL:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.all()
+In [4]: print(orm.query)
+SELECT
+  `produtos_produto`.`id`, `produtos_produto`.`nome`,
+  `produtos_produto`.`valor`, `produtos_produto`.`categoria_id`
+FROM `produtos_produto`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;filter&quot;&gt;.filter()&lt;/h3&gt;
+&lt;p&gt;O método &lt;code class=&quot;highlighter-rouge&quot;&gt;.filter()&lt;/code&gt; retornará todos os produtos em uma determinada condição.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+In [2]: Produto.objects.filter(id=1)
+Out[2]: &amp;lt;QuerySet [&amp;lt;Produto: Produto 1 da Categoria 1&amp;gt;]&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;e para visualizarmos o script SQL:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.filter(id=1)
+In [4]: print(orm.query)
+SELECT
+  `produtos_produto`.`id`, `produtos_produto`.`nome`,
+  `produtos_produto`.`valor`, `produtos_produto`.`categoria_id`
+FROM `produtos_produto` WHERE `produtos_produto`.`id` = 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;filtercampo__lookup&quot;&gt;.filter(campo__lookup)&lt;/h3&gt;
+&lt;p&gt;Podemos passar lookups quando utilizamos o &lt;code class=&quot;highlighter-rouge&quot;&gt;.filter()&lt;/code&gt;, você pode conferir todos os lookups &lt;a href=&quot;https://docs.djangoproject.com/en/dev/ref/models/querysets/#field-lookups&quot;&gt;aqui&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+In [2]: Produto.objects.filter(id__in=[1,3,5])
+Out[2]: &amp;lt;QuerySet [&amp;lt;Produto: Produto 1 da Categoria 1&amp;gt;,
+&amp;lt;Produto: Produto 3 da Categoria 1&amp;gt;, &amp;lt;Produto: Produto 5 da Categoria 1&amp;gt;]&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;e para visualizarmos o script:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.filter(id__in=[1, 3 ,5])
+In [4]: print(orm.query)
+SELECT
+  `produtos_produto`.`id`, `produtos_produto`.`nome`,
+  `produtos_produto`.`valor`, `produtos_produto`.`categoria_id`
+FROM `produtos_produto` WHERE `produtos_produto`.`id` IN (1, 3, 5)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;filterfk__campo&quot;&gt;.filter(fk__campo)&lt;/h3&gt;
+
+&lt;p&gt;Conseguimos acessar o campo de uma chave estrangeira utilizando ORM:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+In [2]: Produto.objects.filter(categoria__nome='categoria_1')
+Out[2]: &amp;lt;QuerySet [&amp;lt;Produto: Produto 1 da Categoria 1&amp;gt;,
+&amp;lt;Produto: Produto 2 da Categoria 1&amp;gt;, &amp;lt;Produto: Produto 3 da Categoria 1&amp;gt;,
+&amp;lt;Produto: Produto 4 da Categoria 1&amp;gt;, &amp;lt;Produto: Produto 5 da Categoria 1&amp;gt;]&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;visualizando em SQL:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.filter(categoria__nome='categoria_1')
+In [4]: print(orm.query)
+SELECT
+  `produtos_produto`.`id`, `produtos_produto`.`nome`,
+  `produtos_produto`.`valor`, `produtos_produto`.`categoria_id`
+FROM `produtos_produto`
+INNER JOIN `categorias_categoria` ON (
+  `produtos_produto`.`categoria_id` = `categorias_categoria`.`id`
+)
+WHERE `categorias_categoria`.`nome` = categoria_1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;o interessante é que não precisamos nos preocupar com os joins do SQL quando utilizamos ORM!&lt;/p&gt;
+
+&lt;h3 id=&quot;get&quot;&gt;.get()&lt;/h3&gt;
+&lt;p&gt;O método &lt;code class=&quot;highlighter-rouge&quot;&gt;.get()&lt;/code&gt; é semelhante ao &lt;code class=&quot;highlighter-rouge&quot;&gt;.filter()&lt;/code&gt;, vamos entender as diferenças posteriormente.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+In [2]: Produto.objects.get(id=1)
+Out[2]: &amp;lt;Produto: Produto 1 da Categoria 1&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;visualizando em SQL:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.get(id=1)
+In [4]: print(orm.query)
+ — — — — — —— — — — — — — — — — — — — — — — — — — — — — — — — —
+AttributeError Traceback (most recent call last)
+&amp;lt;ipython-input-4–9d5bf753c2b6&amp;gt; in &amp;lt;module&amp;gt;()
+ — → 1 print(script.query)
+AttributeError: ‘Produto’ object has no attribute ‘query’
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;EITA! Caímos em um erro. Isso ocorreu porque diferente do &lt;code class=&quot;highlighter-rouge&quot;&gt;.filter()&lt;/code&gt;, o &lt;code class=&quot;highlighter-rouge&quot;&gt;.get()&lt;/code&gt; não retorna um queryset e sim o objeto do model.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [5]: script = Produto.objects.filter(id=1)
+In [6]: type(script)
+Out[6]: django.db.models.query.QuerySet
+In [7]: script = Produto.objects.get(id=1)
+In [8]: type(script)
+Out[8]: core.produtos.models.Produto
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Mas ainda sim conseguimos visualizar o SQL dessa ORM:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [5]: from django.db import connection
+In [6]: connection.queries
+Out[6]: [{'sql':
+'SELECT
+  `produto_produto`.`id`, `produto_produto`.`nome`,
+  `produto_produto`.`valor`, `produto_produto`.`categoria_id`
+FROM `produto_produto`
+WHERE `produto_produto`.`id` = 1',
+'time': '0.000'}]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;exclude&quot;&gt;.exclude()&lt;/h3&gt;
+&lt;p&gt;Esse método trará os objetos que não correspondem aos parâmetros fornecidos:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+In [2]: Produto.objects.exclude(id__gte=4)
+Out[2]: &amp;lt;QuerySet [&amp;lt;Produto: Produto 1 da Categoria 1&amp;gt;,
+&amp;lt;Produto: Produto 2 da Categoria 1&amp;gt;, &amp;lt;Produto: Produto 3 da Categoria 1&amp;gt;]&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;visualizando em SQL:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.exclude(id__gte=4)
+In [4]: print(orm.query)
+SELECT
+  `produtos_produto`.`id`, `produtos_produto`.`nome`,
+  `produtos_produto`.`valor`, `produtos_produto`.`categoria_id`
+FROM `produtos_produto` WHERE NOT (`produtos_produto`.`id` &amp;gt;= 4)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;values&quot;&gt;.values()&lt;/h3&gt;
+&lt;p&gt;Com o &lt;code class=&quot;highlighter-rouge&quot;&gt;.values()&lt;/code&gt; podemos passar os campos que sejam retornados no queryset, além disso a queryset retornará dicionários.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+In [2]: Produto.objects.values(‘nome’, ‘valor’)
+Out[2]: &amp;lt;QuerySet [
+{‘valor’: Decimal(‘2.00’), ‘nome’: ‘Produto 1 da Categoria 1’},
+{‘valor’: Decimal(‘5.00’), ‘nome’: ‘Produto 2 da Categoria 1’},
+{‘valor’: Decimal(‘20.00’), ‘nome’: ‘Produto 3 da Categoria 1’},
+{‘valor’: Decimal(‘15.00’), ‘nome’: ‘Produto 4 da Categoria 1’},
+{‘valor’: Decimal(‘10.00’), ‘nome’: ‘Produto 5 da Categoria 1’},
+{‘valor’: Decimal(‘5.00’), ‘nome’: ‘Produto 1 da Categoria 2’},
+{‘valor’: Decimal(‘7.00’), ‘nome’: ‘Produto 2 da Categoria 2’},
+{‘valor’: Decimal(‘20.00’), ‘nome’: ‘Produto 3 da Categoria 2’},
+‘…(remaining elements truncated)…’]&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;visualizando em SQL:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.values(‘nome’, ‘valor’)
+In [4]: print(orm.query)
+SELECT
+  `produtos_produto`.`nome`, `produtos_produto`.`valor`
+FROM `produtos_produto`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;values_list&quot;&gt;.values_list()&lt;/h3&gt;
+&lt;p&gt;Similar ao &lt;code class=&quot;highlighter-rouge&quot;&gt;.values()&lt;/code&gt;, a diferença é que a queryset retorna tupla.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+In [2]: Produto.objects.values_list(‘nome’)
+Out[2]: &amp;lt;QuerySet [
+(‘Produto 1 da Categoria 1’,), (‘Produto 2 da Categoria 1’,),
+(‘Produto 3 da Categoria 1’,), (‘Produto 4 da Categoria 1’,),
+(‘Produto 5 da Categoria 1’,), (‘Produto 1 da Categoria 2’,),
+(‘Produto 2 da Categoria 2’,), (‘Produto 3 da Categoria 2’,),
+(‘Produto 4 da Categoria 2’,),’…(remaining elements truncated)…’]&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Visualizando em SQL:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.values_list(‘nome’)
+In [4]: print(orm.query)
+SELECT
+  `produtos_produto`.`nome`
+FROM `produtos_produto`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;values_listfield-flattrue&quot;&gt;.values_list(field, flat=True)&lt;/h3&gt;
+&lt;p&gt;Quando utilizamos o flat=True como paramêtro do &lt;code class=&quot;highlighter-rouge&quot;&gt;.values_list()&lt;/code&gt; o resultado são retornado em valores únicos ao em vez de tuplas.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+In [2]: Produto.objects.values_list(‘nome’, flat=True)
+Out[2]:&amp;lt;QuerySet [‘Produto 1 da Categoria 1’, ‘Produto 2 da Categoria 1’,
+‘Produto 3 da Categoria 1’, ‘Produto 4 da Categoria 1’,
+‘Produto 5 da Categoria 1’, ‘Produto 1 da Categoria 2’,
+‘Produto 2 da Categoria 2’, ‘Produto 3 da Categoria 2’,
+‘Produto 4 da Categoria 2’, ‘Produto 5 da Categoria 2’,
+‘Produto 1 da Categoria 3’, ‘Produto 2 da Categoria 3’,
+‘…(remaining elements truncated)…’]&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Visualizando em SQL:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.values_list(‘nome’, flat=True)
+In [4]: print(orm.query)
+SELECT
+  `produtos_produto`.`nome`
+FROM `produtos_produto`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;annotate&quot;&gt;.annotate()&lt;/h3&gt;
+&lt;p&gt;Retorna um queryset agrupado levando em consideração cada objeto.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+In [2]: from django.db.models import Sum
+In [3]: Produto.objects.values(‘categoria’).annotate(Sum(‘valor’))
+Out[3]: &amp;lt;QuerySet [{‘valor__sum’: Decimal(‘52.00’), ‘categoria’: 1},
+{‘valor__sum’: Decimal(‘66.00’), ‘categoria’: 2},
+{‘valor__sum’: Decimal(‘147.60’), ‘categoria’: 3},
+{‘valor__sum’: Decimal(‘209.30’), ‘categoria’: 4},
+{‘valor__sum’: Decimal(‘87.20’), ‘categoria’: 5}]&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;No exemplo acima foi agrupado a soma de todas as categorias dos produtos.&lt;/p&gt;
+
+&lt;p&gt;Visualizando em SQL:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [4]: orm = Produto.objects.values(‘categoria’).annotate(Sum(‘valor’))
+In [5]: print(orm.query)
+SELECT
+  `produtos_produto`.`categoria_id`,
+  SUM(`produtos_produto`.`valor`) AS `valor__sum`
+FROM `produtos_produto`
+GROUP BY `produtos_produto`.`categoria_id` ORDER BY NULL
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;aggregate&quot;&gt;.aggregate()&lt;/h3&gt;
+&lt;p&gt;Semelhante ao &lt;code class=&quot;highlighter-rouge&quot;&gt;.annotate()&lt;/code&gt; com a diferença de retornar um dicionário com valores agregados calculado sobre todo o queryset&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+In [2]: from django.db.models import Avg, Max, Min
+In [3]: Produto.objects.aggregate(
+   ...: valor_maximo=Max('valor'),
+   ...: valor_minimo=Min('valor'),
+   ...: valor_medio=Avg('valor')
+   ...: )
+Out[3]:
+{'valor_maximo': Decimal('100.00'),
+ 'valor_medio': 22.484,
+ 'valor_minimo': Decimal('2.00')}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Visualizando SQL:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [4]: orm = Produto.objects.aggregate(
+ …: valor_maximo=Max(‘valor’),
+ …: valor_minimo=Min(‘valor’),
+ …: valor_medio=Avg(‘valor’)
+ …: )
+In [5]: print(orm.query)
+ — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — -
+AttributeError Traceback (most recent call last)
+&amp;lt;ipython-input-5–02ba74239328&amp;gt; in &amp;lt;module&amp;gt;()
+ — → 1 print(orm.query)
+AttributeError: ‘dict’ object has no attribute ‘query’
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Caímos no erro novamente, o &lt;code class=&quot;highlighter-rouge&quot;&gt;.aggregate()&lt;/code&gt; não retona um queryset.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [4]: orm = Produto.objects.values(‘categoria’).annotate(Sum(‘valor’))
+In [5]: type(orm)
+Out[5]: django.db.models.query.QuerySet
+In [6]: orm = Produto.objects.aggregate(
+ …: valor_maximo=Max(‘valor’),
+ …: valor_minimo=Min(‘valor’),
+ …: valor_medio=Avg(‘valor’)
+ …: )
+In [7]: type(orm)
+Out[7]: dict
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Assim como &lt;code class=&quot;highlighter-rouge&quot;&gt;.get()&lt;/code&gt; também conseguimos visualizar a query SQL:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [4]: from django.db import connection
+In [5]: connection.queries
+Out[5]:
+[{‘sql’: ‘SELECT
+  MAX(`produtos_produto`.`valor`) AS `valor_maximo`,
+  AVG(`produtos_produto`.`valor`) AS `valor_medio`,
+  MIN(`produtos_produto`.`valor`) AS `valor_minimo`
+FROM `produtos_produto`’,
+ ‘time’: ‘0.000’}]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;queryset-são-lazy&quot;&gt;QuerySet são Lazy&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Todos os métodos que retornam um QuerySet&lt;/strong&gt; são considerados lazy.&lt;/p&gt;
+
+&lt;p&gt;Se eu tiver essas consultas abaixo, quantas consultas foram realizadas no banco de dados?&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+In [2]: produtos = Produto.objects.all()
+In [3]: categoria_2 = produtos.filter(categoria=2)
+In [4]: lista_produto = produtos.values_list(‘nome’, flat=True)
+In [5]: print(lista_produto)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;APENAS UMA!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+In [2]: from django.db import connection
+In [3]: produtos = Produto.objects.all()
+In [4]: categoria_2 = produtos.filter(categoria=2)
+In [5]: lista_produto = produtos.values_list(‘nome’, flat=True)
+In [6]: print(len(connection.queries))
+0
+In [7]: print(lista_produto)
+&amp;lt;QuerySet [‘Produto 1 da Categoria 1’, ‘Produto 2 da Categoria 1’,
+‘Produto 3 da Categoria 1’, ‘Produto 4 da Categoria 1’,
+‘Produto 5 da Categoria 1’, ‘Produto 1 da Categoria 2’,
+‘Produto 2 da Categoria 2’, ‘Produto 3 da Categoria 2’,
+‘Produto 4 da Categoria 2’, ‘Produto 5 da Categoria 2’,
+‘Produto 1 da Categoria 3’, ‘Produto 2 da Categoria 3’,
+‘Produto 3 da Categoria 3’, ‘Produto 4 da Categoria 3’,
+‘Produto 5 da Categoria 3’, ‘Produto 1 da Categoria 4’,
+‘Produto 2 da Categoria 4’, ‘Produto 3 da Categoria 4’,
+‘Produto 4 da Categoria 4’, ‘Produto 5 da Categoria 4’,
+‘…(remaining elements truncated)…’]&amp;gt;
+In [8]: print(len(connection.queries))
+1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Isso significa que as consulta são realizadas no banco de dados quando pedimos. Mas quando pedimos?&lt;/p&gt;
+
+&lt;p&gt;Podemos pedir para serem executadas nas seguintes formas:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Quando solicitamos somente um resultado:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; Produto.objects.all()[0]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Quando fazemos um slicinf passando um “step”:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; Produtos.objects.all()[::2]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Quando iteramos:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; categoria for categoria in Categoria.objects.all()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Quando chamamos o método len() :&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; len(Produto.objects.all())
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Quando chamamos um list() :&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; list(Produto.objects.all())
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Quando chamamos um bool() :&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; bool(Produto.objects.all())
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Quando chamamos o repr() :&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; repr(Produto.objects.all())
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;dicas&quot;&gt;DICAS&lt;/h2&gt;
+
+&lt;h3 id=&quot;reset_queries&quot;&gt;reset_queries&lt;/h3&gt;
+&lt;p&gt;Se precisar limpar a lista de query do connection, utilize:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from django.db import reset_queries
+&amp;gt;&amp;gt; reset_queries()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;django-logging&quot;&gt;Django logging&lt;/h3&gt;
+&lt;p&gt;Caso queira que a query sql apareça toda vez que seja executada uma consulta orm, adicione ao arquivo &lt;code class=&quot;highlighter-rouge&quot;&gt;settings.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;...
+
+LOGGING = {
+    &amp;#39;version&amp;#39;: 1,
+    &amp;#39;disable_existing_loggers&amp;#39;: False,
+    &amp;#39;handlers&amp;#39;: {
+        &amp;#39;console&amp;#39;: {
+            &amp;#39;class&amp;#39;: &amp;#39;logging.StreamHandler&amp;#39;,
+        },
+    },
+    &amp;#39;loggers&amp;#39;: {
+        &amp;#39;django&amp;#39;: {
+            &amp;#39;handlers&amp;#39;: [&amp;#39;console&amp;#39;],
+            &amp;#39;level&amp;#39;: &amp;#39;DEBUG&amp;#39;,
+        },
+    },
+}&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/beatrizuezu/deb68f559403ab9c0ad709c991d3e496.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Espero que tenha ajudado a entender um pouco sobre ORM Django :)&lt;/p&gt;
+
+&lt;p&gt;Obrigada ❤&lt;/p&gt;
+
+&lt;p&gt;esse post foi originalmente escrito no &lt;a href=&quot;https://medium.com/@beatrizuezu/visualizando-query-sql-a-partir-do-orm-django-5771370a9c55&quot;&gt;Medium&lt;/a&gt; no dia 07/08/2017&lt;/p&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="django" /><category term="orm" /><category term="sql" /><summary type="html">Falei sobre esse assunto na palestra que fiz na TDC 2017 (The Developer’s Conference) e vou mostrar como visualizar query SQL do ORM do Django.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">PyLadies &amp;amp; Django Girls: do medo ao incentivo</title><link href="http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo/" rel="alternate" type="text/html" title="PyLadies &amp; Django Girls: do medo ao incentivo" /><published>2018-03-16T22:44:00-03:00</published><updated>2018-03-16T22:44:00-03:00</updated><id>http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo</id><content type="html" xml:base="http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo/">&lt;p&gt;Na época que fazia faculdade gostava de mexer com HTML e CSS até que eu cheguei a estagiar como Front-End. Chegou um momento do estágio que eu não me via naquilo e queria entrar na área de Banco de dados e Big Data. Como eu gostava de ler sobre o tema de Big Data ouvia falar sobre as linguagens Python e Java. Porém tinha dificuldade em programar e achava difícil, só queria entrar em Banco de Dados e Big Data porque não iria programar. (Sabe de nada, inocente).&lt;/p&gt;
 
 &lt;p&gt;Foi aí que eu decidi a procurar vagas de Banco de Dados e até que comecei a trabalhar com desenvolvimento de software com a linguagem VB.net e SQL Server. Tive medo de ser demitida nos primeiros meses por não saber a programar, achava que precisava documentar tudo e fiquei surpresa por terem me colocado em um projeto em menos de 3 meses. Corri atrás de cursos de orientação a objetos para entender melhor o código.&lt;/p&gt;
 

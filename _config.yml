@@ -22,7 +22,7 @@ url: http://beatrizuezu.github.io
 permalink: /:title/
 
 # To enable google analytics, supply your token below
-# analytics-google: 'UA-MYANALYTICS'
+analytics-google: 'UA-120268498-1'
 
 # To enable piwik tracking, supply your url & site ID below
 # analytics-piwik-url: 'piwik.my-host.com'
@@ -113,5 +113,3 @@ jekyll_admin:
     - staticfiles
     - datafiles
     - configuration
-
-oogle_analytics: UA-120268498-1

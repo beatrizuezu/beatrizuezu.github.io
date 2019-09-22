@@ -2,7 +2,7 @@
 title: "Visualizando query SQL a partir do ORM Django"
 layout: post
 date: 2019-02-27 22:58
-image: /assets/images/markdown.jpg
+image: /assets/images/relacao-tabela-vs-classes.png
 headerImage: false
 tag:
 - django

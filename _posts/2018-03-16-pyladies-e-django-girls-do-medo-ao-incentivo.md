@@ -2,7 +2,7 @@
 title: "PyLadies & Django Girls: do medo ao incentivo"
 layout: post
 date: 2018-03-16 22:44
-image: /assets/images/markdown.jpg
+image: /assets/images/dg-1.jpeg
 headerImage: false
 tag:
 - pyladies

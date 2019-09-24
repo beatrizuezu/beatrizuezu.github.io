@@ -16,13 +16,13 @@ description: Plugins do atom para programar em Python
 ---
 
 
-Editor bom é aquele é você se sente mais produtiva para programar
+Editor bom é aquele que você se sente mais produtiva para programar
 
 
 ---
 
 ## Atom
-O Atom é um editor de texto open souce desenvolvido pelo GitHub e construído com [Electron](https://github.com/electron/electron). É o editor que mais gosto de usar, já testei alguns, mas não consegui me adaptar ou talvez falte paciência e tempo para isso ¯\\\_(ツ)\_/¯. Vou listar os plugins que uso:
+O Atom é um editor de texto open source desenvolvido pelo GitHub e construído com [Electron](https://github.com/electron/electron). É o editor que mais gosto de usar, já testei alguns, mas não consegui me adaptar ou talvez me falte paciência e tempo para isso ¯\\\_(ツ)\_/¯. Vou listar os plugins que uso:
 
 
 ### Plugins

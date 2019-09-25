@@ -11,7 +11,7 @@ tag:
 - reduce
 - lambda
 - list comprehension
-published: true
+published: false
 category: blog
 author: beatrizuezu
 description: Conhecendo mais sobre map, filter, reduce e lambda

@@ -49,7 +49,7 @@ A função filter recebe uma função (`maior_que_zero`) e um iterável (`valore
 
 A ideia de usar o [reduce](https://docs.python.org/3.7/library/functools.html#functools.reduce) é aplicar uma função (`somar`) a cada item de um iterável (`range(5)`, ou seja, números de 0 à 4) a fim de ser "reduzida" a um único valor.
 
-É possível passar  terceiro parâmetro opcional para inicializar o valor da função:
+É possível passar um terceiro parâmetro opcional para inicializar o valor da função:
 
 ![](/assets/images/reduce-initializer.png){: .center-image }
 

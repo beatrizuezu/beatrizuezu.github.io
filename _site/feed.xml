@@ -1,4 +1,170 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-29T13:34:33-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Beatriz Uezu Page</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Entendendo map, filter, reduce e lambda</title><link href="http://localhost:4000/entendendo-map-filter-reduce-lambda/" rel="alternate" type="text/html" title="Entendendo map, filter, reduce e lambda" /><published>2019-09-29T00:00:00-03:00</published><updated>2019-09-29T00:00:00-03:00</updated><id>http://localhost:4000/entendendo-map-filter-reduce-lambda</id><content type="html" xml:base="http://localhost:4000/entendendo-map-filter-reduce-lambda/">&lt;p&gt;Antes de falar sobre map, filter e reduce, precisamos entender sobre &lt;strong&gt;função de ordem superior&lt;/strong&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-11-23T11:57:53-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Beatriz Uezu Page</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Referência de objetos</title><link href="http://localhost:4000/referencia-objetos/" rel="alternate" type="text/html" title="Referência de objetos" /><published>2019-11-23T00:00:00-03:00</published><updated>2019-11-23T00:00:00-03:00</updated><id>http://localhost:4000/referencia-objetos</id><content type="html" xml:base="http://localhost:4000/referencia-objetos/">&lt;p&gt;Já aconteceu de você ter duas variáveis com os mesmos valores e alterar uma variável a outra também é alterada?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;o-que-é-variável-em-programação&quot;&gt;O que é variável em programação?&lt;/h1&gt;
+
+&lt;p&gt;Variável é uma informação que será armazenada em um endereço da memória do computador, para ficar mais fácil identificar esse endereço atribuimos um nome para esse valor.&lt;/p&gt;
+
+&lt;h1 id=&quot;caixas-e-post-its&quot;&gt;Caixas e post-its?&lt;/h1&gt;
+&lt;p&gt;Para melhor entendimento podemos usar a metáfora da caixa e do post-its. Em algumas linguagens a variável representa uma caixa que vai armazenar um determinado valor, ou seja, cada caixa representado por uma variável terá um endereço na memória.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/box-autora.png&quot; alt=&quot;variável autora representado pela caixa com valor beatriz&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;variável autora representado pela caixa com valor beatriz&lt;/figcaption&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/box-nome.png&quot; alt=&quot;variável nome representado pela caixa com valor beatriz&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;variável nome representado pela caixa com valor beatriz&lt;/figcaption&gt;
+
+&lt;p&gt;Em Python, essa metáfora não é válida. Podemos dizer que as variáveis são como post-its, as variáveis quando tiverem o mesmo valor terão a mesma referência.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/postits.png&quot; alt=&quot;Valor beatriz com as variáveis nome e autora representados pelo post-its&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;Valor beatriz com as variáveis nome e autora representados pelo post-its&lt;/figcaption&gt;
+
+&lt;p&gt;Isso pode ser observado nesse código:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;nome = &amp;#39;beatriz&amp;#39;
+autora = &amp;#39;beatriz&amp;#39;
+
+
+id(nome)
+#4542762672
+
+id(autora)
+#4542762672
+
+id(&amp;#39;beatriz&amp;#39;)
+#4542762672&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/beatrizuezu/d840aa64b4a2f7f2f47bf42395c6fd2f.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;A função &lt;a href=&quot;https://docs.python.org/pt-br/3/library/functions.html#id&quot;&gt;id()&lt;/a&gt; retorna o endereço da memória que está armazenado aquele determinado valor.&lt;/p&gt;
+
+&lt;h1 id=&quot;listas-tuplas-dicionários-e-conjuntos-armazenam-referências&quot;&gt;listas, tuplas, dicionários e conjuntos armazenam referências&lt;/h1&gt;
+&lt;p&gt;Ao declarar listas, tuplas ou dicionários com os mesmos valores, os objetos não terão o mesmo id, ou seja a mesma referência, porém se os valores forem iguais “apontarão” para o mesmo id.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/lista.jpg&quot; alt=&quot;Desenho ilustrativo das variaveis lista_1 e lista_2&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;Variávies lista_1 e lista_2 possuem os mesmos valores&lt;/figcaption&gt;
+
+&lt;p&gt;Podemos observar no código abaixo que a variável &lt;code class=&quot;highlighter-rouge&quot;&gt;lista_1&lt;/code&gt; e &lt;code class=&quot;highlighter-rouge&quot;&gt;lista_2&lt;/code&gt; possuem os ids diferentes, mas o valor de index 0 de ambas as listas possuem o mesmo id.&lt;/p&gt;
+
+&lt;p&gt;Podemos usar o operador &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; para comparar os valores, enquanto o &lt;code class=&quot;highlighter-rouge&quot;&gt;is&lt;/code&gt; é utilizado para comparar os ids&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;lista_1 = [1, 3, 5, 7]
+lista_2 = [1, 3, 5, 7]
+
+# ids das variáveis sao diferentes
+print(id(lista_1))
+print(id(lista_2))
+
+# ids do index 0 sao iguais
+print(id(lista_1[0]))
+print(id(lista_2[0]))
+
+# verdadeiro, pois os valores sao iguais
+print(lista_1 == lista_2)
+
+# falso, pois os ids sao diferentes
+print(lista_1 is lista_2)&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/beatrizuezu/35254604b2ce26757ff7bdb1ae61bd26.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Caso atribuirmos o valor de &lt;code class=&quot;highlighter-rouge&quot;&gt;lista_2&lt;/code&gt; em &lt;code class=&quot;highlighter-rouge&quot;&gt;lista_1&lt;/code&gt;, eles terão o mesmo id.&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;lista_2 = [1, 3, 5, 7]
+
+lista_1 = lista_2
+
+# os ids serao os mesmos
+print(id(lista_1))
+print(id(lista_2))
+
+# verdadeiro, pois os valores sao iguais
+print(lista_1 == lista_2)
+
+# verdadeiro, pois tem a mesma referencia
+print(lista_1 is lista_2)&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/beatrizuezu/2219a404ebd014633f03ce53ca2f4b3c.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Atente-se quando for manipular uma lista ou dicionário que for atribuída a uma outra variável para nāo perder os valores do objeto, pois estaremos alterando a mesma referência!&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;dicionario_1 = {&amp;#39;nome&amp;#39;: &amp;#39;beatriz&amp;#39;}
+
+dicionario_2 = dicionario_1
+
+dicionario_2[&amp;#39;linguagem&amp;#39;] = &amp;#39;python&amp;#39;
+
+print(dicionario_1)
+# {&amp;#39;nome&amp;#39;: &amp;#39;beatriz&amp;#39;, &amp;#39;linguagem&amp;#39;: &amp;#39;python&amp;#39;}
+
+print(dicionario_2)
+# {&amp;#39;nome&amp;#39;: &amp;#39;beatriz&amp;#39;, &amp;#39;linguagem&amp;#39;: &amp;#39;python&amp;#39;}&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/beatrizuezu/d0081a5b9ee6bbfed64cd8b4162a8f1e.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Para a alteração não afetar a variável original, podemos usar o módulo &lt;code class=&quot;highlighter-rouge&quot;&gt;copy&lt;/code&gt; com as funçōes &lt;a href=&quot;https://docs.python.org/pt-br/3/library/copy.html?highlight=copy#copy.copy&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;copy()&lt;/code&gt;&lt;/a&gt;, que retorna uma cópia rasa, e &lt;a href=&quot;https://docs.python.org/pt-br/3/library/copy.html?highlight=copy#copy.deepcopy&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;deepcopy()&lt;/code&gt;&lt;/a&gt;, que retorna uma cópia profunda.&lt;/p&gt;
+
+&lt;h2 id=&quot;copy&quot;&gt;copy&lt;/h2&gt;
+&lt;p&gt;No código abaixo estamos usando a função &lt;code class=&quot;highlighter-rouge&quot;&gt;copy()&lt;/code&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;import copy
+
+lista_1 = [1,2, [9,8]]
+
+# fazendo a copia rasa
+lista_2 = copy.copy(lista_1)
+
+print(id(lista_1))
+#4527883760
+
+print(id(lista_2))
+#4549096704
+
+lista_2[2].append(7)
+
+print(lista_2)
+#[1, 2, [9, 8, 7]]
+
+print(lista_1)
+#[1, 2, [9, 8, 7]]
+
+print(id(lista_1[2]))
+#4549332496
+
+print(id(lista_2[2]))
+#4549332496&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/beatrizuezu/c78e72f96cd8568611cba991e98997a4.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Notamos que ao alterar a lista interna (index 2) da variável &lt;code class=&quot;highlighter-rouge&quot;&gt;lista_2&lt;/code&gt; alterou também a variável &lt;code class=&quot;highlighter-rouge&quot;&gt;lista_1&lt;/code&gt;. Podemos dizer que tanto a &lt;code class=&quot;highlighter-rouge&quot;&gt;lista_1&lt;/code&gt; quanto a &lt;code class=&quot;highlighter-rouge&quot;&gt;lista_2&lt;/code&gt; “apontam” para a mesma lista interna (&lt;code class=&quot;highlighter-rouge&quot;&gt;[9,8]&lt;/code&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/lista-manipulacao.jpg&quot; alt=&quot;Desenho ilustrativos das variaveis lista_1 e lista_2 apontando para a mesma lista [9,8]&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;Desenho ilustrativos das variaveis lista_1 e lista_2 apontando para a mesma lista [9,8]&lt;/figcaption&gt;
+
+&lt;h2 id=&quot;deepcopy&quot;&gt;deepcopy&lt;/h2&gt;
+&lt;p&gt;No &lt;code class=&quot;highlighter-rouge&quot;&gt;deepcopy()&lt;/code&gt; é feita uma cópia profunda&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;import copy
+
+lista_1 = [1,2, [9,8]]
+
+# fazendo a cópia profunda
+lista_2 = copy.deepcopy(lista_1)
+
+print(id(lista_1))
+#4548273648
+
+print(id(lista_2))
+#4543572480
+
+print(id(lista_1[2]))
+#4547001952
+
+print(id(lista_2[2]))
+#4543706128&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/beatrizuezu/b1ddc80c92da70608384fa0f7864d719.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;As variáveis não compartilham da mesma referência quando usado o &lt;code class=&quot;highlighter-rouge&quot;&gt;deepcopy()&lt;/code&gt;,logo o index 2 da variável &lt;code class=&quot;highlighter-rouge&quot;&gt;lista_1&lt;/code&gt; e da variável &lt;code class=&quot;highlighter-rouge&quot;&gt;lista_2&lt;/code&gt; são diferentes.&lt;/p&gt;
+
+&lt;p&gt;Espero que esse post tenha ficado simples e que você tenha entendido sobre referência de objetos!&lt;/p&gt;
+
+&lt;p&gt;Obrigada por ter lido &amp;lt;3&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="variável" /><category term="memória" /><category term="referência de objetos" /><summary type="html">Já aconteceu de você ter duas variáveis com os mesmos valores e alterar uma variável a outra também é alterada?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/lista.jpg" /></entry><entry><title type="html">Entendendo map, filter, reduce e lambda</title><link href="http://localhost:4000/entendendo-map-filter-reduce-lambda/" rel="alternate" type="text/html" title="Entendendo map, filter, reduce e lambda" /><published>2019-09-29T00:00:00-03:00</published><updated>2019-09-29T00:00:00-03:00</updated><id>http://localhost:4000/entendendo-map-filter-reduce-lambda</id><content type="html" xml:base="http://localhost:4000/entendendo-map-filter-reduce-lambda/">&lt;p&gt;Antes de falar sobre map, filter e reduce, precisamos entender sobre &lt;strong&gt;função de ordem superior&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;hr /&gt;
 

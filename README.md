@@ -20,7 +20,7 @@ source ~/.profile
 
 #### Install Ruby Version (2.5.1) on RVM
 ```shell
-rvm install 2.5.1
+rvm install 2.7.2
 ```
 
 #### Install Bundler and install dependencies

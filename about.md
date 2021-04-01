@@ -4,7 +4,7 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>Formada em Análise e Desenvolvimendo de Sistemas pela FATEC-SP,<br>co-organizadora do PyLadies São Paulo, fundadora e co-organizadora do Django Girls São Paulo e desenvolvedora back-end em Python. Gosta de compartilhar conhecimento, participar de comunidades, tirar fotografias e comer coxinhas ¯\_(ツ)_/¯</p>
+<p>Formada em Análise e Desenvolvimendo de Sistemas pela FATEC-SP,<br>voluntária no PyLadies São Paulo, fundadora e co-organizadora do Django Girls São Paulo e Engenheira de Software. Gosta de compartilhar conhecimento, participar de comunidades, tirar fotografias e ver vídeo sobre receitas ¯\_(ツ)_/¯</p>
 
 Se quiser saber como a comunidade python me ajudou a me tornar desenvolvedora back-end: [leia esse post]({% post_url 2018-03-16-pyladies-e-django-girls-do-medo-ao-incentivo%}).
 
@@ -16,10 +16,9 @@ Se quiser saber como a comunidade python me ajudou a me tornar desenvolvedora ba
 
 * Python
 * Django
-* MySQL/SQL Server
-* HTML
-* CSS (Sass) / CSS Frameworks (Bootstrap)
-* Javascript / JQuery
+* MySQL/SQL Server/Postgres
+* HTML/ CSS (Sass) / CSS Frameworks (Bootstrap)
+* Kotlin / Java
 * Git
 * Scrum
 

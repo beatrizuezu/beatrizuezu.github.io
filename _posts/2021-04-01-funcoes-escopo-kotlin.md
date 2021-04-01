@@ -87,7 +87,7 @@ print(result)
 //  kotlin.Unit
 ```
 
-Ao imprimir a variável `result` o retorno é um `[kotlin.Unit`,](https://kotlinlang.org/docs/functions.html#unit-returning-functions) significa que o retorno é um valor não útil. Portanto, concluímos que o `let` não retorna um valor.
+Ao imprimir a variável `result` o retorno é um [kotlin.Unit](https://kotlinlang.org/docs/functions.html#unit-returning-functions) significa que o retorno é um valor não útil. Portanto, concluímos que o `let` não retorna um valor.
 
 Podemos utilizar o `let` quando invocamos uma ou mais funções em resultados de chamadas encadeadas:
 

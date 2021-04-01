@@ -248,7 +248,7 @@ print(product2)
 ## Resumo
 
 | Função | Retorno     | Variável dentro do escopo | Uso                                                         |
-|--------|-------------|---------------------------|-------------------------------------------------------------|
+|:--------:|:-------------:|:---------------------------:|:-------------------------------------------------------------:|
 | Let    | Unit/Lambda* | `it`                        | Funções com chamadas encadeadas e checagem de objetos nulos |
 | Run    | Unit/Lambda* | `this`                      | Inicialização do objeto e o cálculo do valor de retorno     |
 | With   | Unit/Lambda*        | `this`                      | Executar funções no objeto dentro de um contexto.           |

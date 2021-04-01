@@ -122,9 +122,9 @@ O uso do `this` é opcional, e também deixa o código redundante, portanto pode
 
 ```kotlin
 product.run {
-	title = "Smarthpone Bonitono"
-  price = 700.00
-	deactivate()
+    title = "Smarthpone Bonitono"
+    price = 700.00
+    deactivate()
 }
 ```
 
@@ -132,9 +132,9 @@ Vamos entender o retorno do `run`:
 
 ```kotlin
 var result = product.run {
-	title = "Smarthpone Bonitono"
-  price = 700.00
-	deactivate()
+    title = "Smarthpone Bonitono"
+    price = 700.00
+    deactivate()
 }
 
 println(result)
@@ -180,9 +180,9 @@ Podemos utilizar o `apply` para alterar os atributos de `product`, utilizamos o 
 var product = Product("Smarthphone", 999.99, true)
 
 product.apply {
-  this.title = "Smarthpone Bonitono"
-  this.price = 1_000.00
-	this.deactivate()
+    this.title = "Smarthpone Bonitono"
+    this.price = 1_000.00
+    this.deactivate()
 }
 ```
 
@@ -190,9 +190,9 @@ O uso do `this` é opcional e também deixa o código redundante, portanto podem
 
 ```kotlin
 product.apply {
-  title = "Smarthpone Bonitono"
-  price = 1_000.00
-	deactivate()
+    title = "Smarthpone Bonitono"
+    price = 1_000.00
+    deactivate()
 }
 ```
 
@@ -200,9 +200,9 @@ O valor de retorno do `apply` é o próprio objeto, podemos imprimir a variável
 
 ```kotlin
 var result = product.apply {
-    this.title = "Smarthpone Bonitono"
-    this.price = 1_000.00
-		deactivate()
+    title = "Smarthpone Bonitono"
+    price = 1_000.00
+    deactivate()
 }
 println(result)
 
@@ -219,10 +219,10 @@ Para referenciar o objeto dentro do escopo utilizamos o `it`
 var product = Product("Smarthphone", 999.99, true)
 
 product.apply {
-  title = "Smarthpone Bonitono"
-  price = 700.00
-	deactivate()
-}.also{println("Promoção do Produto $it")}
+    title = "Smarthpone Bonitono"
+    price = 700.00
+    deactivate()
+}.also{ println("Promoção do Produto $it") }
 
 // Promoção do Produto Product(title=Smarthpone Bonitono, price=700.0, isActive=false)
 ```
@@ -241,7 +241,7 @@ product2?.let {
   it.isActive = false
 }
 
-print(product2)
+println(product2)
 //  null
 ```
 

@@ -1,4 +1,95 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-04-01T18:11:38-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Beatriz Uezu Page</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Funções de Escopo do Kotlin</title><link href="http://localhost:4000/funcoes-escopo-kotlin/" rel="alternate" type="text/html" title="Funções de Escopo do Kotlin" /><published>2021-04-01T00:00:00-03:00</published><updated>2021-04-01T00:00:00-03:00</updated><id>http://localhost:4000/funcoes-escopo-kotlin</id><content type="html" xml:base="http://localhost:4000/funcoes-escopo-kotlin/">&lt;p&gt;Recentemente comecei a trabalhar em um projeto em Kotlin, e no trabalho tenho a oportunidade de aprender e a compartilhar conhecimento com meu time. Esse foi o primeiro assunto que escolhi compartilhar com eles :)&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-04-18T19:24:14-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Beatriz Uezu Page</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Anotações sobre Princípios SOLID</title><link href="http://localhost:4000/solid/" rel="alternate" type="text/html" title="Anotações sobre Princípios SOLID" /><published>2021-04-17T00:00:00-03:00</published><updated>2021-04-17T00:00:00-03:00</updated><id>http://localhost:4000/solid</id><content type="html" xml:base="http://localhost:4000/solid/">&lt;hr /&gt;
+
+&lt;h2 id=&quot;o-que-é-solid&quot;&gt;O que é SOLID?&lt;/h2&gt;
+
+&lt;p&gt;SOLID é uma sigla em inglês para cinco princícios da programação orientada a objetos.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;S&lt;/strong&gt;ingle Responsability Principle - Princípio da Responsabilidade Única&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;O&lt;/strong&gt;pen-Closed Principle - Princípio Aberto Fechado&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;iskov Substitution Principle - Princípio da Substituição de Liskov&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;I&lt;/strong&gt;nterface Segregation Principle - Princípio da Segregação de Interfaces&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;D&lt;/strong&gt;ependency Inversion Principle - Princípio da Inversão de Dependência&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Os princípios foram criados pelo Uncle Bob (Robert C. Martin) e o acrônimo foi criado por Michael Feathers.&lt;/p&gt;
+
+&lt;h2 id=&quot;single-responsibility-principle-srp---princípio-da-responsabilidade-única&quot;&gt;Single Responsibility Principle (SRP) - Princípio da Responsabilidade Única&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;A class should do one thing and therefore it should have only a single reason to change.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;“Uma classe deve fazer uma coisa e, portanto, deve ter apenas um único motivo para mudar.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Uma classe deve ter uma única responsabilidade, permitindo assim separar comportamentos e evitar acoplamentos.
+Isso também é aplicado para funções, métodos e módulos.&lt;/p&gt;
+
+&lt;h2 id=&quot;open-closed-principle-ocp---princípio-aberto-fechado&quot;&gt;Open-Closed Principle (OCP) - Princípio Aberto Fechado&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;A module should be open for extension but closed for modification.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;“Um módulo deve ser aberto para extensão, mas fechado para modificação.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Ao escrever uma funcionalidade ou comportamento novos, devemos estender, ou seja, devemos incluir ao em vez de modificar o que já existe.&lt;/p&gt;
+
+&lt;h2 id=&quot;liskov-substitution-principle-lsp---princípio-da-substituição-de-liskov&quot;&gt;Liskov Substitution Principle (LSP) - Princípio da Substituição de Liskov&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Subclasses should be substitutable for their base classes.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;“As subclasses devem ser substituíveis por suas classes básicas.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Quando temos uma classe B que herda de uma classe A, esperamos que a classe B estenda os comportamentos da classe A.&lt;/p&gt;
+
+&lt;h2 id=&quot;interface-segregation-principle-isp---princípio-da-segregação-de-interfaces&quot;&gt;Interface Segregation Principle (ISP) - Princípio da Segregação de Interfaces&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Many client specific interfaces are better than one general purpose interface&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;“Muitas interfaces específicas do cliente são melhores do que uma interface de propósito geral”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Classes implementadas não devem serem forçadas a implementar funcionalidades que ela não precisa.&lt;/p&gt;
+
+&lt;h2 id=&quot;dependency-inversion-principle-dip---princípio-da-inversão-de-dependência&quot;&gt;Dependency Inversion Principle (DIP) - Princípio da Inversão de Dependência&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Depend upon Abstractions. Do not depend upon concretions.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;“Dependa de abstrações. Não dependa de concreções.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Clases novas devem depender de interfaces ou de abstrações e não de classes concretas&lt;/p&gt;
+
+&lt;h3 id=&quot;notas&quot;&gt;Notas&lt;/h3&gt;
+&lt;p&gt;Recomendo assistir o vídeo &lt;a href=&quot;https://www.youtube.com/watch?v=6SfrO3D4dHM&quot;&gt;SOLID fica FÁCIL com Essas Ilustrações&lt;/a&gt;, do &lt;a href=&quot;https://twitter.com/FilipeDeschamps&quot;&gt;Filipe Deschamps&lt;/a&gt; em que ele explica o artigo &lt;a href=&quot;https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898&quot;&gt;The S.O.L.I.D Principles in Pictures&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;referências&quot;&gt;Referências&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Artigo Free Code Camp- &lt;a href=&quot;https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/&quot;&gt;The SOLID Principles of Object-Oriented Programming Explained in Plain English&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Artigo Medium - &lt;a href=&quot;https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898&quot;&gt;The S.O.L.I.D Principles in Pictures&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Artigo Medium - &lt;a href=&quot;https://medium.com/desenvolvendo-com-paixao/o-que-%C3%A9-solid-o-guia-completo-para-voc%C3%AA-entender-os-5-princ%C3%ADpios-da-poo-2b937b3fc530&quot;&gt;O que é SOLID: O guia completo para você entender os 5 princípios da POO&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Paper - &lt;a href=&quot;https://fi.ort.edu.uy/innovaportal/file/2032/1/design_principles.pdf&quot;&gt;Design Principles and Design Patterns&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Youtube Video - &lt;a href=&quot;https://www.youtube.com/watch?v=6SfrO3D4dHM&quot;&gt;SOLID fica FÁCIL com Essas Ilustrações&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Talk - &lt;a href=&quot;https://pgrangeiro.github.io/solid-python-talk/&quot;&gt;SOLID Python - Princípios SOLID em Projetos Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Obrigada por ter lido &amp;lt;3&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="solid" /><summary type="html"></summary></entry><entry><title type="html">Funções de Escopo do Kotlin</title><link href="http://localhost:4000/funcoes-escopo-kotlin/" rel="alternate" type="text/html" title="Funções de Escopo do Kotlin" /><published>2021-04-01T00:00:00-03:00</published><updated>2021-04-01T00:00:00-03:00</updated><id>http://localhost:4000/funcoes-escopo-kotlin</id><content type="html" xml:base="http://localhost:4000/funcoes-escopo-kotlin/">&lt;p&gt;Recentemente comecei a trabalhar em um projeto em Kotlin, e no trabalho tenho a oportunidade de aprender e a compartilhar conhecimento com meu time. Esse foi o primeiro assunto que escolhi compartilhar com eles :)&lt;/p&gt;
 
 &lt;p&gt;Esse post é o compilado do que li e entendi &lt;del&gt;ou não&lt;/del&gt; sobre o assunto.&lt;/p&gt;
 

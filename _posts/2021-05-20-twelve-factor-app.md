@@ -91,7 +91,7 @@ Na aplicação podemos ter um arquivo para armazenar essas configurações e que
 
 São considerados serviços de apoio qualquer serviço terceiro como banco de dados, sistema de mensageria e filas, serviços de emails e de cache, serviços de métricas e logs, ou seja, são serviços que a aplicação utiliza como parte do sistema, isto é um recurso anexado.
 
-Esse fator sugere que em um serviço local e de terceiros não deve haver distinção. Isso que dizer que, caso seja necessário a troca de um recurso para outro não deve haver mudança no código, a não ser que tenhamos algo muito específico que estamos utilizando do recurso. Podemos utilizar o exemplo a mudança do banco de dados MySQL para um outro banco seja PostgreSQL ou RDS da Amazon, isso deve ser transparente para a aplicação.
+Esse fator sugere que em um serviço local e de terceiros não deve haver distinção. Isso quer dizer que, caso seja necessário a troca de um recurso para outro não deve haver mudança no código, a não ser que tenhamos algo muito específico que estamos utilizando do recurso. Podemos utilizar o exemplo a mudança do banco de dados MySQL para um outro banco seja PostgreSQL ou RDS da Amazon, isso deve ser transparente para a aplicação.
 
 [Documentação em portugês](https://12factor.net/pt_br/backing-services)
 
@@ -102,7 +102,7 @@ Esse fator sugere que em um serviço local e de terceiros não deve haver distin
 
 *"Separe estritamente os estágios de construção e execução"*
 
-O processo de o deploy da base de código ocorre em três estágios:
+O processo do deploy da base de código ocorre em três estágios:
 
 #### Construção (*Build*)
 
@@ -129,7 +129,7 @@ Para cada estágio há ferramentas especificas da cada linguaguem em fazer a aut
 
 *"Execute a aplicação como um ou mais processos que não armazenam estado"*
 
-Esse fator significa que os processos não armazenam estados (*stateless*) e não devem compartilhar nada. Caso os estados precisem ser armazenados, devemos utilizar um serviço de apoio como uma base dados ou sistema de cache.
+Esse fator significa que os processos não armazenam estados (*stateless*) e não devem compartilhar nada entre si. Caso os estados precisem ser armazenados, devemos utilizar um serviço de apoio como uma base dados ou sistema de cache.
 
 
 [Documentação em portugês](https://12factor.net/pt_br/processes)
@@ -157,9 +157,9 @@ A aplicação exporta uma porta HTTP como um serviço através dessa porta, assi
 *"Escale através do processo modelo"*
 
 A aplicação deve ter um modelo para conseguir escalar. A escalabilidade pode ser:
-- horizontal: adição de mais servidores com as mesmas configurações de recursos (CPU, RAM);
+- Horizontal: adição de mais servidores com as mesmas configurações de recursos (CPU, RAM);
 
-- vertical: aumentar os recursos de cada servidor no qual a aplicação ou o sistema está sendo executado.
+- Vertical: aumentar os recursos de cada servidor no qual a aplicação ou o sistema está sendo executado.
 
 [Documentação em portugês](https://12factor.net/pt_br/concurrency)
 
@@ -172,7 +172,7 @@ A aplicação deve ter um modelo para conseguir escalar. A escalabilidade pode s
 
 *"Maximize robustez com inicialização rápida e desligamento gracioso"*
 
-Os processos devem inicializar em poucos segundos para que a aplicação esteja pronta para receber requisições. A inicialização rápida prove agilidade para os processos de releases e escalabilidade.
+Os processos devem inicializar em poucos segundos para que a aplicação esteja pronta para receber requisições. A inicialização rápida promove agilidade para os processos de releases e escalabilidade.
 
 Quanto o desligamento gracioso quer dizer que o servidor para de receber novas requisições e finaliza o que estiver em andamento e encerrar o processo.
 
@@ -205,7 +205,7 @@ Esse fator pretende diminuir as divergências em três áreas:
 
 *"Trate logs como fluxos de eventos"*
 
-Os logs nos dá visibilidade sobre o comportamento da aplicação, podemos agregar os eventos e ordernar por tempo de execução de todos os processos em execução e de serviços de apoio.
+Os logs nos dão visibilidade sobre o comportamento da aplicação, podemos agregar os eventos e ordernar por tempo de execução de todos os processos em execução e de serviços de apoio.
 
 No ambiente de desenvolvimentos, os logs devem ser exibidos no terminal, enquanto que nos ambientes de staging e produção devemos utilizar ferramentas (como Graylog, Logentries, ELK) para nos auxiliar com a coleta e armazenamento dos logs.
 
@@ -220,7 +220,7 @@ No ambiente de desenvolvimentos, os logs devem ser exibidos no terminal, enquant
 
 *"Rode tarefas de administração/gestão em processos pontuais"*
 
-Processos administrativos são processos pontuais, como migrações, scripts e execuções no console, devem ser executados em ambientes idênticos e isolados aos que tarefas de processamento longo rodam.
+Processos administrativos são processos pontuais, como migrações, scripts e execuções no console, devem ser executados em ambientes idênticos e isolados de ambientes em que tarefas de processamento longo rodam.
 
 Esses processos também devem ser versionados, estar dentro do processo de deploy e utilizar as mesmas configurações do ambiente.
 
@@ -234,6 +234,8 @@ Curso de git e github: https://www.udemy.com/course/git-e-github-para-iniciantes
 ## Referências
 
 - Youtube - [The Twelve Factor APP | Zup Insights](https://youtu.be/C2VbGlOBYyw)
+
+- Youtube - [12 Factor App (Boas práticas para criar uma aplicação SaaS) // Dicionário do Programador](https://youtu.be/Xayg7f2utgk)
 
 - Alura - [The Twelve-Factor App: Metodologia para construção de aplicações robustas](https://www.alura.com.br/curso-online-the-twelve-factor-app)
 

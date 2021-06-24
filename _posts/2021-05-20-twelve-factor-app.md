@@ -233,7 +233,7 @@ Curso de git e github: https://www.udemy.com/course/git-e-github-para-iniciantes
 
 ## Referências
 
-- Youtube - [The Twelve Factor APP | Zup Insights](https://youtu.be/C2VbGlOBYyw)
+- Youtube - [The Twelve Factor APP - Zup Insights](https://youtu.be/C2VbGlOBYyw)
 
 - Youtube - [12 Factor App (Boas práticas para criar uma aplicação SaaS) // Dicionário do Programador](https://youtu.be/Xayg7f2utgk)
 

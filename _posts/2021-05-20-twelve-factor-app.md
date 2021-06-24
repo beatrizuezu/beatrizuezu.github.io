@@ -1,17 +1,17 @@
 ---
 title: "Twelve Factor App"
 layout: post
-date: 2021-05-20
+date: 2021-06-24
 headerImage: false
 tag:
 - twelve factor app
 - metodologia de aplicações doze fatores
-published: false
+published: true
 category: blog
 author: beatrizuezu
 description: 
 ---
-
+Essas são as minhas anotações do meu estudo sobre 12 Factor App, aproveitei também para compartilhar esses conhecimentos com o meu time do trabalho :)
 
 ---
 

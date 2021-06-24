@@ -19,7 +19,7 @@ Essas são as minhas anotações do meu estudo sobre 12 Factor App, aproveitei t
 
 ## O que é?
 
-É uma metodologia criada pelo Heroku que traz doze regras/princípios/boas práticas de desenvolvimento de software que pode ser aplicada em qualquer linguagem de programação e que utilizem qualquer combinação de serviços de suportes (banco de dados, caches...).
+É uma metodologia criada pelo Heroku que traz doze regras/princípios/boas práticas de desenvolvimento de software que podem ser aplicada em qualquer linguagem de programação e que utilizem qualquer combinação de serviços de suportes (banco de dados, caches...).
 
 Essas práticas nos ajudam a automatizar e minimizar a configuração inicial do projeto, ter uma portabilidade entre os ambientes em que o projeto será executado, facilitar o deploy em serviços em cloud, minimizar divergências entre ambientes e escalar a aplicação de uma forma sustentável.
 

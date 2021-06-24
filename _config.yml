@@ -1,6 +1,6 @@
 # main text of home
 name: Beatriz Uezu
-bio: Python Developer
+bio: Software Engineer
 title: Beatriz Uezu Page
 # twitter summary info
 description: A blog about technology and stuff related
@@ -55,7 +55,7 @@ email: beatriz.uezu@gmail.com
 authors:
     beatrizuezu:
         name: Beatriz Uezu
-        bio: Python Developer
+        bio: Software Engineer
         external-image: false
         picture: assets/images/profile.jpg
         twitter: beatrizuezu

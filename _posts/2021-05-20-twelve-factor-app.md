@@ -229,7 +229,7 @@ Esses processos também devem ser versionados, estar dentro do processo de deplo
 [Documentação em inglês](https://12factor.net/admin-processes)
 
 ### Notas
-Curso de git e github: https://www.udemy.com/course/git-e-github-para-iniciantes/
+[Curso de git e github]( https://www.udemy.com/course/git-e-github-para-iniciantes/) - gratuito
 
 ## Referências
 

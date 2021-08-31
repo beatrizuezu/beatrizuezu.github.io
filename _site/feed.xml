@@ -1,95 +1,284 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-04-18T19:24:14-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Beatriz Uezu Page</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Anotações sobre Princípios SOLID</title><link href="http://localhost:4000/solid/" rel="alternate" type="text/html" title="Anotações sobre Princípios SOLID" /><published>2021-04-17T00:00:00-03:00</published><updated>2021-04-17T00:00:00-03:00</updated><id>http://localhost:4000/solid</id><content type="html" xml:base="http://localhost:4000/solid/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-09-01T22:09:43+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Beatriz Uezu Page</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">My Work Out Process</title><link href="http://localhost:4000/work-out-process/" rel="alternate" type="text/html" title="My Work Out Process" /><published>2021-08-31T00:00:00+02:00</published><updated>2021-08-31T00:00:00+02:00</updated><id>http://localhost:4000/work-out-process</id><content type="html" xml:base="http://localhost:4000/work-out-process/">&lt;p&gt;I have completed 1 year working out at home consistently. 
+ 🎉&lt;/p&gt;
 
-&lt;h2 id=&quot;o-que-é-solid&quot;&gt;O que é SOLID?&lt;/h2&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;SOLID é uma sigla em inglês para cinco princícios da programação orientada a objetos.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;: this post is related to my process and I’m trying to motivate you to be high on endorphin, try to figure out what kind of work out/sport works for you.&lt;/p&gt;
 
+&lt;p&gt;I had to start working out because I was sedentary before the pandemic started (2020, March) and I was sick when I returned from an exchange. After eating something fatty I got sick, experiencing headache and nausea. So, I decided to investigate these problems and I went to 3 or 4 doctors and nutritionists. I had to do a lot of exams. The conclusion was: I had to do physical exercises and change my diet.&lt;/p&gt;
+
+&lt;p&gt;Let’s focus on the work out process here. I decided to work out at home due to COVID and quarantine. It was not easy to start and stick to this routine. At the beginning, I started to do it 4 times a week and anaerobic on weekends, with time I was adapting my training with my availability. There was a period that I did it 3 times a week on alternate days and I noticed that during the days I didn’t workout I was lazier and less willing, so I decided to work out every day in less time.&lt;/p&gt;
+
+&lt;p&gt;I can realize the work out routine helps me sleep better, dealing with the anxiety and self-esteem, I feel more willing and that I have some muscles that I couldn’t imagine! 😄&lt;/p&gt;
+
+&lt;p&gt;Not everyday I’m motivated to work out, but I have to do it. After the work out I feel more energetic ⚡. I like to be high on endorphin 😂 there is a Brazilian hashtag #ChapadinhaDeEndorfina and a profile with the same name on Instagram.&lt;/p&gt;
+
+&lt;p&gt;I’m not even close to being an athlete, but it changed my life completely. I would like to do many different sports, like crossfit, boxing, running (I’m trying this one occasionally), cycling (when I was in Brazil I usually used to cycle once a week), soccer and handball (I used to play when I was at school lol).&lt;/p&gt;
+
+&lt;p&gt;Ah, it’s an important point here, I’m followed up by a physical education professional. This is a good option to not be hurt while working out.&lt;/p&gt;
+
+&lt;p&gt;I’ll try to write more in English just to practice, feel free to send me a message if you would like to talk more about it with me or anything related :)&lt;/p&gt;
+
+&lt;p&gt;Thank you for reading &amp;lt;3&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="workout" /><category term="endorphin" /><category term="habit" /><summary type="html">I have completed 1 year working out at home consistently. 🎉</summary></entry><entry><title type="html">Twelve Factor App</title><link href="http://localhost:4000/twelve-factor-app/" rel="alternate" type="text/html" title="Twelve Factor App" /><published>2021-06-24T00:00:00+02:00</published><updated>2021-06-24T00:00:00+02:00</updated><id>http://localhost:4000/twelve-factor-app</id><content type="html" xml:base="http://localhost:4000/twelve-factor-app/">&lt;p&gt;Essas são as minhas anotações do meu estudo sobre 12 Factor App, aproveitei também para compartilhar esses conhecimentos com o meu time do trabalho :)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;metodologia-de-aplicações-doze-fatores-ou-12-factor-app&quot;&gt;Metodologia de aplicações doze fatores ou 12 Factor App&lt;/h1&gt;
+
+&lt;h2 id=&quot;o-que-é&quot;&gt;O que é?&lt;/h2&gt;
+
+&lt;p&gt;É uma metodologia criada pelo Heroku que traz doze regras/princípios/boas práticas de desenvolvimento de software que podem ser aplicada em qualquer linguagem de programação e que utilizem qualquer combinação de serviços de suportes (banco de dados, caches…).&lt;/p&gt;
+
+&lt;p&gt;Essas práticas nos ajudam a automatizar e minimizar a configuração inicial do projeto, ter uma portabilidade entre os ambientes em que o projeto será executado, facilitar o deploy em serviços em cloud, minimizar divergências entre ambientes e escalar a aplicação de uma forma sustentável.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/pt_br/&quot;&gt;Documentação em portugês&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/&quot;&gt;Documentação em inglês&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;quando-e-como-utilizar&quot;&gt;Quando e como utilizar?&lt;/h2&gt;
+
+&lt;p&gt;Dependendo do projeto conseguimos aplicar a maioria dos fatores,mas será necessário o entendimento da necessidade para que não torne o projeto complexo. Quanto mais fatores utilizado mais o software estará pronto para ser utilizado como um serviço (&lt;em&gt;Software as a Service&lt;/em&gt;, SAAS).&lt;/p&gt;
+
+&lt;h2 id=&quot;os-12-fatores&quot;&gt;Os 12 fatores&lt;/h2&gt;
+
+&lt;h3 id=&quot;01---base-de-código-codebase&quot;&gt;01 - Base de código (Codebase)&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;One codebase tracked in revision control, many deploys&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;“Uma base de código com rastreamento utilizando controle de revisão, muitos deploys”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Ou seja, utilizar um sistema de controle de versão de código, como git, mercurial ou subversion, para ter o código centralizado em um repositório. Se tivermos mais de uma aplicação compartilhando o mesmo código, estamos violando os 12 fatores. A solução para isso é fatorar o código compartilhado em uma biblioteca e incluir  através de um gerenciador de &lt;a href=&quot;próximo tópico.&quot;&gt;dependências&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Várias aplicações/serviços devem estar base de código independentes, para que elas sejam auto contidas, assim a alteração em uma aplicação não dependa e impacte a outra.&lt;/p&gt;
+
+&lt;p&gt;Podemos ter alguns ambientes para fazer o deploy (implantação do código), ambiente de desenvolvimento, também chamado de ambiente local, homologação (staging) e produção (production). Cada pessoa desenvolvedora pode ter uma versão da aplicação rodando no ambiente de desenvolvimento (ambiente local), assim como os ambientes de homologação e produção podemos ter versões diferentes em cada deploy.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/pt_br/codebase&quot;&gt;Documentação em portugês&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/codebase&quot;&gt;Documentação em inglês&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;02---dependências-dependencies&quot;&gt;02 - Dependências (Dependencies)&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Explicitly declare and isolate dependencies&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;“Declare e isole explicitamente as dependências”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Maioria das linguagens de programação possuem gerenciadores de dependências, com elas podemos instalar as bibliotecas que são utilizadas na aplicação. Todas as dependências precisam estar explicitamentes declaradas por meio de um manifesto de declaração de dependência, ou seja, haverá um arquivo que contém as bibliotecas que são utilizadas na aplicação e qual a versão usada na aplicação. Podemos utilizar ferramentas que isolem o ambiente para que não tenhamos conflitos de dependências com outras bibliotecas de outros projetos.&lt;/p&gt;
+
+&lt;p&gt;Por exemplo, no Python podemos utilizar o pip, pipenv, poetry como gerenciadores de dependência e o virtualenv para isolar o ambiente. No Java temos o gradle e o maven, no Ruby bundler como gerenciadores de dependência.&lt;/p&gt;
+
+&lt;p&gt;Isso simplifica o processo de configuração da aplicação para as pessoas desenvolvedoras e também facilita a portabilidade de servidor.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/pt_br/dependencies&quot;&gt;Documentação em portugês&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/dependencies&quot;&gt;Documentação em inglês&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;03---configurações-config&quot;&gt;03 - Configurações (Config)&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Store config in the environment&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;“Armazene as configurações no ambiente”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Esse fator significa que devemos armazenar as configurações no ambiente, pois as configurações do aplicativo variam em cada ambiente (local, staging e production) e assim conseguimos ter as configurações separadas do código. Entende-se como configuração como credenciais para serviços externos e da aplicação, variáveis que diferem em cada ambiente, como o hostname e banco de dados.&lt;/p&gt;
+
+&lt;p&gt;Na aplicação podemos ter um arquivo para armazenar essas configurações e que não deve ser versionado. Chamamos essas configurações de variáveis de ambiente (&lt;em&gt;environment variables&lt;/em&gt; ou &lt;em&gt;env vars&lt;/em&gt;), as variáveis são definidas no próprio sistema operacional.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/pt_br/config&quot;&gt;Documentação em portugês&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/config&quot;&gt;Documentação em inglês&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;04---serviços-de-apoio-backing-services&quot;&gt;04 - Serviços de Apoio (Backing Services)&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Treat backing services as attached resources&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;“Trate serviços de apoio como recursos anexados”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;São considerados serviços de apoio qualquer serviço terceiro como banco de dados, sistema de mensageria e filas, serviços de emails e de cache, serviços de métricas e logs, ou seja, são serviços que a aplicação utiliza como parte do sistema, isto é um recurso anexado.&lt;/p&gt;
+
+&lt;p&gt;Esse fator sugere que em um serviço local e de terceiros não deve haver distinção. Isso quer dizer que, caso seja necessário a troca de um recurso para outro não deve haver mudança no código, a não ser que tenhamos algo muito específico que estamos utilizando do recurso. Podemos utilizar o exemplo a mudança do banco de dados MySQL para um outro banco seja PostgreSQL ou RDS da Amazon, isso deve ser transparente para a aplicação.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/pt_br/backing-services&quot;&gt;Documentação em portugês&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/backing-services&quot;&gt;Documentação em inglês&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;05---construa-lance-execute-build-release-run&quot;&gt;05 - Construa, lance, execute (Build, release, run)&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Strictly separate build and run stages&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;“Separe estritamente os estágios de construção e execução”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;O processo do deploy da base de código ocorre em três estágios:&lt;/p&gt;
+
+&lt;h4 id=&quot;construção-build&quot;&gt;Construção (&lt;em&gt;Build&lt;/em&gt;)&lt;/h4&gt;
+
+&lt;p&gt;Nesse estágio é obtido as dependências do projeto, compilado em binário e lida com os arquivos estáticos (&lt;em&gt;assets&lt;/em&gt;) para que seja gerado o executável do projeto.&lt;/p&gt;
+
+&lt;h4 id=&quot;lançamento-release&quot;&gt;Lançamento (&lt;em&gt;Release&lt;/em&gt;)&lt;/h4&gt;
+
+&lt;p&gt;O estágio de release é a combinação do build com as configurações de ambiente em que será feita o deploy.É muito comum termos versões de release com um identificador único, pode ser utilizado um número incremental (como &lt;code class=&quot;highlighter-rouge&quot;&gt;v123&lt;/code&gt;), &lt;a href=&quot;https://semver.org/lang/pt-BR/&quot;&gt;versionamento semântico&lt;/a&gt; ( como &lt;code class=&quot;highlighter-rouge&quot;&gt;2.1.1&lt;/code&gt;) ou por data e hora (como &lt;code class=&quot;highlighter-rouge&quot;&gt;202106052230&lt;/code&gt;), assim caso precise fazer a reversão da versão anterior, também conhecido como &lt;em&gt;rollback&lt;/em&gt;, fique fácil de identificar o release.&lt;/p&gt;
+
+&lt;h4 id=&quot;execução-run&quot;&gt;Execução (&lt;em&gt;Run&lt;/em&gt;)&lt;/h4&gt;
+
+&lt;p&gt;É nesse estágio em que será inicializado os processos para que a aplicação seja executada.&lt;/p&gt;
+
+&lt;p&gt;Para cada estágio há ferramentas especificas da cada linguaguem em fazer a automatização do build, release e run.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/pt_br/build-release-run&quot;&gt;Documentação em portugês&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/build-release-run&quot;&gt;Documentação em inglês&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;06---processos-processes&quot;&gt;06 - Processos (&lt;em&gt;Processes&lt;/em&gt;)&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Execute the app as one or more stateless processes&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;“Execute a aplicação como um ou mais processos que não armazenam estado”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Esse fator significa que os processos não armazenam estados (&lt;em&gt;stateless&lt;/em&gt;) e não devem compartilhar nada entre si. Caso os estados precisem ser armazenados, devemos utilizar um serviço de apoio como uma base dados ou sistema de cache.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/pt_br/processes&quot;&gt;Documentação em portugês&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/processes&quot;&gt;Documentação em inglês&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;07---vínculo-de-portas-port-binding&quot;&gt;07 - Vínculo de Portas (&lt;em&gt;Port binding&lt;/em&gt;)&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Export services via port binding&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;“Exporte serviços via vínculo de portas”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A aplicação exporta uma porta HTTP como um serviço através dessa porta, assim atua como um serviço independente podendo servir com um serviço de apoio e não dependa de servidores externos.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/pt_br/port-binding&quot;&gt;Documentação em portugês&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/port-binding&quot;&gt;Documentação em inglês&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;08---concorrência-concurrency&quot;&gt;08 - Concorrência (&lt;em&gt;Concurrency&lt;/em&gt;)&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Scale out via the process model&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;“Escale através do processo modelo”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A aplicação deve ter um modelo para conseguir escalar. A escalabilidade pode ser:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;S&lt;/strong&gt;ingle Responsability Principle - Princípio da Responsabilidade Única&lt;/p&gt;
+    &lt;p&gt;Horizontal: adição de mais servidores com as mesmas configurações de recursos (CPU, RAM);&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;O&lt;/strong&gt;pen-Closed Principle - Princípio Aberto Fechado&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;iskov Substitution Principle - Princípio da Substituição de Liskov&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;I&lt;/strong&gt;nterface Segregation Principle - Princípio da Segregação de Interfaces&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;D&lt;/strong&gt;ependency Inversion Principle - Princípio da Inversão de Dependência&lt;/p&gt;
+    &lt;p&gt;Vertical: aumentar os recursos de cada servidor no qual a aplicação ou o sistema está sendo executado.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Os princípios foram criados pelo Uncle Bob (Robert C. Martin) e o acrônimo foi criado por Michael Feathers.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/pt_br/concurrency&quot;&gt;Documentação em portugês&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;single-responsibility-principle-srp---princípio-da-responsabilidade-única&quot;&gt;Single Responsibility Principle (SRP) - Princípio da Responsabilidade Única&lt;/h2&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;A class should do one thing and therefore it should have only a single reason to change.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/concurrency&quot;&gt;Documentação em inglês&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;“Uma classe deve fazer uma coisa e, portanto, deve ter apenas um único motivo para mudar.”&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Uma classe deve ter uma única responsabilidade, permitindo assim separar comportamentos e evitar acoplamentos.
-Isso também é aplicado para funções, métodos e módulos.&lt;/p&gt;
-
-&lt;h2 id=&quot;open-closed-principle-ocp---princípio-aberto-fechado&quot;&gt;Open-Closed Principle (OCP) - Princípio Aberto Fechado&lt;/h2&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;A module should be open for extension but closed for modification.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;em&gt;“Um módulo deve ser aberto para extensão, mas fechado para modificação.”&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Ao escrever uma funcionalidade ou comportamento novos, devemos estender, ou seja, devemos incluir ao em vez de modificar o que já existe.&lt;/p&gt;
-
-&lt;h2 id=&quot;liskov-substitution-principle-lsp---princípio-da-substituição-de-liskov&quot;&gt;Liskov Substitution Principle (LSP) - Princípio da Substituição de Liskov&lt;/h2&gt;
+&lt;h3 id=&quot;09---descartabilidade-disposability&quot;&gt;09 - Descartabilidade (&lt;em&gt;Disposability&lt;/em&gt;)&lt;/h3&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Subclasses should be substitutable for their base classes.&lt;/p&gt;
+  &lt;p&gt;Maximize robustness with fast startup and graceful shutdown&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;em&gt;“As subclasses devem ser substituíveis por suas classes básicas.”&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;“Maximize robustez com inicialização rápida e desligamento gracioso”&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Quando temos uma classe B que herda de uma classe A, esperamos que a classe B estenda os comportamentos da classe A.&lt;/p&gt;
+&lt;p&gt;Os processos devem inicializar em poucos segundos para que a aplicação esteja pronta para receber requisições. A inicialização rápida promove agilidade para os processos de releases e escalabilidade.&lt;/p&gt;
 
-&lt;h2 id=&quot;interface-segregation-principle-isp---princípio-da-segregação-de-interfaces&quot;&gt;Interface Segregation Principle (ISP) - Princípio da Segregação de Interfaces&lt;/h2&gt;
+&lt;p&gt;Quanto o desligamento gracioso quer dizer que o servidor para de receber novas requisições e finaliza o que estiver em andamento e encerrar o processo.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/pt_br/disposability&quot;&gt;Documentação em portugês&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/disposability&quot;&gt;Documentação em inglês&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;10---paridade-entre-desenvolvimento-e-produção-devprod-parity&quot;&gt;10 - Paridade entre desenvolvimento e produção (&lt;em&gt;Dev/prod parity&lt;/em&gt;)&lt;/h3&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Many client specific interfaces are better than one general purpose interface&lt;/p&gt;
+  &lt;p&gt;Keep development, staging, and production as similar as possible&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;em&gt;“Muitas interfaces específicas do cliente são melhores do que uma interface de propósito geral”&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;“Mantenha o desenvolvimento, homologação e produção o mais similares possível”&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Classes implementadas não devem serem forçadas a implementar funcionalidades que ela não precisa.&lt;/p&gt;
+&lt;p&gt;Manter os ambientes mais similares possíveis para que tenhamos o mínimo de divergências entre os ambientes de desenvolvimento, staging e produção.&lt;/p&gt;
 
-&lt;h2 id=&quot;dependency-inversion-principle-dip---princípio-da-inversão-de-dependência&quot;&gt;Dependency Inversion Principle (DIP) - Princípio da Inversão de Dependência&lt;/h2&gt;
+&lt;p&gt;Esse fator pretende diminuir as divergências em três áreas:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;versão de código: a pessoa desenvolvedora escreve o código em algumas horas e faz o deploy minutos depois;&lt;/li&gt;
+  &lt;li&gt;equipes: a equipe que está envolvida no desenvolvimento daquele código realiza e acompanha o deploy em produção;&lt;/li&gt;
+  &lt;li&gt;ferramentas: utilizar os mesmos serviços de apoio nos ambientes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/pt_br/dev-prod-parity&quot;&gt;Documentação em portugês&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/dev-prod-parity&quot;&gt;Documentação em inglês&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;11---logs-logs&quot;&gt;11 - Logs (&lt;em&gt;Logs&lt;/em&gt;)&lt;/h3&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Depend upon Abstractions. Do not depend upon concretions.&lt;/p&gt;
+  &lt;p&gt;Treat logs as event streams&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;em&gt;“Dependa de abstrações. Não dependa de concreções.”&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;“Trate logs como fluxos de eventos”&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Clases novas devem depender de interfaces ou de abstrações e não de classes concretas&lt;/p&gt;
+&lt;p&gt;Os logs nos dão visibilidade sobre o comportamento da aplicação, podemos agregar os eventos e ordernar por tempo de execução de todos os processos em execução e de serviços de apoio.&lt;/p&gt;
+
+&lt;p&gt;No ambiente de desenvolvimentos, os logs devem ser exibidos no terminal, enquanto que nos ambientes de staging e produção devemos utilizar ferramentas (como Graylog, Logentries, ELK) para nos auxiliar com a coleta e armazenamento dos logs.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/pt_br/logs&quot;&gt;Documentação em portugês&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/logs&quot;&gt;Documentação em inglês&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;12---processos-administrativos-admin-processes&quot;&gt;12 - Processos administrativos (&lt;em&gt;Admin processes&lt;/em&gt;)&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Run admin/management tasks as one-off processes&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;“Rode tarefas de administração/gestão em processos pontuais”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Processos administrativos são processos pontuais, como migrações, scripts e execuções no console, devem ser executados em ambientes idênticos e isolados de ambientes em que tarefas de processamento longo rodam.&lt;/p&gt;
+
+&lt;p&gt;Esses processos também devem ser versionados, estar dentro do processo de deploy e utilizar as mesmas configurações do ambiente.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/pt_br/admin-processes&quot;&gt;Documentação em portugês&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://12factor.net/admin-processes&quot;&gt;Documentação em inglês&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;notas&quot;&gt;Notas&lt;/h3&gt;
-&lt;p&gt;Recomendo assistir o vídeo &lt;a href=&quot;https://www.youtube.com/watch?v=6SfrO3D4dHM&quot;&gt;SOLID fica FÁCIL com Essas Ilustrações&lt;/a&gt;, do &lt;a href=&quot;https://twitter.com/FilipeDeschamps&quot;&gt;Filipe Deschamps&lt;/a&gt; em que ele explica o artigo &lt;a href=&quot;https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898&quot;&gt;The S.O.L.I.D Principles in Pictures&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.udemy.com/course/git-e-github-para-iniciantes/&quot;&gt;Curso de git e github&lt;/a&gt; - gratuito&lt;/p&gt;
 
 &lt;h2 id=&quot;referências&quot;&gt;Referências&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Artigo Free Code Camp- &lt;a href=&quot;https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/&quot;&gt;The SOLID Principles of Object-Oriented Programming Explained in Plain English&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Artigo Medium - &lt;a href=&quot;https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898&quot;&gt;The S.O.L.I.D Principles in Pictures&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Artigo Medium - &lt;a href=&quot;https://medium.com/desenvolvendo-com-paixao/o-que-%C3%A9-solid-o-guia-completo-para-voc%C3%AA-entender-os-5-princ%C3%ADpios-da-poo-2b937b3fc530&quot;&gt;O que é SOLID: O guia completo para você entender os 5 princípios da POO&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Paper - &lt;a href=&quot;https://fi.ort.edu.uy/innovaportal/file/2032/1/design_principles.pdf&quot;&gt;Design Principles and Design Patterns&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Youtube Video - &lt;a href=&quot;https://www.youtube.com/watch?v=6SfrO3D4dHM&quot;&gt;SOLID fica FÁCIL com Essas Ilustrações&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Talk - &lt;a href=&quot;https://pgrangeiro.github.io/solid-python-talk/&quot;&gt;SOLID Python - Princípios SOLID em Projetos Python&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Youtube - &lt;a href=&quot;https://youtu.be/C2VbGlOBYyw&quot;&gt;The Twelve Factor APP - Zup Insights&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Youtube - &lt;a href=&quot;https://youtu.be/Xayg7f2utgk&quot;&gt;12 Factor App (Boas práticas para criar uma aplicação SaaS) // Dicionário do Programador&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Alura - &lt;a href=&quot;https://www.alura.com.br/curso-online-the-twelve-factor-app&quot;&gt;The Twelve-Factor App: Metodologia para construção de aplicações robustas&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Medium - &lt;a href=&quot;https://medium.com/trainingcenter/twelve-factor-app-f51665af95e7&quot;&gt;Twelve Factor app - Boas práticas para microsserviços&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Obrigada por ter lido &amp;lt;3&lt;/p&gt;
 
-&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="solid" /><summary type="html"></summary></entry><entry><title type="html">Funções de Escopo do Kotlin</title><link href="http://localhost:4000/funcoes-escopo-kotlin/" rel="alternate" type="text/html" title="Funções de Escopo do Kotlin" /><published>2021-04-01T00:00:00-03:00</published><updated>2021-04-01T00:00:00-03:00</updated><id>http://localhost:4000/funcoes-escopo-kotlin</id><content type="html" xml:base="http://localhost:4000/funcoes-escopo-kotlin/">&lt;p&gt;Recentemente comecei a trabalhar em um projeto em Kotlin, e no trabalho tenho a oportunidade de aprender e a compartilhar conhecimento com meu time. Esse foi o primeiro assunto que escolhi compartilhar com eles :)&lt;/p&gt;
+&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="twelve factor app" /><category term="metodologia de aplicações doze fatores" /><summary type="html">Essas são as minhas anotações do meu estudo sobre 12 Factor App, aproveitei também para compartilhar esses conhecimentos com o meu time do trabalho :)</summary></entry><entry><title type="html">Funções de Escopo do Kotlin</title><link href="http://localhost:4000/funcoes-escopo-kotlin/" rel="alternate" type="text/html" title="Funções de Escopo do Kotlin" /><published>2021-04-01T00:00:00+02:00</published><updated>2021-04-01T00:00:00+02:00</updated><id>http://localhost:4000/funcoes-escopo-kotlin</id><content type="html" xml:base="http://localhost:4000/funcoes-escopo-kotlin/">&lt;p&gt;Recentemente comecei a trabalhar em um projeto em Kotlin, e no trabalho tenho a oportunidade de aprender e a compartilhar conhecimento com meu time. Esse foi o primeiro assunto que escolhi compartilhar com eles :)&lt;/p&gt;
 
 &lt;p&gt;Esse post é o compilado do que li e entendi &lt;del&gt;ou não&lt;/del&gt; sobre o assunto.&lt;/p&gt;
 
@@ -383,7 +572,7 @@ Isso também é aplicado para funções, métodos e módulos.&lt;/p&gt;
 
 &lt;p&gt;Obrigada por ter lido &amp;lt;3&lt;/p&gt;
 
-&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="funções de escopo" /><category term="kotlin" /><summary type="html">Recentemente comecei a trabalhar em um projeto em Kotlin, e no trabalho tenho a oportunidade de aprender e a compartilhar conhecimento com meu time. Esse foi o primeiro assunto que escolhi compartilhar com eles :)</summary></entry><entry><title type="html">Referência de objetos</title><link href="http://localhost:4000/referencia-objetos/" rel="alternate" type="text/html" title="Referência de objetos" /><published>2019-11-23T00:00:00-03:00</published><updated>2019-11-23T00:00:00-03:00</updated><id>http://localhost:4000/referencia-objetos</id><content type="html" xml:base="http://localhost:4000/referencia-objetos/">&lt;p&gt;Já aconteceu de você ter duas variáveis com os mesmos valores e alterar uma variável a outra também é alterada?&lt;/p&gt;
+&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="funções de escopo" /><category term="kotlin" /><summary type="html">Recentemente comecei a trabalhar em um projeto em Kotlin, e no trabalho tenho a oportunidade de aprender e a compartilhar conhecimento com meu time. Esse foi o primeiro assunto que escolhi compartilhar com eles :)</summary></entry><entry><title type="html">Referência de objetos</title><link href="http://localhost:4000/referencia-objetos/" rel="alternate" type="text/html" title="Referência de objetos" /><published>2019-11-23T00:00:00+01:00</published><updated>2019-11-23T00:00:00+01:00</updated><id>http://localhost:4000/referencia-objetos</id><content type="html" xml:base="http://localhost:4000/referencia-objetos/">&lt;p&gt;Já aconteceu de você ter duas variáveis com os mesmos valores e alterar uma variável a outra também é alterada?&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -549,7 +738,7 @@ print(id(lista_2[2]))
 
 &lt;p&gt;Obrigada por ter lido &amp;lt;3&lt;/p&gt;
 
-&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="variável" /><category term="memória" /><category term="referência de objetos" /><summary type="html">Já aconteceu de você ter duas variáveis com os mesmos valores e alterar uma variável a outra também é alterada?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/lista.jpg" /></entry><entry><title type="html">Entendendo map, filter, reduce e lambda</title><link href="http://localhost:4000/entendendo-map-filter-reduce-lambda/" rel="alternate" type="text/html" title="Entendendo map, filter, reduce e lambda" /><published>2019-09-29T00:00:00-03:00</published><updated>2019-09-29T00:00:00-03:00</updated><id>http://localhost:4000/entendendo-map-filter-reduce-lambda</id><content type="html" xml:base="http://localhost:4000/entendendo-map-filter-reduce-lambda/">&lt;p&gt;Antes de falar sobre map, filter e reduce, precisamos entender sobre &lt;strong&gt;função de ordem superior&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="variável" /><category term="memória" /><category term="referência de objetos" /><summary type="html">Já aconteceu de você ter duas variáveis com os mesmos valores e alterar uma variável a outra também é alterada?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/lista.jpg" /></entry><entry><title type="html">Entendendo map, filter, reduce e lambda</title><link href="http://localhost:4000/entendendo-map-filter-reduce-lambda/" rel="alternate" type="text/html" title="Entendendo map, filter, reduce e lambda" /><published>2019-09-29T00:00:00+02:00</published><updated>2019-09-29T00:00:00+02:00</updated><id>http://localhost:4000/entendendo-map-filter-reduce-lambda</id><content type="html" xml:base="http://localhost:4000/entendendo-map-filter-reduce-lambda/">&lt;p&gt;Antes de falar sobre map, filter e reduce, precisamos entender sobre &lt;strong&gt;função de ordem superior&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -649,7 +838,7 @@ print(id(lista_2[2]))
 
 &lt;p&gt;Obrigada por ter lido &amp;lt;3&lt;/p&gt;
 
-&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="python" /><category term="map" /><category term="filter" /><category term="reduce" /><category term="lambda" /><category term="list comprehension" /><summary type="html">Antes de falar sobre map, filter e reduce, precisamos entender sobre função de ordem superior.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/lambda-icon.png" /></entry><entry><title type="html">Configurando o Atom para programar em Python</title><link href="http://localhost:4000/configurando-atom/" rel="alternate" type="text/html" title="Configurando o Atom para programar em Python" /><published>2019-09-22T00:00:00-03:00</published><updated>2019-09-22T00:00:00-03:00</updated><id>http://localhost:4000/configurando-atom</id><content type="html" xml:base="http://localhost:4000/configurando-atom/">&lt;p&gt;Editor bom é aquele que você se sente mais produtiva para programar&lt;/p&gt;
+&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="python" /><category term="map" /><category term="filter" /><category term="reduce" /><category term="lambda" /><category term="list comprehension" /><summary type="html">Antes de falar sobre map, filter e reduce, precisamos entender sobre função de ordem superior.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/lambda-icon.png" /></entry><entry><title type="html">Configurando o Atom para programar em Python</title><link href="http://localhost:4000/configurando-atom/" rel="alternate" type="text/html" title="Configurando o Atom para programar em Python" /><published>2019-09-22T00:00:00+02:00</published><updated>2019-09-22T00:00:00+02:00</updated><id>http://localhost:4000/configurando-atom</id><content type="html" xml:base="http://localhost:4000/configurando-atom/">&lt;p&gt;Editor bom é aquele que você se sente mais produtiva para programar&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -712,7 +901,7 @@ print(id(lista_2[2]))
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/isort.gif&quot; alt=&quot;&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;deixa os imports na ordem certa&lt;/p&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="atom" /><category term="ide" /><category term="python" /><category term="plugin" /><summary type="html">Editor bom é aquele que você se sente mais produtiva para programar</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/atom.png" /></entry><entry><title type="html">Visualizando query SQL a partir do ORM Django</title><link href="http://localhost:4000/visualizando-query-sql-a-partir-do-orm-django/" rel="alternate" type="text/html" title="Visualizando query SQL a partir do ORM Django" /><published>2019-02-27T22:58:00-03:00</published><updated>2019-02-27T22:58:00-03:00</updated><id>http://localhost:4000/visualizando-query-sql-a-partir-do-orm-django</id><content type="html" xml:base="http://localhost:4000/visualizando-query-sql-a-partir-do-orm-django/">&lt;p&gt;Falei sobre esse assunto na palestra que fiz na TDC 2017 (The Developer’s Conference) e vou mostrar como visualizar query SQL do ORM do Django.&lt;/p&gt;
+&lt;p&gt;deixa os imports na ordem certa&lt;/p&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="atom" /><category term="ide" /><category term="python" /><category term="plugin" /><summary type="html">Editor bom é aquele que você se sente mais produtiva para programar</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/atom.png" /></entry><entry><title type="html">Visualizando query SQL a partir do ORM Django</title><link href="http://localhost:4000/visualizando-query-sql-a-partir-do-orm-django/" rel="alternate" type="text/html" title="Visualizando query SQL a partir do ORM Django" /><published>2019-02-27T22:58:00+01:00</published><updated>2019-02-27T22:58:00+01:00</updated><id>http://localhost:4000/visualizando-query-sql-a-partir-do-orm-django</id><content type="html" xml:base="http://localhost:4000/visualizando-query-sql-a-partir-do-orm-django/">&lt;p&gt;Falei sobre esse assunto na palestra que fiz na TDC 2017 (The Developer’s Conference) e vou mostrar como visualizar query SQL do ORM do Django.&lt;/p&gt;
 
 &lt;p&gt;Um dos motivos para falar sobre esse assunto foi a dificuldade que tive para entender como funcionava a ORM do Django. Em uma das minhas primeiras experiências com Django precisei gerar um relatório e como já tinha trabalhado com SQL resolvi fazer com SQL mesmo e posteriormente e passaria a query pra ORM pra entender. Uma maneira simples para o meu entendimento foi associar o que eu sabia de SQL para entender o ORM.&lt;/p&gt;
 
@@ -747,7 +936,7 @@ class Produto(models.Model):
         blank=True,
         null=True
     )
-    categoria = models.ForeignKey(Categoria)
+    categoria = models.ForeignKey(Categoria, models.SET_NULL, null=True)
 &lt;/pre&gt;&lt;/noscript&gt;
 &lt;script src=&quot;https://gist.github.com/beatrizuezu/5ec77ef4799a3d1b5e8a178e5d9fa6de.js&quot;&gt; &lt;/script&gt;
 
@@ -1233,7 +1422,7 @@ LOGGING = {
 
 &lt;p&gt;Obrigada ❤&lt;/p&gt;
 
-&lt;p&gt;esse post foi originalmente escrito no &lt;a href=&quot;https://medium.com/@beatrizuezu/visualizando-query-sql-a-partir-do-orm-django-5771370a9c55&quot;&gt;Medium&lt;/a&gt; no dia 07/08/2017&lt;/p&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="django" /><category term="orm" /><category term="sql" /><summary type="html">Falei sobre esse assunto na palestra que fiz na TDC 2017 (The Developer’s Conference) e vou mostrar como visualizar query SQL do ORM do Django.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/relacao-tabela-vs-classes.png" /></entry><entry><title type="html">PyLadies &amp;amp; Django Girls: do medo ao incentivo</title><link href="http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo/" rel="alternate" type="text/html" title="PyLadies &amp; Django Girls: do medo ao incentivo" /><published>2018-03-16T22:44:00-03:00</published><updated>2018-03-16T22:44:00-03:00</updated><id>http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo</id><content type="html" xml:base="http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo/">&lt;p&gt;Na época que fazia faculdade gostava de mexer com HTML e CSS até que eu cheguei a estagiar como Front-End. Chegou um momento do estágio que eu não me via naquilo e queria entrar na área de Banco de dados e Big Data. Como eu gostava de ler sobre o tema de Big Data ouvia falar sobre as linguagens Python e Java. Porém tinha dificuldade em programar e achava difícil, só queria entrar em Banco de Dados e Big Data porque não iria programar. (Sabe de nada, inocente).&lt;/p&gt;
+&lt;p&gt;esse post foi originalmente escrito no &lt;a href=&quot;https://medium.com/@beatrizuezu/visualizando-query-sql-a-partir-do-orm-django-5771370a9c55&quot;&gt;Medium&lt;/a&gt; no dia 07/08/2017&lt;/p&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="django" /><category term="orm" /><category term="sql" /><summary type="html">Falei sobre esse assunto na palestra que fiz na TDC 2017 (The Developer’s Conference) e vou mostrar como visualizar query SQL do ORM do Django.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/relacao-tabela-vs-classes.png" /></entry><entry><title type="html">PyLadies &amp;amp; Django Girls: do medo ao incentivo</title><link href="http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo/" rel="alternate" type="text/html" title="PyLadies &amp; Django Girls: do medo ao incentivo" /><published>2018-03-16T22:44:00+01:00</published><updated>2018-03-16T22:44:00+01:00</updated><id>http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo</id><content type="html" xml:base="http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo/">&lt;p&gt;Na época que fazia faculdade gostava de mexer com HTML e CSS até que eu cheguei a estagiar como Front-End. Chegou um momento do estágio que eu não me via naquilo e queria entrar na área de Banco de dados e Big Data. Como eu gostava de ler sobre o tema de Big Data ouvia falar sobre as linguagens Python e Java. Porém tinha dificuldade em programar e achava difícil, só queria entrar em Banco de Dados e Big Data porque não iria programar. (Sabe de nada, inocente).&lt;/p&gt;
 
 &lt;p&gt;Foi aí que eu decidi a procurar vagas de Banco de Dados e até que comecei a trabalhar com desenvolvimento de software com a linguagem VB.net e SQL Server. Tive medo de ser demitida nos primeiros meses por não saber a programar, achava que precisava documentar tudo e fiquei surpresa por terem me colocado em um projeto em menos de 3 meses. Corri atrás de cursos de orientação a objetos para entender melhor o código.&lt;/p&gt;
 

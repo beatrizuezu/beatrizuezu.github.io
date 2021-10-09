@@ -61,14 +61,17 @@ Some kubernetes studies notes 🎉
   - Configmap
   - HorizontalPodAutoscaler
   - Service
-  - Ingres
+  - Ingress
   - ...
 - Pods: the smallest unit in Kubernetes, you can run one or more containers. Each pod contains an internal IP, it runs the application in the container and it can has or not a volume. Volume is a pre-existing data structure to use in the pod to share files or to use a temporary files.
-    ![Pods](/assets/images/k8s-pods.png){: .center-image }
+![Pods](/assets/images/k8s-pods.png){: .center-image }
 - Labels: as “nametags” to identify things, it can be used to query based on the labels.
 - Deployments: deployments manages and adds "intelligence" to pods, and it can group pods by an label. Also, you can define the number of replicas inside of the deployment
-    ![Deployment](/assets/images/k8s-deployment.png){: .center-image }
-    ![Deployment](/assets/images/k8s-deployment-file-example.png){: .center-image }
+  
+![Deployment](/assets/images/k8s-deployment.png){: .center-image }
+
+![Deployment File example](/assets/images/k8s-deployment-file-example.png){: .center-image }
+
 - Replicaset: it created by a deployment. It manage the number of replicas inside of the cluster. Each one contains a different image version, it is able to create versions of images. It always keep the desired number state.
 
 - Replication Controllers: responsible to manage the numbers of pods, pods' lifecycle, scaling up and down, rolling deployments, and monitoring.
@@ -81,11 +84,11 @@ Some kubernetes studies notes 🎉
 
 
 #### Sources:
-Post - [The Illustrated Children’s Guide to Kubernetes](https://www.cncf.io/phippy/the-childrens-illustrated-guide-to-kubernetes/)
-Youtube Video - [The Illustrated Children's Guide to Kubernetes](https://www.youtube.com/watch?v=4ht22ReBjno)
-Course - [Introduction to Kubernetes](https://www.edx.org/course/introduction-to-kubernetes)
-GitHub - [Descomplicando Kuberntes](https://github.com/badtuxx/DescomplicandoKubernetes)
-Bootcamp - [Maratona AKS: Tudo sobre Kubernetes de A a Z](https://channel9.msdn.com/Series/AKS-Bootcamp-From-zero-to-container-hero)
-Youtube Video - [Kubernetes Tutorial for Beginners - FULL COURSE in 4 Hours](https://youtu.be/X48VuDVv0do) 
+- Post - [The Illustrated Children’s Guide to Kubernetes](https://www.cncf.io/phippy/the-childrens-illustrated-guide-to-kubernetes/)
+- Youtube Video - [The Illustrated Children's Guide to Kubernetes](https://www.youtube.com/watch?v=4ht22ReBjno)
+- Course - [Introduction to Kubernetes](https://www.edx.org/course/introduction-to-kubernetes)
+- GitHub - [Descomplicando Kuberntes](https://github.com/badtuxx/DescomplicandoKubernetes)
+- Bootcamp - [Maratona AKS: Tudo sobre Kubernetes de A a Z](https://channel9.msdn.com/Series/AKS-Bootcamp-From-zero-to-container-hero)
+- Youtube Video - [Kubernetes Tutorial for Beginners - FULL COURSE in 4 Hours](https://youtu.be/X48VuDVv0do) 
 
 ---

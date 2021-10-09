@@ -1,4 +1,97 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-09T19:16:55+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Beatriz Uezu Page</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Kubernetes Notes - Introduction - Part 1</title><link href="http://localhost:4000/kubernetes-notes/" rel="alternate" type="text/html" title="Kubernetes Notes - Introduction - Part 1" /><published>2021-10-05T00:00:00+02:00</published><updated>2021-10-05T00:00:00+02:00</updated><id>http://localhost:4000/kubernetes-notes</id><content type="html" xml:base="http://localhost:4000/kubernetes-notes/">&lt;p&gt;Some kubernetes studies notes 🎉&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-09T19:27:48+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Beatriz Uezu Page</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Anotações sobre Princípios SOLID</title><link href="http://localhost:4000/solid/" rel="alternate" type="text/html" title="Anotações sobre Princípios SOLID" /><published>2021-10-09T00:00:00+02:00</published><updated>2021-10-09T00:00:00+02:00</updated><id>http://localhost:4000/solid</id><content type="html" xml:base="http://localhost:4000/solid/">&lt;p&gt;Anotações sobre SOLID&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;o-que-é-solid&quot;&gt;O que é SOLID?&lt;/h2&gt;
+
+&lt;p&gt;SOLID é uma sigla em inglês para cinco princícios da programação orientada a objetos.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;S&lt;/strong&gt;ingle Responsability Principle - Princípio da Responsabilidade Única&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;O&lt;/strong&gt;pen-Closed Principle - Princípio Aberto Fechado&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;L&lt;/strong&gt;iskov Substitution Principle - Princípio da Substituição de Liskov&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;I&lt;/strong&gt;nterface Segregation Principle - Princípio da Segregação de Interfaces&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;D&lt;/strong&gt;ependency Inversion Principle - Princípio da Inversão de Dependência&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Os princípios foram criados pelo Uncle Bob (Robert C. Martin) e o acrônimo foi criado por Michael Feathers.&lt;/p&gt;
+
+&lt;h2 id=&quot;single-responsibility-principle-srp---princípio-da-responsabilidade-única&quot;&gt;Single Responsibility Principle (SRP) - Princípio da Responsabilidade Única&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;A class should do one thing and therefore it should have only a single reason to change.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;“Uma classe deve fazer uma coisa e, portanto, deve ter apenas um único motivo para mudar.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Uma classe deve ter uma única responsabilidade, permitindo assim separar comportamentos e evitar acoplamentos.
+Isso também é aplicado para funções, métodos e módulos.&lt;/p&gt;
+
+&lt;h2 id=&quot;open-closed-principle-ocp---princípio-aberto-fechado&quot;&gt;Open-Closed Principle (OCP) - Princípio Aberto Fechado&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;A module should be open for extension but closed for modification.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;“Um módulo deve ser aberto para extensão, mas fechado para modificação.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Ao escrever uma funcionalidade ou comportamento novos, devemos estender, ou seja, devemos incluir ao em vez de modificar o que já existe.&lt;/p&gt;
+
+&lt;h2 id=&quot;liskov-substitution-principle-lsp---princípio-da-substituição-de-liskov&quot;&gt;Liskov Substitution Principle (LSP) - Princípio da Substituição de Liskov&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Subclasses should be substitutable for their base classes.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;“As subclasses devem ser substituíveis por suas classes básicas.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Quando temos uma classe B que herda de uma classe A, esperamos que a classe B estenda os comportamentos da classe A.&lt;/p&gt;
+
+&lt;h2 id=&quot;interface-segregation-principle-isp---princípio-da-segregação-de-interfaces&quot;&gt;Interface Segregation Principle (ISP) - Princípio da Segregação de Interfaces&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Many client specific interfaces are better than one general purpose interface&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;“Muitas interfaces específicas do cliente são melhores do que uma interface de propósito geral”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Classes implementadas não devem serem forçadas a implementar funcionalidades que ela não precisa.&lt;/p&gt;
+
+&lt;h2 id=&quot;dependency-inversion-principle-dip---princípio-da-inversão-de-dependência&quot;&gt;Dependency Inversion Principle (DIP) - Princípio da Inversão de Dependência&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Depend upon Abstractions. Do not depend upon concretions.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;“Dependa de abstrações. Não dependa de concreções.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Clases novas devem depender de interfaces ou de abstrações e não de classes concretas&lt;/p&gt;
+
+&lt;h3 id=&quot;notas&quot;&gt;Notas&lt;/h3&gt;
+&lt;p&gt;Recomendo assistir o vídeo &lt;a href=&quot;https://www.youtube.com/watch?v=6SfrO3D4dHM&quot;&gt;SOLID fica FÁCIL com Essas Ilustrações&lt;/a&gt;, do &lt;a href=&quot;https://twitter.com/FilipeDeschamps&quot;&gt;Filipe Deschamps&lt;/a&gt; em que ele explica o artigo &lt;a href=&quot;https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898&quot;&gt;The S.O.L.I.D Principles in Pictures&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;referências&quot;&gt;Referências&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Artigo Free Code Camp- &lt;a href=&quot;https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/&quot;&gt;The SOLID Principles of Object-Oriented Programming Explained in Plain English&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Artigo Medium - &lt;a href=&quot;https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898&quot;&gt;The S.O.L.I.D Principles in Pictures&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Artigo Medium - &lt;a href=&quot;https://medium.com/desenvolvendo-com-paixao/o-que-%C3%A9-solid-o-guia-completo-para-voc%C3%AA-entender-os-5-princ%C3%ADpios-da-poo-2b937b3fc530&quot;&gt;O que é SOLID: O guia completo para você entender os 5 princípios da POO&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Paper - &lt;a href=&quot;https://fi.ort.edu.uy/innovaportal/file/2032/1/design_principles.pdf&quot;&gt;Design Principles and Design Patterns&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Youtube Video - &lt;a href=&quot;https://www.youtube.com/watch?v=6SfrO3D4dHM&quot;&gt;SOLID fica FÁCIL com Essas Ilustrações&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Talk - &lt;a href=&quot;https://pgrangeiro.github.io/solid-python-talk/&quot;&gt;SOLID Python - Princípios SOLID em Projetos Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Obrigada por ter lido &amp;lt;3&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="solid" /><category term="orientação a objetos" /><summary type="html">Anotações sobre SOLID</summary></entry><entry><title type="html">Kubernetes Notes - Introduction - Part 1</title><link href="http://localhost:4000/kubernetes-notes/" rel="alternate" type="text/html" title="Kubernetes Notes - Introduction - Part 1" /><published>2021-10-05T00:00:00+02:00</published><updated>2021-10-05T00:00:00+02:00</updated><id>http://localhost:4000/kubernetes-notes</id><content type="html" xml:base="http://localhost:4000/kubernetes-notes/">&lt;p&gt;Some kubernetes studies notes 🎉&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;h1 id=&quot;kubernetes&quot;&gt;Kubernetes&lt;/h1&gt;
@@ -219,7 +312,7 @@
 
 &lt;h4 id=&quot;lançamento-release&quot;&gt;Lançamento (&lt;em&gt;Release&lt;/em&gt;)&lt;/h4&gt;
 
-&lt;p&gt;O estágio de release é a combinação do build com as configurações de ambiente em que será feita o deploy.É muito comum termos versões de release com um identificador único, pode ser utilizado um número incremental (como &lt;code class=&quot;highlighter-rouge&quot;&gt;v123&lt;/code&gt;), &lt;a href=&quot;https://semver.org/lang/pt-BR/&quot;&gt;versionamento semântico&lt;/a&gt; ( como &lt;code class=&quot;highlighter-rouge&quot;&gt;2.1.1&lt;/code&gt;) ou por data e hora (como &lt;code class=&quot;highlighter-rouge&quot;&gt;202106052230&lt;/code&gt;), assim caso precise fazer a reversão da versão anterior, também conhecido como &lt;em&gt;rollback&lt;/em&gt;, fique fácil de identificar o release.&lt;/p&gt;
+&lt;p&gt;O estágio de release é a combinação do build com as configurações de ambiente em que será feita o deploy.É muito comum termos versões de release com um identificador único, pode ser utilizado um número incremental (como &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v123&lt;/code&gt;), &lt;a href=&quot;https://semver.org/lang/pt-BR/&quot;&gt;versionamento semântico&lt;/a&gt; ( como &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2.1.1&lt;/code&gt;) ou por data e hora (como &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;202106052230&lt;/code&gt;), assim caso precise fazer a reversão da versão anterior, também conhecido como &lt;em&gt;rollback&lt;/em&gt;, fique fácil de identificar o release.&lt;/p&gt;
 
 &lt;h4 id=&quot;execução-run&quot;&gt;Execução (&lt;em&gt;Run&lt;/em&gt;)&lt;/h4&gt;
 
@@ -379,214 +472,214 @@
 
 &lt;h2 id=&quot;o-que-são-funções-de-escopo-scope-functions&quot;&gt;O que são Funções de Escopo (Scope Functions)?&lt;/h2&gt;
 
-&lt;p&gt;São funções da biblioteca padrão do Kotlin cujo o objetivo é executar um bloco de código dentro de um escopo/contexto de um objeto que podem ou não ter um valor de retorno. São cinco funções: &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;run&lt;/code&gt; ,  &lt;code class=&quot;highlighter-rouge&quot;&gt;with&lt;/code&gt; , &lt;code class=&quot;highlighter-rouge&quot;&gt;apply&lt;/code&gt; e &lt;code class=&quot;highlighter-rouge&quot;&gt;also&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;São funções da biblioteca padrão do Kotlin cujo o objetivo é executar um bloco de código dentro de um escopo/contexto de um objeto que podem ou não ter um valor de retorno. São cinco funções: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run&lt;/code&gt; ,  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;with&lt;/code&gt; , &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apply&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;also&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Para começar vamos utilizar a classe &lt;code class=&quot;highlighter-rouge&quot;&gt;Product&lt;/code&gt; como exemplo:&lt;/p&gt;
+&lt;p&gt;Para começar vamos utilizar a classe &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Product&lt;/code&gt; como exemplo:&lt;/p&gt;
 
 &lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;data class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;isActive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Boolean&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;isActive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Boolean&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;isActive&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;false&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;product&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Smarthphone&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;999.99&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;product&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Smarthphone&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;999.99&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Quando queremos mudar os atributo de &lt;code class=&quot;highlighter-rouge&quot;&gt;product&lt;/code&gt; fazemos isso:&lt;/p&gt;
+&lt;p&gt;Quando queremos mudar os atributo de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;product&lt;/code&gt; fazemos isso:&lt;/p&gt;
 
 &lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Smarthpone Bonitono&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;00&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deativate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1_000.00&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;deativate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Com as funções de escopo também é possível mudar os atributos e deixar o código mais com o estilo do Kotlin.&lt;/p&gt;
 
 &lt;h2 id=&quot;let&quot;&gt;Let&lt;/h2&gt;
 
-&lt;p&gt;Podemos utilizar o &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; para alterar os atributos de &lt;code class=&quot;highlighter-rouge&quot;&gt;product&lt;/code&gt; e usamos o &lt;code class=&quot;highlighter-rouge&quot;&gt;it&lt;/code&gt; para referenciar o &lt;code class=&quot;highlighter-rouge&quot;&gt;product&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Podemos utilizar o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let&lt;/code&gt; para alterar os atributos de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;product&lt;/code&gt; e usamos o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;it&lt;/code&gt; para referenciar o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;product&lt;/code&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Smarthpone Bonitono&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;00&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1_000.00&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;É possível trocar o &lt;code class=&quot;highlighter-rouge&quot;&gt;it&lt;/code&gt; para qualquer outra variável para referenciar o product:&lt;/p&gt;
+&lt;p&gt;É possível trocar o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;it&lt;/code&gt; para qualquer outra variável para referenciar o product:&lt;/p&gt;
 
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;att&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&amp;gt;&lt;/span&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;att&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;att&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Smarthpone Bonitono&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;att&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;00&lt;/span&gt;  
-    &lt;span class=&quot;n&quot;&gt;att&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;      
+    &lt;span class=&quot;n&quot;&gt;att&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1_000.00&lt;/span&gt;  
+    &lt;span class=&quot;n&quot;&gt;att&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;      
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//  Product(title=Smarthpone Bonitono, price=1000.0, isActive=false)
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//  Product(title=Smarthpone Bonitono, price=1000.0, isActive=false)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Logo, os atributos de &lt;code class=&quot;highlighter-rouge&quot;&gt;product&lt;/code&gt; foram modificados com &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Logo, os atributos de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;product&lt;/code&gt; foram modificados com &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Agora vamos entender o valor de retorno do &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Agora vamos entender o valor de retorno do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Smarthpone Bonitono&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;00&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1_000.00&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//  kotlin.Unit
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//  kotlin.Unit&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Ao imprimir a variável &lt;code class=&quot;highlighter-rouge&quot;&gt;result&lt;/code&gt; o retorno é um &lt;a href=&quot;https://kotlinlang.org/docs/functions.html#unit-returning-functions&quot;&gt;kotlin.Unit&lt;/a&gt; significa que o retorno é um valor não útil. Portanto, concluímos que o &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; não retorna um valor.&lt;/p&gt;
+&lt;p&gt;Ao imprimir a variável &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;result&lt;/code&gt; o retorno é um &lt;a href=&quot;https://kotlinlang.org/docs/functions.html#unit-returning-functions&quot;&gt;kotlin.Unit&lt;/a&gt; significa que o retorno é um valor não útil. Portanto, concluímos que o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let&lt;/code&gt; não retorna um valor.&lt;/p&gt;
 
-&lt;p&gt;Podemos utilizar o &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; quando invocamos uma ou mais funções em resultados de chamadas encadeadas:&lt;/p&gt;
+&lt;p&gt;Podemos utilizar o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let&lt;/code&gt; quando invocamos uma ou mais funções em resultados de chamadas encadeadas:&lt;/p&gt;
 
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mutableListOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;one&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;two&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;three&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;four&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;five&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;mutableListOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;one&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;two&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;three&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;four&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;five&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Se dentro do bloco de código do &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; tiver apenas uma função com o argumento &lt;code class=&quot;highlighter-rouge&quot;&gt;it&lt;/code&gt;, podemos escrever o escopo da função &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; como:&lt;/p&gt;
+&lt;p&gt;Se dentro do bloco de código do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let&lt;/code&gt; tiver apenas uma função com o argumento &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;it&lt;/code&gt;, podemos escrever o escopo da função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let&lt;/code&gt; como:&lt;/p&gt;
 
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;let&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;let&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;run&quot;&gt;Run&lt;/h2&gt;
 
-&lt;p&gt;Também é possível utilizar o &lt;code class=&quot;highlighter-rouge&quot;&gt;run&lt;/code&gt; para mudar os atributos de &lt;code class=&quot;highlighter-rouge&quot;&gt;product&lt;/code&gt; e utilizamos o &lt;code class=&quot;highlighter-rouge&quot;&gt;this&lt;/code&gt; para referenciar o escopo do objeto:&lt;/p&gt;
+&lt;p&gt;Também é possível utilizar o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run&lt;/code&gt; para mudar os atributos de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;product&lt;/code&gt; e utilizamos o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;this&lt;/code&gt; para referenciar o escopo do objeto:&lt;/p&gt;
 
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;product&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Smarthphone&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;999.99&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;product&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Smarthphone&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;999.99&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Smarthpone Bonitono&quot;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;700.00&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;700.00&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;O uso do &lt;code class=&quot;highlighter-rouge&quot;&gt;this&lt;/code&gt; é opcional, e também deixa o código redundante, portanto podemos escrever dessa forma:&lt;/p&gt;
+&lt;p&gt;O uso do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;this&lt;/code&gt; é opcional, e também deixa o código redundante, portanto podemos escrever dessa forma:&lt;/p&gt;
 
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Smarthpone Bonitono&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;700.00&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;700.00&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Vamos entender o retorno do &lt;code class=&quot;highlighter-rouge&quot;&gt;run&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Vamos entender o retorno do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Smarthpone Bonitono&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;700.00&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;700.00&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//kotlin.Unit
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//kotlin.Unit&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Ao imprimir a variável &lt;code class=&quot;highlighter-rouge&quot;&gt;result&lt;/code&gt; o retorno é um &lt;code class=&quot;highlighter-rouge&quot;&gt;[kotlin.Unit&lt;/code&gt;,](https://kotlinlang.org/docs/functions.html#unit-returning-functions) significa que o retorno é um valor não útil. Portanto, concluímos que o &lt;code class=&quot;highlighter-rouge&quot;&gt;run&lt;/code&gt; não retorna um valor.&lt;/p&gt;
+&lt;p&gt;Ao imprimir a variável &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;result&lt;/code&gt; o retorno é um &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[kotlin.Unit&lt;/code&gt;,](https://kotlinlang.org/docs/functions.html#unit-returning-functions) significa que o retorno é um valor não útil. Portanto, concluímos que o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run&lt;/code&gt; não retorna um valor.&lt;/p&gt;
 
-&lt;p&gt;Podemos utilizar o &lt;code class=&quot;highlighter-rouge&quot;&gt;run&lt;/code&gt; para executar operações sobre um objeto e obter um resultado dentro de um escopo.&lt;/p&gt;
+&lt;p&gt;Podemos utilizar o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run&lt;/code&gt; para executar operações sobre um objeto e obter um resultado dentro de um escopo.&lt;/p&gt;
 
 &lt;h2 id=&quot;with&quot;&gt;With&lt;/h2&gt;
 
-&lt;p&gt;Utilizamos o &lt;code class=&quot;highlighter-rouge&quot;&gt;with&lt;/code&gt; para executar funções no objeto dentro de um contexto. Podemos ler como “&lt;em&gt;com esse objeto, faça&lt;/em&gt;”&lt;/p&gt;
+&lt;p&gt;Utilizamos o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;with&lt;/code&gt; para executar funções no objeto dentro de um contexto. Podemos ler como “&lt;em&gt;com esse objeto, faça&lt;/em&gt;”&lt;/p&gt;
 
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;product&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Smarthphone&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;999.99&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;product&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Smarthphone&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;999.99&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;produto desativado&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;produto desativado&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// produto desativado
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;span class=&quot;c1&quot;&gt;// produto desativado&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;O valor de retorno do &lt;code class=&quot;highlighter-rouge&quot;&gt;with&lt;/code&gt; é um &lt;code class=&quot;highlighter-rouge&quot;&gt;kotlin.Unit&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;O valor de retorno do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;with&lt;/code&gt; é um &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;kotlin.Unit&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;produto desativado&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;produto desativado&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;c1&quot;&gt;// produto desativado
-// kotlin.Unit
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;span class=&quot;c1&quot;&gt;// produto desativado&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// kotlin.Unit&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;apply&quot;&gt;Apply&lt;/h2&gt;
 
-&lt;p&gt;Podemos utilizar o &lt;code class=&quot;highlighter-rouge&quot;&gt;apply&lt;/code&gt; para alterar os atributos de &lt;code class=&quot;highlighter-rouge&quot;&gt;product&lt;/code&gt;, utilizamos o &lt;code class=&quot;highlighter-rouge&quot;&gt;this&lt;/code&gt; para referenciar o escopo do objeto. Podemos ler “&lt;em&gt;aplique as seguintes atribuições ao objeto&lt;/em&gt;”&lt;/p&gt;
+&lt;p&gt;Podemos utilizar o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apply&lt;/code&gt; para alterar os atributos de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;product&lt;/code&gt;, utilizamos o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;this&lt;/code&gt; para referenciar o escopo do objeto. Podemos ler “&lt;em&gt;aplique as seguintes atribuições ao objeto&lt;/em&gt;”&lt;/p&gt;
 
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;product&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Smarthphone&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;999.99&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;product&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Smarthphone&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;999.99&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apply&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;apply&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Smarthpone Bonitono&quot;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;00&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1_000.00&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;O uso do &lt;code class=&quot;highlighter-rouge&quot;&gt;this&lt;/code&gt; é opcional e também deixa o código redundante, portanto podemos escrever dessa forma:&lt;/p&gt;
+&lt;p&gt;O uso do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;this&lt;/code&gt; é opcional e também deixa o código redundante, portanto podemos escrever dessa forma:&lt;/p&gt;
 
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apply&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;apply&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Smarthpone Bonitono&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;00&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1_000.00&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;O valor de retorno do &lt;code class=&quot;highlighter-rouge&quot;&gt;apply&lt;/code&gt; é o próprio objeto, podemos imprimir a variável &lt;code class=&quot;highlighter-rouge&quot;&gt;result&lt;/code&gt; para entender isso:&lt;/p&gt;
+&lt;p&gt;O valor de retorno do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apply&lt;/code&gt; é o próprio objeto, podemos imprimir a variável &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;result&lt;/code&gt; para entender isso:&lt;/p&gt;
 
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apply&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;apply&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Smarthpone Bonitono&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;00&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1_000.00&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;c1&quot;&gt;// Product(title=Smarthpone Bonitono, price=1000.0, isActive=true)
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;span class=&quot;c1&quot;&gt;// Product(title=Smarthpone Bonitono, price=1000.0, isActive=true)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;also&quot;&gt;Also&lt;/h2&gt;
 
-&lt;p&gt;Usamos o &lt;code class=&quot;highlighter-rouge&quot;&gt;also&lt;/code&gt; para ações que utilizam o objeto do contexto como argumento ou quando precisamos de uma referência ao invés das propriedades e funções. Podemos ler como: “&lt;em&gt;e também faça com o objeto”.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Usamos o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;also&lt;/code&gt; para ações que utilizam o objeto do contexto como argumento ou quando precisamos de uma referência ao invés das propriedades e funções. Podemos ler como: “&lt;em&gt;e também faça com o objeto”.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Para referenciar o objeto dentro do escopo utilizamos o &lt;code class=&quot;highlighter-rouge&quot;&gt;it&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Para referenciar o objeto dentro do escopo utilizamos o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;it&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;product&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Smarthphone&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;999.99&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;product&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Smarthphone&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;999.99&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apply&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;apply&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Smarthpone Bonitono&quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;700.00&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;also&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Promoção do Produto $it&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;700.00&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;deactivate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;also&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Promoção do Produto $it&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;c1&quot;&gt;// Promoção do Produto Product(title=Smarthpone Bonitono, price=700.0, isActive=false)
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;span class=&quot;c1&quot;&gt;// Promoção do Produto Product(title=Smarthpone Bonitono, price=700.0, isActive=false)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;objeto-nulos&quot;&gt;Objeto nulos&lt;/h2&gt;
 
 &lt;p&gt;Quando tivermos um objeto que possa ser nulo, as funções de escopo garantem que a função será chamada apenas se o objeto for não nulo:&lt;/p&gt;
 
-&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;product2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// O ? permite que a variável seja nula
-&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;product2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;product2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// O ? permite que a variável seja nula&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;product2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;tv&quot;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100.00&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;100.00&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isActive&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;false&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;product2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//  null
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;product2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//  null&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;resumo&quot;&gt;Resumo&lt;/h2&gt;
 
@@ -603,31 +696,31 @@
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Let&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Unit/Lambda*&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;it&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;it&lt;/code&gt;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Funções com chamadas encadeadas e checagem de objetos nulos&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Run&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Unit/Lambda*&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;this&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;this&lt;/code&gt;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Inicialização do objeto e o cálculo do valor de retorno&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;With&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Unit/Lambda*&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;this&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;this&lt;/code&gt;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Executar funções no objeto dentro de um contexto.&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Apply&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Objeto&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;this&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;this&lt;/code&gt;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Inicializar e configurar um objeto&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Also&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Objeto&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;it&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;it&lt;/code&gt;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Ações adicionais que não alteram o objeto&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -711,9 +804,9 @@ id(&amp;#39;beatriz&amp;#39;)
 &lt;p&gt;&lt;img src=&quot;/assets/images/lista.jpg&quot; alt=&quot;Desenho ilustrativo das variaveis lista_1 e lista_2&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 &lt;figcaption class=&quot;caption&quot;&gt;Variávies lista_1 e lista_2 possuem os mesmos valores&lt;/figcaption&gt;
 
-&lt;p&gt;Podemos observar no código abaixo que a variável &lt;code class=&quot;highlighter-rouge&quot;&gt;lista_1&lt;/code&gt; e &lt;code class=&quot;highlighter-rouge&quot;&gt;lista_2&lt;/code&gt; possuem os ids diferentes, mas o valor de index 0 de ambas as listas possuem o mesmo id.&lt;/p&gt;
+&lt;p&gt;Podemos observar no código abaixo que a variável &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lista_1&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lista_2&lt;/code&gt; possuem os ids diferentes, mas o valor de index 0 de ambas as listas possuem o mesmo id.&lt;/p&gt;
 
-&lt;p&gt;Podemos usar o operador &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; para comparar os valores, enquanto o &lt;code class=&quot;highlighter-rouge&quot;&gt;is&lt;/code&gt; é utilizado para comparar os ids&lt;/p&gt;
+&lt;p&gt;Podemos usar o operador &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;==&lt;/code&gt; para comparar os valores, enquanto o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;is&lt;/code&gt; é utilizado para comparar os ids&lt;/p&gt;
 
 &lt;noscript&gt;&lt;pre&gt;lista_1 = [1, 3, 5, 7]
 lista_2 = [1, 3, 5, 7]
@@ -733,7 +826,7 @@ print(lista_1 == lista_2)
 print(lista_1 is lista_2)&lt;/pre&gt;&lt;/noscript&gt;
 &lt;script src=&quot;https://gist.github.com/beatrizuezu/35254604b2ce26757ff7bdb1ae61bd26.js&quot;&gt; &lt;/script&gt;
 
-&lt;p&gt;Caso atribuirmos o valor de &lt;code class=&quot;highlighter-rouge&quot;&gt;lista_2&lt;/code&gt; em &lt;code class=&quot;highlighter-rouge&quot;&gt;lista_1&lt;/code&gt;, eles terão o mesmo id.&lt;/p&gt;
+&lt;p&gt;Caso atribuirmos o valor de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lista_2&lt;/code&gt; em &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lista_1&lt;/code&gt;, eles terão o mesmo id.&lt;/p&gt;
 
 &lt;noscript&gt;&lt;pre&gt;lista_2 = [1, 3, 5, 7]
 
@@ -765,10 +858,10 @@ print(dicionario_2)
 # {&amp;#39;nome&amp;#39;: &amp;#39;beatriz&amp;#39;, &amp;#39;linguagem&amp;#39;: &amp;#39;python&amp;#39;}&lt;/pre&gt;&lt;/noscript&gt;
 &lt;script src=&quot;https://gist.github.com/beatrizuezu/d0081a5b9ee6bbfed64cd8b4162a8f1e.js&quot;&gt; &lt;/script&gt;
 
-&lt;p&gt;Para a alteração não afetar a variável original, podemos usar o módulo &lt;code class=&quot;highlighter-rouge&quot;&gt;copy&lt;/code&gt; com as funçōes &lt;a href=&quot;https://docs.python.org/pt-br/3/library/copy.html?highlight=copy#copy.copy&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;copy()&lt;/code&gt;&lt;/a&gt;, que retorna uma cópia rasa, e &lt;a href=&quot;https://docs.python.org/pt-br/3/library/copy.html?highlight=copy#copy.deepcopy&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;deepcopy()&lt;/code&gt;&lt;/a&gt;, que retorna uma cópia profunda.&lt;/p&gt;
+&lt;p&gt;Para a alteração não afetar a variável original, podemos usar o módulo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;copy&lt;/code&gt; com as funçōes &lt;a href=&quot;https://docs.python.org/pt-br/3/library/copy.html?highlight=copy#copy.copy&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;copy()&lt;/code&gt;&lt;/a&gt;, que retorna uma cópia rasa, e &lt;a href=&quot;https://docs.python.org/pt-br/3/library/copy.html?highlight=copy#copy.deepcopy&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deepcopy()&lt;/code&gt;&lt;/a&gt;, que retorna uma cópia profunda.&lt;/p&gt;
 
 &lt;h2 id=&quot;copy&quot;&gt;copy&lt;/h2&gt;
-&lt;p&gt;No código abaixo estamos usando a função &lt;code class=&quot;highlighter-rouge&quot;&gt;copy()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;No código abaixo estamos usando a função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;copy()&lt;/code&gt;&lt;/p&gt;
 &lt;noscript&gt;&lt;pre&gt;import copy
 
 lista_1 = [1,2, [9,8]]
@@ -797,13 +890,13 @@ print(id(lista_2[2]))
 #4549332496&lt;/pre&gt;&lt;/noscript&gt;
 &lt;script src=&quot;https://gist.github.com/beatrizuezu/c78e72f96cd8568611cba991e98997a4.js&quot;&gt; &lt;/script&gt;
 
-&lt;p&gt;Notamos que ao alterar a lista interna (index 2) da variável &lt;code class=&quot;highlighter-rouge&quot;&gt;lista_2&lt;/code&gt; alterou também a variável &lt;code class=&quot;highlighter-rouge&quot;&gt;lista_1&lt;/code&gt;. Podemos dizer que tanto a &lt;code class=&quot;highlighter-rouge&quot;&gt;lista_1&lt;/code&gt; quanto a &lt;code class=&quot;highlighter-rouge&quot;&gt;lista_2&lt;/code&gt; “apontam” para a mesma lista interna (&lt;code class=&quot;highlighter-rouge&quot;&gt;[9,8]&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;Notamos que ao alterar a lista interna (index 2) da variável &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lista_2&lt;/code&gt; alterou também a variável &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lista_1&lt;/code&gt;. Podemos dizer que tanto a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lista_1&lt;/code&gt; quanto a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lista_2&lt;/code&gt; “apontam” para a mesma lista interna (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[9,8]&lt;/code&gt;)&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/lista-manipulacao.jpg&quot; alt=&quot;Desenho ilustrativos das variaveis lista_1 e lista_2 apontando para a mesma lista [9,8]&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 &lt;figcaption class=&quot;caption&quot;&gt;Desenho ilustrativos das variaveis lista_1 e lista_2 apontando para a mesma lista [9,8]&lt;/figcaption&gt;
 
 &lt;h2 id=&quot;deepcopy&quot;&gt;deepcopy&lt;/h2&gt;
-&lt;p&gt;No &lt;code class=&quot;highlighter-rouge&quot;&gt;deepcopy()&lt;/code&gt; é feita uma cópia profunda&lt;/p&gt;
+&lt;p&gt;No &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deepcopy()&lt;/code&gt; é feita uma cópia profunda&lt;/p&gt;
 
 &lt;noscript&gt;&lt;pre&gt;import copy
 
@@ -825,13 +918,13 @@ print(id(lista_2[2]))
 #4543706128&lt;/pre&gt;&lt;/noscript&gt;
 &lt;script src=&quot;https://gist.github.com/beatrizuezu/b1ddc80c92da70608384fa0f7864d719.js&quot;&gt; &lt;/script&gt;
 
-&lt;p&gt;As variáveis não compartilham da mesma referência quando usado o &lt;code class=&quot;highlighter-rouge&quot;&gt;deepcopy()&lt;/code&gt;,logo o index 2 da variável &lt;code class=&quot;highlighter-rouge&quot;&gt;lista_1&lt;/code&gt; e da variável &lt;code class=&quot;highlighter-rouge&quot;&gt;lista_2&lt;/code&gt; são diferentes.&lt;/p&gt;
+&lt;p&gt;As variáveis não compartilham da mesma referência quando usado o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deepcopy()&lt;/code&gt;,logo o index 2 da variável &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lista_1&lt;/code&gt; e da variável &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lista_2&lt;/code&gt; são diferentes.&lt;/p&gt;
 
 &lt;p&gt;Espero que esse post tenha ficado simples e que você tenha entendido sobre referência de objetos!&lt;/p&gt;
 
 &lt;p&gt;Obrigada por ter lido &amp;lt;3&lt;/p&gt;
 
-&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="variável" /><category term="memória" /><category term="referência de objetos" /><summary type="html">Já aconteceu de você ter duas variáveis com os mesmos valores e alterar uma variável a outra também é alterada?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/lista.jpg" /></entry><entry><title type="html">Entendendo map, filter, reduce e lambda</title><link href="http://localhost:4000/entendendo-map-filter-reduce-lambda/" rel="alternate" type="text/html" title="Entendendo map, filter, reduce e lambda" /><published>2019-09-29T00:00:00+02:00</published><updated>2019-09-29T00:00:00+02:00</updated><id>http://localhost:4000/entendendo-map-filter-reduce-lambda</id><content type="html" xml:base="http://localhost:4000/entendendo-map-filter-reduce-lambda/">&lt;p&gt;Antes de falar sobre map, filter e reduce, precisamos entender sobre &lt;strong&gt;função de ordem superior&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="variável" /><category term="memória" /><category term="referência de objetos" /><summary type="html">Já aconteceu de você ter duas variáveis com os mesmos valores e alterar uma variável a outra também é alterada?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/lista.jpg" /><media:content medium="image" url="http://localhost:4000/assets/images/lista.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Entendendo map, filter, reduce e lambda</title><link href="http://localhost:4000/entendendo-map-filter-reduce-lambda/" rel="alternate" type="text/html" title="Entendendo map, filter, reduce e lambda" /><published>2019-09-29T00:00:00+02:00</published><updated>2019-09-29T00:00:00+02:00</updated><id>http://localhost:4000/entendendo-map-filter-reduce-lambda</id><content type="html" xml:base="http://localhost:4000/entendendo-map-filter-reduce-lambda/">&lt;p&gt;Antes de falar sobre map, filter e reduce, precisamos entender sobre &lt;strong&gt;função de ordem superior&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -848,19 +941,19 @@ print(id(lista_2[2]))
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/map.png&quot; alt=&quot;&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;A função map recebe uma função (&lt;code class=&quot;highlighter-rouge&quot;&gt;dobrar_numero&lt;/code&gt;) e um iterável (&lt;code class=&quot;highlighter-rouge&quot;&gt;range(4)&lt;/code&gt;), cada item desse iterável (números de 0 à 3) é aplicada na função, o que faz o map retornar um objeto map e convertemos esse resultado em uma lista.&lt;/p&gt;
+&lt;p&gt;A função map recebe uma função (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dobrar_numero&lt;/code&gt;) e um iterável (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;range(4)&lt;/code&gt;), cada item desse iterável (números de 0 à 3) é aplicada na função, o que faz o map retornar um objeto map e convertemos esse resultado em uma lista.&lt;/p&gt;
 
 &lt;h2 id=&quot;filter&quot;&gt;Filter&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/filter.png&quot; alt=&quot;&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;A função filter recebe uma função (&lt;code class=&quot;highlighter-rouge&quot;&gt;maior_que_zero&lt;/code&gt;) e um iterável (&lt;code class=&quot;highlighter-rouge&quot;&gt;valores&lt;/code&gt;), cada item do iterável é aplicada a condição da função que faz o “filtro”, retornando também um objeto filter e convertemos o resultado em uma lista&lt;/p&gt;
+&lt;p&gt;A função filter recebe uma função (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;maior_que_zero&lt;/code&gt;) e um iterável (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;valores&lt;/code&gt;), cada item do iterável é aplicada a condição da função que faz o “filtro”, retornando também um objeto filter e convertemos o resultado em uma lista&lt;/p&gt;
 
 &lt;h2 id=&quot;reduce&quot;&gt;Reduce&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/reduce.png&quot; alt=&quot;&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;A ideia de usar o &lt;a href=&quot;https://docs.python.org/3.7/library/functools.html#functools.reduce&quot;&gt;reduce&lt;/a&gt; é aplicar uma função (&lt;code class=&quot;highlighter-rouge&quot;&gt;somar&lt;/code&gt;) a cada item de um iterável (&lt;code class=&quot;highlighter-rouge&quot;&gt;range(5)&lt;/code&gt;, ou seja, números de 0 à 4) a fim de ser “reduzida” a um único valor.&lt;/p&gt;
+&lt;p&gt;A ideia de usar o &lt;a href=&quot;https://docs.python.org/3.7/library/functools.html#functools.reduce&quot;&gt;reduce&lt;/a&gt; é aplicar uma função (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;somar&lt;/code&gt;) a cada item de um iterável (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;range(5)&lt;/code&gt;, ou seja, números de 0 à 4) a fim de ser “reduzida” a um único valor.&lt;/p&gt;
 
 &lt;p&gt;É possível passar um terceiro parâmetro opcional para inicializar o valor da função:&lt;/p&gt;
 
@@ -868,7 +961,7 @@ print(id(lista_2[2]))
 
 &lt;h2 id=&quot;lambda&quot;&gt;Lambda&lt;/h2&gt;
 
-&lt;p&gt;Função lambda também é conhecida como função anônima, e é comum vermos a função lambda ser usada junto com map, filter ou reduce afim de encurtar as funções criadas pelo comando &lt;code class=&quot;highlighter-rouge&quot;&gt;def&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Função lambda também é conhecida como função anônima, e é comum vermos a função lambda ser usada junto com map, filter ou reduce afim de encurtar as funções criadas pelo comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;def&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;map-e-lambda&quot;&gt;Map e lambda&lt;/h4&gt;
 
@@ -884,7 +977,7 @@ print(id(lista_2[2]))
 
 &lt;h2 id=&quot;deixando-map-filter-e-reduce-mais-legíveis&quot;&gt;Deixando map, filter e reduce mais legíveis&lt;/h2&gt;
 
-&lt;p&gt;Para tornar o código mais legível é possível substituir as funções map e filter por list comprehension e a função reduce por &lt;code class=&quot;highlighter-rouge&quot;&gt;sum()&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;all()&lt;/code&gt; e &lt;code class=&quot;highlighter-rouge&quot;&gt;any()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Para tornar o código mais legível é possível substituir as funções map e filter por list comprehension e a função reduce por &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sum()&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;all()&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;any()&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Como já diz no &lt;a href=&quot;https://www.python.org/dev/peps/pep-0020/&quot;&gt; Zen of Python&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -917,13 +1010,13 @@ print(id(lista_2[2]))
 &lt;p&gt;&lt;img src=&quot;/assets/images/sum.png&quot; alt=&quot;&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 &lt;figcaption class=&quot;caption&quot;&gt;código substituindo reduce por sum&lt;/figcaption&gt;
 
-&lt;p&gt;A função &lt;code class=&quot;highlighter-rouge&quot;&gt;all()&lt;/code&gt; recebe um iterável e se todos os elementos forem verdadeiros a função retorna &lt;code class=&quot;highlighter-rouge&quot;&gt;True&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;A função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;all()&lt;/code&gt; recebe um iterável e se todos os elementos forem verdadeiros a função retorna &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;True&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/all.png&quot; alt=&quot;&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
 &lt;figcaption class=&quot;caption&quot;&gt;exemplo de código utilizando a função all&lt;/figcaption&gt;
 
-&lt;p&gt;A função &lt;code class=&quot;highlighter-rouge&quot;&gt;any()&lt;/code&gt; recebe um iterável e se algum elemento for verdadeiro a função retorna &lt;code class=&quot;highlighter-rouge&quot;&gt;True&lt;/code&gt;
+&lt;p&gt;A função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;any()&lt;/code&gt; recebe um iterável e se algum elemento for verdadeiro a função retorna &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;True&lt;/code&gt;
 &lt;img src=&quot;/assets/images/any.png&quot; alt=&quot;&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 &lt;figcaption class=&quot;caption&quot;&gt;exemplo de código utilizando a função any&lt;/figcaption&gt;
 
@@ -931,7 +1024,7 @@ print(id(lista_2[2]))
 
 &lt;p&gt;Obrigada por ter lido &amp;lt;3&lt;/p&gt;
 
-&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="python" /><category term="map" /><category term="filter" /><category term="reduce" /><category term="lambda" /><category term="list comprehension" /><summary type="html">Antes de falar sobre map, filter e reduce, precisamos entender sobre função de ordem superior.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/lambda-icon.png" /></entry><entry><title type="html">Configurando o Atom para programar em Python</title><link href="http://localhost:4000/configurando-atom/" rel="alternate" type="text/html" title="Configurando o Atom para programar em Python" /><published>2019-09-22T00:00:00+02:00</published><updated>2019-09-22T00:00:00+02:00</updated><id>http://localhost:4000/configurando-atom</id><content type="html" xml:base="http://localhost:4000/configurando-atom/">&lt;p&gt;Editor bom é aquele que você se sente mais produtiva para programar&lt;/p&gt;
+&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="python" /><category term="map" /><category term="filter" /><category term="reduce" /><category term="lambda" /><category term="list comprehension" /><summary type="html">Antes de falar sobre map, filter e reduce, precisamos entender sobre função de ordem superior.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/lambda-icon.png" /><media:content medium="image" url="http://localhost:4000/assets/images/lambda-icon.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Configurando o Atom para programar em Python</title><link href="http://localhost:4000/configurando-atom/" rel="alternate" type="text/html" title="Configurando o Atom para programar em Python" /><published>2019-09-22T00:00:00+02:00</published><updated>2019-09-22T00:00:00+02:00</updated><id>http://localhost:4000/configurando-atom</id><content type="html" xml:base="http://localhost:4000/configurando-atom/">&lt;p&gt;Editor bom é aquele que você se sente mais produtiva para programar&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -950,9 +1043,9 @@ print(id(lista_2[2]))
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/linter-flake8.gif&quot; alt=&quot;&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Linter é uma ferramenta de análise de código que acusa os erros sintáticos, ajuda bastante se você esquece de fechar &lt;code class=&quot;highlighter-rouge&quot;&gt;)&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;]&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;}&lt;/code&gt; (para evitar isso, se você abrir já fecha para não correr o risco de fechar os parênteses, chaves, colchetes ou aspas), de colocar &lt;code class=&quot;highlighter-rouge&quot;&gt;:&lt;/code&gt; no final de algum comando entre outras coisas.&lt;/p&gt;
+&lt;p&gt;Linter é uma ferramenta de análise de código que acusa os erros sintáticos, ajuda bastante se você esquece de fechar &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;)&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;]&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;}&lt;/code&gt; (para evitar isso, se você abrir já fecha para não correr o risco de fechar os parênteses, chaves, colchetes ou aspas), de colocar &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:&lt;/code&gt; no final de algum comando entre outras coisas.&lt;/p&gt;
 
-&lt;p&gt;Linter para python usando flake8, precisa instalar o flake8(&lt;code class=&quot;highlighter-rouge&quot;&gt;pip install flake8&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Linter para python usando flake8, precisa instalar o flake8(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip install flake8&lt;/code&gt;).&lt;/p&gt;
 
 &lt;h4 id=&quot;linter&quot;&gt;&lt;a href=&quot;https://atom.io/packages/linter&quot;&gt;linter&lt;/a&gt;&lt;/h4&gt;
 
@@ -994,7 +1087,7 @@ print(id(lista_2[2]))
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/isort.gif&quot; alt=&quot;&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;deixa os imports na ordem certa&lt;/p&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="atom" /><category term="ide" /><category term="python" /><category term="plugin" /><summary type="html">Editor bom é aquele que você se sente mais produtiva para programar</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/atom.png" /></entry><entry><title type="html">Visualizando query SQL a partir do ORM Django</title><link href="http://localhost:4000/visualizando-query-sql-a-partir-do-orm-django/" rel="alternate" type="text/html" title="Visualizando query SQL a partir do ORM Django" /><published>2019-02-27T22:58:00+01:00</published><updated>2019-02-27T22:58:00+01:00</updated><id>http://localhost:4000/visualizando-query-sql-a-partir-do-orm-django</id><content type="html" xml:base="http://localhost:4000/visualizando-query-sql-a-partir-do-orm-django/">&lt;p&gt;Falei sobre esse assunto na palestra que fiz na TDC 2017 (The Developer’s Conference) e vou mostrar como visualizar query SQL do ORM do Django.&lt;/p&gt;
+&lt;p&gt;deixa os imports na ordem certa&lt;/p&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="atom" /><category term="ide" /><category term="python" /><category term="plugin" /><summary type="html">Editor bom é aquele que você se sente mais produtiva para programar</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/atom.png" /><media:content medium="image" url="http://localhost:4000/assets/images/atom.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Visualizando query SQL a partir do ORM Django</title><link href="http://localhost:4000/visualizando-query-sql-a-partir-do-orm-django/" rel="alternate" type="text/html" title="Visualizando query SQL a partir do ORM Django" /><published>2019-02-27T22:58:00+01:00</published><updated>2019-02-27T22:58:00+01:00</updated><id>http://localhost:4000/visualizando-query-sql-a-partir-do-orm-django</id><content type="html" xml:base="http://localhost:4000/visualizando-query-sql-a-partir-do-orm-django/">&lt;p&gt;Falei sobre esse assunto na palestra que fiz na TDC 2017 (The Developer’s Conference) e vou mostrar como visualizar query SQL do ORM do Django.&lt;/p&gt;
 
 &lt;p&gt;Um dos motivos para falar sobre esse assunto foi a dificuldade que tive para entender como funcionava a ORM do Django. Em uma das minhas primeiras experiências com Django precisei gerar um relatório e como já tinha trabalhado com SQL resolvi fazer com SQL mesmo e posteriormente e passaria a query pra ORM pra entender. Uma maneira simples para o meu entendimento foi associar o que eu sabia de SQL para entender o ORM.&lt;/p&gt;
 
@@ -1061,7 +1154,7 @@ class Produto(models.Model):
 
 &lt;p&gt;Tenho uma determinada ORM, vou utilizar essa abaixo como exemplo:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Produto.objects.all()
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Produto.objects.all()
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Vamos entender o fluxo para obtermos o script SQL:&lt;/p&gt;
@@ -1076,7 +1169,7 @@ class Produto(models.Model):
 &lt;p&gt;O manager está acoplado ao Model, para acessar qualquer objeto salvo no banco é preciso acessar o Manager, isto é o objects presente em todo Model.&lt;/p&gt;
 
 &lt;h3 id=&quot;queryset&quot;&gt;QuerySet&lt;/h3&gt;
-&lt;p&gt;É o conjunto de ações quer serão realizadas no banco (select, insert, update, delete). Representado pelo &lt;code class=&quot;highlighter-rouge&quot;&gt;all()&lt;/code&gt; no nosso exemplo.&lt;/p&gt;
+&lt;p&gt;É o conjunto de ações quer serão realizadas no banco (select, insert, update, delete). Representado pelo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;all()&lt;/code&gt; no nosso exemplo.&lt;/p&gt;
 
 &lt;h3 id=&quot;query&quot;&gt;Query&lt;/h3&gt;
 &lt;p&gt;Cria uma estrutura de dados complexa com todos os elementos presentes em uma consulta. É gerado uma representação SQL de um QuerySet, ou seja, é através desse método que conseguimos ver as conversões do ORM para SQL (MySQL, PostgreSQL, SQLite).&lt;/p&gt;
@@ -1088,9 +1181,9 @@ class Produto(models.Model):
 &lt;p&gt;Vou abordar alguns métodos da ORM, você pode visualizar todos os métodos &lt;a href=&quot;https://docs.djangoproject.com/en/dev/ref/models/querysets/&quot;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;all&quot;&gt;.all()&lt;/h3&gt;
-&lt;p&gt;O método &lt;code class=&quot;highlighter-rouge&quot;&gt;.all()&lt;/code&gt; retornará todos os produtos.&lt;/p&gt;
+&lt;p&gt;O método &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.all()&lt;/code&gt; retornará todos os produtos.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]:from core.produtos.models import Produto
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]:from core.produtos.models import Produto
 In [2]:Produto.objects.all()
 Out [2]:&amp;lt;QuerySet [&amp;lt;Produto: Produto 1 da Categoria 1&amp;gt;,
 &amp;lt;Produto: Produto 2 da Categoria 1&amp;gt;, &amp;lt;Produto: Produto 3 da Categoria 1&amp;gt;,
@@ -1107,7 +1200,7 @@ Out [2]:&amp;lt;QuerySet [&amp;lt;Produto: Produto 1 da Categoria 1&amp;gt;,
 
 &lt;p&gt;e para visualizarmos o script SQL:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.all()
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.all()
 In [4]: print(orm.query)
 SELECT
   `produtos_produto`.`id`, `produtos_produto`.`nome`,
@@ -1116,16 +1209,16 @@ FROM `produtos_produto`
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;filter&quot;&gt;.filter()&lt;/h3&gt;
-&lt;p&gt;O método &lt;code class=&quot;highlighter-rouge&quot;&gt;.filter()&lt;/code&gt; retornará todos os produtos em uma determinada condição.&lt;/p&gt;
+&lt;p&gt;O método &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.filter()&lt;/code&gt; retornará todos os produtos em uma determinada condição.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
 In [2]: Produto.objects.filter(id=1)
 Out[2]: &amp;lt;QuerySet [&amp;lt;Produto: Produto 1 da Categoria 1&amp;gt;]&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;e para visualizarmos o script SQL:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.filter(id=1)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.filter(id=1)
 In [4]: print(orm.query)
 SELECT
   `produtos_produto`.`id`, `produtos_produto`.`nome`,
@@ -1134,9 +1227,9 @@ FROM `produtos_produto` WHERE `produtos_produto`.`id` = 1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;filtercampo__lookup&quot;&gt;.filter(campo__lookup)&lt;/h3&gt;
-&lt;p&gt;Podemos passar lookups quando utilizamos o &lt;code class=&quot;highlighter-rouge&quot;&gt;.filter()&lt;/code&gt;, você pode conferir todos os lookups &lt;a href=&quot;https://docs.djangoproject.com/en/dev/ref/models/querysets/#field-lookups&quot;&gt;aqui&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Podemos passar lookups quando utilizamos o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.filter()&lt;/code&gt;, você pode conferir todos os lookups &lt;a href=&quot;https://docs.djangoproject.com/en/dev/ref/models/querysets/#field-lookups&quot;&gt;aqui&lt;/a&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
 In [2]: Produto.objects.filter(id__in=[1,3,5])
 Out[2]: &amp;lt;QuerySet [&amp;lt;Produto: Produto 1 da Categoria 1&amp;gt;,
 &amp;lt;Produto: Produto 3 da Categoria 1&amp;gt;, &amp;lt;Produto: Produto 5 da Categoria 1&amp;gt;]&amp;gt;
@@ -1144,7 +1237,7 @@ Out[2]: &amp;lt;QuerySet [&amp;lt;Produto: Produto 1 da Categoria 1&amp;gt;,
 
 &lt;p&gt;e para visualizarmos o script:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.filter(id__in=[1, 3 ,5])
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.filter(id__in=[1, 3 ,5])
 In [4]: print(orm.query)
 SELECT
   `produtos_produto`.`id`, `produtos_produto`.`nome`,
@@ -1156,7 +1249,7 @@ FROM `produtos_produto` WHERE `produtos_produto`.`id` IN (1, 3, 5)
 
 &lt;p&gt;Conseguimos acessar o campo de uma chave estrangeira utilizando ORM:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
 In [2]: Produto.objects.filter(categoria__nome='categoria_1')
 Out[2]: &amp;lt;QuerySet [&amp;lt;Produto: Produto 1 da Categoria 1&amp;gt;,
 &amp;lt;Produto: Produto 2 da Categoria 1&amp;gt;, &amp;lt;Produto: Produto 3 da Categoria 1&amp;gt;,
@@ -1165,7 +1258,7 @@ Out[2]: &amp;lt;QuerySet [&amp;lt;Produto: Produto 1 da Categoria 1&amp;gt;,
 
 &lt;p&gt;visualizando em SQL:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.filter(categoria__nome='categoria_1')
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.filter(categoria__nome='categoria_1')
 In [4]: print(orm.query)
 SELECT
   `produtos_produto`.`id`, `produtos_produto`.`nome`,
@@ -1180,16 +1273,16 @@ WHERE `categorias_categoria`.`nome` = categoria_1
 &lt;p&gt;o interessante é que não precisamos nos preocupar com os joins do SQL quando utilizamos ORM!&lt;/p&gt;
 
 &lt;h3 id=&quot;get&quot;&gt;.get()&lt;/h3&gt;
-&lt;p&gt;O método &lt;code class=&quot;highlighter-rouge&quot;&gt;.get()&lt;/code&gt; é semelhante ao &lt;code class=&quot;highlighter-rouge&quot;&gt;.filter()&lt;/code&gt;, vamos entender as diferenças posteriormente.&lt;/p&gt;
+&lt;p&gt;O método &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.get()&lt;/code&gt; é semelhante ao &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.filter()&lt;/code&gt;, vamos entender as diferenças posteriormente.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
 In [2]: Produto.objects.get(id=1)
 Out[2]: &amp;lt;Produto: Produto 1 da Categoria 1&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;visualizando em SQL:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.get(id=1)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.get(id=1)
 In [4]: print(orm.query)
  — — — — — —— — — — — — — — — — — — — — — — — — — — — — — — — —
 AttributeError Traceback (most recent call last)
@@ -1198,9 +1291,9 @@ AttributeError Traceback (most recent call last)
 AttributeError: ‘Produto’ object has no attribute ‘query’
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;EITA! Caímos em um erro. Isso ocorreu porque diferente do &lt;code class=&quot;highlighter-rouge&quot;&gt;.filter()&lt;/code&gt;, o &lt;code class=&quot;highlighter-rouge&quot;&gt;.get()&lt;/code&gt; não retorna um queryset e sim o objeto do model.&lt;/p&gt;
+&lt;p&gt;EITA! Caímos em um erro. Isso ocorreu porque diferente do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.filter()&lt;/code&gt;, o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.get()&lt;/code&gt; não retorna um queryset e sim o objeto do model.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [5]: script = Produto.objects.filter(id=1)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [5]: script = Produto.objects.filter(id=1)
 In [6]: type(script)
 Out[6]: django.db.models.query.QuerySet
 In [7]: script = Produto.objects.get(id=1)
@@ -1210,7 +1303,7 @@ Out[8]: core.produtos.models.Produto
 
 &lt;p&gt;Mas ainda sim conseguimos visualizar o SQL dessa ORM:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [5]: from django.db import connection
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [5]: from django.db import connection
 In [6]: connection.queries
 Out[6]: [{'sql':
 'SELECT
@@ -1224,14 +1317,14 @@ WHERE `produto_produto`.`id` = 1',
 &lt;h3 id=&quot;exclude&quot;&gt;.exclude()&lt;/h3&gt;
 &lt;p&gt;Esse método trará os objetos que não correspondem aos parâmetros fornecidos:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
 In [2]: Produto.objects.exclude(id__gte=4)
 Out[2]: &amp;lt;QuerySet [&amp;lt;Produto: Produto 1 da Categoria 1&amp;gt;,
 &amp;lt;Produto: Produto 2 da Categoria 1&amp;gt;, &amp;lt;Produto: Produto 3 da Categoria 1&amp;gt;]&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;visualizando em SQL:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.exclude(id__gte=4)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.exclude(id__gte=4)
 In [4]: print(orm.query)
 SELECT
   `produtos_produto`.`id`, `produtos_produto`.`nome`,
@@ -1240,9 +1333,9 @@ FROM `produtos_produto` WHERE NOT (`produtos_produto`.`id` &amp;gt;= 4)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;values&quot;&gt;.values()&lt;/h3&gt;
-&lt;p&gt;Com o &lt;code class=&quot;highlighter-rouge&quot;&gt;.values()&lt;/code&gt; podemos passar os campos que sejam retornados no queryset, além disso a queryset retornará dicionários.&lt;/p&gt;
+&lt;p&gt;Com o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.values()&lt;/code&gt; podemos passar os campos que sejam retornados no queryset, além disso a queryset retornará dicionários.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
 In [2]: Produto.objects.values(‘nome’, ‘valor’)
 Out[2]: &amp;lt;QuerySet [
 {‘valor’: Decimal(‘2.00’), ‘nome’: ‘Produto 1 da Categoria 1’},
@@ -1257,7 +1350,7 @@ Out[2]: &amp;lt;QuerySet [
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;visualizando em SQL:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.values(‘nome’, ‘valor’)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.values(‘nome’, ‘valor’)
 In [4]: print(orm.query)
 SELECT
   `produtos_produto`.`nome`, `produtos_produto`.`valor`
@@ -1265,9 +1358,9 @@ FROM `produtos_produto`
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;values_list&quot;&gt;.values_list()&lt;/h3&gt;
-&lt;p&gt;Similar ao &lt;code class=&quot;highlighter-rouge&quot;&gt;.values()&lt;/code&gt;, a diferença é que a queryset retorna tupla.&lt;/p&gt;
+&lt;p&gt;Similar ao &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.values()&lt;/code&gt;, a diferença é que a queryset retorna tupla.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
 In [2]: Produto.objects.values_list(‘nome’)
 Out[2]: &amp;lt;QuerySet [
 (‘Produto 1 da Categoria 1’,), (‘Produto 2 da Categoria 1’,),
@@ -1278,7 +1371,7 @@ Out[2]: &amp;lt;QuerySet [
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Visualizando em SQL:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.values_list(‘nome’)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.values_list(‘nome’)
 In [4]: print(orm.query)
 SELECT
   `produtos_produto`.`nome`
@@ -1286,9 +1379,9 @@ FROM `produtos_produto`
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;values_listfield-flattrue&quot;&gt;.values_list(field, flat=True)&lt;/h3&gt;
-&lt;p&gt;Quando utilizamos o flat=True como paramêtro do &lt;code class=&quot;highlighter-rouge&quot;&gt;.values_list()&lt;/code&gt; o resultado são retornado em valores únicos ao em vez de tuplas.&lt;/p&gt;
+&lt;p&gt;Quando utilizamos o flat=True como paramêtro do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.values_list()&lt;/code&gt; o resultado são retornado em valores únicos ao em vez de tuplas.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
 In [2]: Produto.objects.values_list(‘nome’, flat=True)
 Out[2]:&amp;lt;QuerySet [‘Produto 1 da Categoria 1’, ‘Produto 2 da Categoria 1’,
 ‘Produto 3 da Categoria 1’, ‘Produto 4 da Categoria 1’,
@@ -1301,7 +1394,7 @@ Out[2]:&amp;lt;QuerySet [‘Produto 1 da Categoria 1’, ‘Produto 2 da Categor
 
 &lt;p&gt;Visualizando em SQL:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.values_list(‘nome’, flat=True)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [3]: orm = Produto.objects.values_list(‘nome’, flat=True)
 In [4]: print(orm.query)
 SELECT
   `produtos_produto`.`nome`
@@ -1311,7 +1404,7 @@ FROM `produtos_produto`
 &lt;h3 id=&quot;annotate&quot;&gt;.annotate()&lt;/h3&gt;
 &lt;p&gt;Retorna um queryset agrupado levando em consideração cada objeto.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
 In [2]: from django.db.models import Sum
 In [3]: Produto.objects.values(‘categoria’).annotate(Sum(‘valor’))
 Out[3]: &amp;lt;QuerySet [{‘valor__sum’: Decimal(‘52.00’), ‘categoria’: 1},
@@ -1324,7 +1417,7 @@ Out[3]: &amp;lt;QuerySet [{‘valor__sum’: Decimal(‘52.00’), ‘categoria�
 
 &lt;p&gt;Visualizando em SQL:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [4]: orm = Produto.objects.values(‘categoria’).annotate(Sum(‘valor’))
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [4]: orm = Produto.objects.values(‘categoria’).annotate(Sum(‘valor’))
 In [5]: print(orm.query)
 SELECT
   `produtos_produto`.`categoria_id`,
@@ -1334,9 +1427,9 @@ GROUP BY `produtos_produto`.`categoria_id` ORDER BY NULL
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;aggregate&quot;&gt;.aggregate()&lt;/h3&gt;
-&lt;p&gt;Semelhante ao &lt;code class=&quot;highlighter-rouge&quot;&gt;.annotate()&lt;/code&gt; com a diferença de retornar um dicionário com valores agregados calculado sobre todo o queryset&lt;/p&gt;
+&lt;p&gt;Semelhante ao &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.annotate()&lt;/code&gt; com a diferença de retornar um dicionário com valores agregados calculado sobre todo o queryset&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
 In [2]: from django.db.models import Avg, Max, Min
 In [3]: Produto.objects.aggregate(
    ...: valor_maximo=Max('valor'),
@@ -1350,7 +1443,7 @@ Out[3]:
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Visualizando SQL:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [4]: orm = Produto.objects.aggregate(
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [4]: orm = Produto.objects.aggregate(
  …: valor_maximo=Max(‘valor’),
  …: valor_minimo=Min(‘valor’),
  …: valor_medio=Avg(‘valor’)
@@ -1363,9 +1456,9 @@ AttributeError Traceback (most recent call last)
 AttributeError: ‘dict’ object has no attribute ‘query’
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Caímos no erro novamente, o &lt;code class=&quot;highlighter-rouge&quot;&gt;.aggregate()&lt;/code&gt; não retona um queryset.&lt;/p&gt;
+&lt;p&gt;Caímos no erro novamente, o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.aggregate()&lt;/code&gt; não retona um queryset.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [4]: orm = Produto.objects.values(‘categoria’).annotate(Sum(‘valor’))
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [4]: orm = Produto.objects.values(‘categoria’).annotate(Sum(‘valor’))
 In [5]: type(orm)
 Out[5]: django.db.models.query.QuerySet
 In [6]: orm = Produto.objects.aggregate(
@@ -1377,9 +1470,9 @@ In [7]: type(orm)
 Out[7]: dict
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Assim como &lt;code class=&quot;highlighter-rouge&quot;&gt;.get()&lt;/code&gt; também conseguimos visualizar a query SQL:&lt;/p&gt;
+&lt;p&gt;Assim como &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.get()&lt;/code&gt; também conseguimos visualizar a query SQL:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [4]: from django.db import connection
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [4]: from django.db import connection
 In [5]: connection.queries
 Out[5]:
 [{‘sql’: ‘SELECT
@@ -1395,7 +1488,7 @@ FROM `produtos_produto`’,
 
 &lt;p&gt;Se eu tiver essas consultas abaixo, quantas consultas foram realizadas no banco de dados?&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
 In [2]: produtos = Produto.objects.all()
 In [3]: categoria_2 = produtos.filter(categoria=2)
 In [4]: lista_produto = produtos.values_list(‘nome’, flat=True)
@@ -1404,7 +1497,7 @@ In [5]: print(lista_produto)
 
 &lt;p&gt;&lt;strong&gt;APENAS UMA!&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In [1]: from core.produtos.models import Produto
 In [2]: from django.db import connection
 In [3]: produtos = Produto.objects.all()
 In [4]: categoria_2 = produtos.filter(categoria=2)
@@ -1435,49 +1528,49 @@ In [8]: print(len(connection.queries))
   &lt;li&gt;Quando solicitamos somente um resultado:&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; Produto.objects.all()[0]
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; Produto.objects.all()[0]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Quando fazemos um slicinf passando um “step”:&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; Produtos.objects.all()[::2]
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; Produtos.objects.all()[::2]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Quando iteramos:&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; categoria for categoria in Categoria.objects.all()
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; categoria for categoria in Categoria.objects.all()
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Quando chamamos o método len() :&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; len(Produto.objects.all())
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; len(Produto.objects.all())
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Quando chamamos um list() :&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; list(Produto.objects.all())
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; list(Produto.objects.all())
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Quando chamamos um bool() :&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; bool(Produto.objects.all())
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; bool(Produto.objects.all())
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Quando chamamos o repr() :&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; repr(Produto.objects.all())
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt; repr(Produto.objects.all())
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;dicas&quot;&gt;DICAS&lt;/h2&gt;
@@ -1485,12 +1578,12 @@ In [8]: print(len(connection.queries))
 &lt;h3 id=&quot;reset_queries&quot;&gt;reset_queries&lt;/h3&gt;
 &lt;p&gt;Se precisar limpar a lista de query do connection, utilize:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from django.db import reset_queries
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from django.db import reset_queries
 &amp;gt;&amp;gt; reset_queries()
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;django-logging&quot;&gt;Django logging&lt;/h3&gt;
-&lt;p&gt;Caso queira que a query sql apareça toda vez que seja executada uma consulta orm, adicione ao arquivo &lt;code class=&quot;highlighter-rouge&quot;&gt;settings.py&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Caso queira que a query sql apareça toda vez que seja executada uma consulta orm, adicione ao arquivo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;settings.py&lt;/code&gt;&lt;/p&gt;
 
 &lt;noscript&gt;&lt;pre&gt;...
 
@@ -1515,7 +1608,7 @@ LOGGING = {
 
 &lt;p&gt;Obrigada ❤&lt;/p&gt;
 
-&lt;p&gt;esse post foi originalmente escrito no &lt;a href=&quot;https://medium.com/@beatrizuezu/visualizando-query-sql-a-partir-do-orm-django-5771370a9c55&quot;&gt;Medium&lt;/a&gt; no dia 07/08/2017&lt;/p&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="django" /><category term="orm" /><category term="sql" /><summary type="html">Falei sobre esse assunto na palestra que fiz na TDC 2017 (The Developer’s Conference) e vou mostrar como visualizar query SQL do ORM do Django.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/relacao-tabela-vs-classes.png" /></entry><entry><title type="html">PyLadies &amp;amp; Django Girls: do medo ao incentivo</title><link href="http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo/" rel="alternate" type="text/html" title="PyLadies &amp; Django Girls: do medo ao incentivo" /><published>2018-03-16T22:44:00+01:00</published><updated>2018-03-16T22:44:00+01:00</updated><id>http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo</id><content type="html" xml:base="http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo/">&lt;p&gt;Na época que fazia faculdade gostava de mexer com HTML e CSS até que eu cheguei a estagiar como Front-End. Chegou um momento do estágio que eu não me via naquilo e queria entrar na área de Banco de dados e Big Data. Como eu gostava de ler sobre o tema de Big Data ouvia falar sobre as linguagens Python e Java. Porém tinha dificuldade em programar e achava difícil, só queria entrar em Banco de Dados e Big Data porque não iria programar. (Sabe de nada, inocente).&lt;/p&gt;
+&lt;p&gt;esse post foi originalmente escrito no &lt;a href=&quot;https://medium.com/@beatrizuezu/visualizando-query-sql-a-partir-do-orm-django-5771370a9c55&quot;&gt;Medium&lt;/a&gt; no dia 07/08/2017&lt;/p&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="django" /><category term="orm" /><category term="sql" /><summary type="html">Falei sobre esse assunto na palestra que fiz na TDC 2017 (The Developer’s Conference) e vou mostrar como visualizar query SQL do ORM do Django.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/relacao-tabela-vs-classes.png" /><media:content medium="image" url="http://localhost:4000/assets/images/relacao-tabela-vs-classes.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">PyLadies &amp;amp; Django Girls: do medo ao incentivo</title><link href="http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo/" rel="alternate" type="text/html" title="PyLadies &amp;amp; Django Girls: do medo ao incentivo" /><published>2018-03-16T22:44:00+01:00</published><updated>2018-03-16T22:44:00+01:00</updated><id>http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo</id><content type="html" xml:base="http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo/">&lt;p&gt;Na época que fazia faculdade gostava de mexer com HTML e CSS até que eu cheguei a estagiar como Front-End. Chegou um momento do estágio que eu não me via naquilo e queria entrar na área de Banco de dados e Big Data. Como eu gostava de ler sobre o tema de Big Data ouvia falar sobre as linguagens Python e Java. Porém tinha dificuldade em programar e achava difícil, só queria entrar em Banco de Dados e Big Data porque não iria programar. (Sabe de nada, inocente).&lt;/p&gt;
 
 &lt;p&gt;Foi aí que eu decidi a procurar vagas de Banco de Dados e até que comecei a trabalhar com desenvolvimento de software com a linguagem VB.net e SQL Server. Tive medo de ser demitida nos primeiros meses por não saber a programar, achava que precisava documentar tudo e fiquei surpresa por terem me colocado em um projeto em menos de 3 meses. Corri atrás de cursos de orientação a objetos para entender melhor o código.&lt;/p&gt;
 
@@ -1574,4 +1667,4 @@ LOGGING = {
 
 &lt;p&gt;Obrigada ❤&lt;/p&gt;
 
-&lt;p&gt;esse post foi originalmente escrito no &lt;a href=&quot;https://medium.com/@beatrizuezu/pyladies-django-girls-do-medo-ao-incentivo-e23c0f8bad38&quot;&gt;Medium&lt;/a&gt; no dia 28/03/2017&lt;/p&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="pyladies" /><category term="django girls" /><category term="comunidade" /><category term="ensinar" /><category term="incentivar" /><summary type="html">Na época que fazia faculdade gostava de mexer com HTML e CSS até que eu cheguei a estagiar como Front-End. Chegou um momento do estágio que eu não me via naquilo e queria entrar na área de Banco de dados e Big Data. Como eu gostava de ler sobre o tema de Big Data ouvia falar sobre as linguagens Python e Java. Porém tinha dificuldade em programar e achava difícil, só queria entrar em Banco de Dados e Big Data porque não iria programar. (Sabe de nada, inocente).</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/dg-1.jpeg" /></entry></feed>
+&lt;p&gt;esse post foi originalmente escrito no &lt;a href=&quot;https://medium.com/@beatrizuezu/pyladies-django-girls-do-medo-ao-incentivo-e23c0f8bad38&quot;&gt;Medium&lt;/a&gt; no dia 28/03/2017&lt;/p&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="pyladies" /><category term="django girls" /><category term="comunidade" /><category term="ensinar" /><category term="incentivar" /><summary type="html">Na época que fazia faculdade gostava de mexer com HTML e CSS até que eu cheguei a estagiar como Front-End. Chegou um momento do estágio que eu não me via naquilo e queria entrar na área de Banco de dados e Big Data. Como eu gostava de ler sobre o tema de Big Data ouvia falar sobre as linguagens Python e Java. Porém tinha dificuldade em programar e achava difícil, só queria entrar em Banco de Dados e Big Data porque não iria programar. (Sabe de nada, inocente).</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/dg-1.jpeg" /><media:content medium="image" url="http://localhost:4000/assets/images/dg-1.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

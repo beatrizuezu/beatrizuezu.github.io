@@ -1,4 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-09-01T22:09:43+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Beatriz Uezu Page</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">My Work Out Process</title><link href="http://localhost:4000/work-out-process/" rel="alternate" type="text/html" title="My Work Out Process" /><published>2021-08-31T00:00:00+02:00</published><updated>2021-08-31T00:00:00+02:00</updated><id>http://localhost:4000/work-out-process</id><content type="html" xml:base="http://localhost:4000/work-out-process/">&lt;p&gt;I have completed 1 year working out at home consistently. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-09T19:08:51+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Beatriz Uezu Page</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Kubernetes Notes - Introduction - Part 1</title><link href="http://localhost:4000/kubernetes-notes/" rel="alternate" type="text/html" title="Kubernetes Notes - Introduction - Part 1" /><published>2021-10-05T00:00:00+02:00</published><updated>2021-10-05T00:00:00+02:00</updated><id>http://localhost:4000/kubernetes-notes</id><content type="html" xml:base="http://localhost:4000/kubernetes-notes/">&lt;p&gt;Some kubernetes studies notes 🎉&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h1 id=&quot;kubernetes&quot;&gt;Kubernetes&lt;/h1&gt;
+
+&lt;h2 id=&quot;what-do-i-need-to-know-first-to-undestand-kubernetes&quot;&gt;What do I need to know first to undestand Kubernetes?&lt;/h2&gt;
+&lt;h3 id=&quot;containers&quot;&gt;Containers&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;To provide portable and isolated virtual environment&lt;/li&gt;
+  &lt;li&gt;Need to be managed and connected to external world&lt;/li&gt;
+  &lt;li&gt;Must be scheduled, distribuited and load balanced and the data persisted somewhere&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;containers-orchestration&quot;&gt;Containers Orchestration&lt;/h3&gt;
+
+&lt;h2 id=&quot;what-is-kubernetes&quot;&gt;What is Kubernetes&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;“Kubernetes” is the Greek word which means helmsman or ship pilot. With this analogy in mind, we can think of Kubernetes as the pilot on a ship of containers.&lt;/li&gt;
+  &lt;li&gt;Referred to as k8s&lt;/li&gt;
+  &lt;li&gt;The Kubernetes project focuses on building a robust platform (a fault-tolerant and scalable solution) for running thousands of containers in production.&lt;/li&gt;
+  &lt;li&gt;Can be achieved by creating a single controller/management unit, after connecting multiple nodes together. This controller/management unit is generally referred to as a container orchestrator.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;features&quot;&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Automatic bin packing&lt;/li&gt;
+  &lt;li&gt;Self-healing: Kubernetes automatically replaces and reschedules containers from failed nodes&lt;/li&gt;
+  &lt;li&gt;Horizontal scaling: scaled manually or automatically based on CPU or custom metrics utilization.&lt;/li&gt;
+  &lt;li&gt;Service discovery and Load balancing&lt;/li&gt;
+  &lt;li&gt;Automated rollouts and rollbacks: to prevent any downtime&lt;/li&gt;
+  &lt;li&gt;Secret and configuration management&lt;/li&gt;
+  &lt;li&gt;Storage orchestration&lt;/li&gt;
+  &lt;li&gt;Batch execution: supports batch execution, long-running jobs, and replaces failed containers.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;why-use-kubernetes&quot;&gt;Why use Kubernetes?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Can be deployed in many environments such as local or remote Virtual Machines, bare metal, or in public/private/hybrid/multi-cloud setups&lt;/li&gt;
+  &lt;li&gt;Kubernetes’ architecture is modular and pluggable&lt;/li&gt;
+  &lt;li&gt;Kubernetes’ functionality can be extended&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;importants-terms&quot;&gt;Importants terms&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Node: or workers, it runs proccess. It contains the app, proxy and kubelet, it can has one or more pods.&lt;/li&gt;
+  &lt;li&gt;Kubelet: responsible to inform to control plane how many cpu, memory the node has.&lt;/li&gt;
+  &lt;li&gt;Control plane: virtual machine, it run a lot of services, such as scheduler service, API server, node controller and state storage (etcd).&lt;/li&gt;
+  &lt;li&gt;Kubectl: Kubernetes CLI, point of control for all apps based in Kubernetes, based in configuration files.&lt;/li&gt;
+  &lt;li&gt;Workloads: everthing you can put inside of kubernetes that generate a work rules, like apps and DNS. The workloads are:
+    &lt;ul&gt;
+      &lt;li&gt;Pod&lt;/li&gt;
+      &lt;li&gt;Deployment&lt;/li&gt;
+      &lt;li&gt;ReplicaSet&lt;/li&gt;
+      &lt;li&gt;Secret&lt;/li&gt;
+      &lt;li&gt;Configmap&lt;/li&gt;
+      &lt;li&gt;HorizontalPodAutoscaler&lt;/li&gt;
+      &lt;li&gt;Service&lt;/li&gt;
+      &lt;li&gt;Ingres&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Pods: the smallest unit in Kubernetes, you can run one or more containers. Each pod contains an internal IP, it runs the application in the container and it can has or not a volume. Volume is a pre-existing data structure to use in the pod to share files or to use a temporary files.
+  &lt;img src=&quot;/assets/images/k8s-pods.png&quot; alt=&quot;Pods&quot; class=&quot;center-image&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Labels: as “nametags” to identify things, it can be used to query based on the labels.&lt;/li&gt;
+  &lt;li&gt;Deployments: deployments manages and adds “intelligence” to pods, and it can group pods by an label. Also, you can define the number of replicas inside of the deployment
+  &lt;img src=&quot;/assets/images/k8s-deployment.png&quot; alt=&quot;Deployment&quot; class=&quot;center-image&quot; /&gt;
+  &lt;img src=&quot;/assets/images/k8s-deployment-file-example.png&quot; alt=&quot;Deployment&quot; class=&quot;center-image&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Replicaset: it created by a deployment. It manage the number of replicas inside of the cluster. Each one contains a different image version, it is able to create versions of images. It always keep the desired number state.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Replication Controllers: responsible to manage the numbers of pods, pods’ lifecycle, scaling up and down, rolling deployments, and monitoring.&lt;/li&gt;
+  &lt;li&gt;Services: Responsible to tell to the rest of the Kubernetes environment what services your application provides, the service IP addresses and ports remain the same.&lt;/li&gt;
+  &lt;li&gt;Volume: Location where containers can access and store information.&lt;/li&gt;
+  &lt;li&gt;Namespaces: group of services, pods, replication controllers, and volumes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/k8s-concepts.png&quot; alt=&quot;Some Kubernetes terms&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;sources&quot;&gt;Sources:&lt;/h4&gt;
+&lt;p&gt;Post - &lt;a href=&quot;https://www.cncf.io/phippy/the-childrens-illustrated-guide-to-kubernetes/&quot;&gt;The Illustrated Children’s Guide to Kubernetes&lt;/a&gt;
+Youtube Video - &lt;a href=&quot;https://www.youtube.com/watch?v=4ht22ReBjno&quot;&gt;The Illustrated Children’s Guide to Kubernetes&lt;/a&gt;
+Course - &lt;a href=&quot;https://www.edx.org/course/introduction-to-kubernetes&quot;&gt;Introduction to Kubernetes&lt;/a&gt;
+GitHub - &lt;a href=&quot;https://github.com/badtuxx/DescomplicandoKubernetes&quot;&gt;Descomplicando Kuberntes&lt;/a&gt;
+Bootcamp - &lt;a href=&quot;https://channel9.msdn.com/Series/AKS-Bootcamp-From-zero-to-container-hero&quot;&gt;Maratona AKS: Tudo sobre Kubernetes de A a Z&lt;/a&gt;
+Youtube Video - &lt;a href=&quot;https://youtu.be/X48VuDVv0do&quot;&gt;Kubernetes Tutorial for Beginners - FULL COURSE in 4 Hours&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="kubernetes" /><category term="notes" /><category term="studies" /><summary type="html">Some kubernetes studies notes 🎉</summary></entry><entry><title type="html">My Work Out Process</title><link href="http://localhost:4000/work-out-process/" rel="alternate" type="text/html" title="My Work Out Process" /><published>2021-08-31T00:00:00+02:00</published><updated>2021-08-31T00:00:00+02:00</updated><id>http://localhost:4000/work-out-process</id><content type="html" xml:base="http://localhost:4000/work-out-process/">&lt;p&gt;I have completed 1 year working out at home consistently. 
  🎉&lt;/p&gt;
 
 &lt;hr /&gt;

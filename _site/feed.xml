@@ -1,4 +1,149 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-09T19:27:48+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Beatriz Uezu Page</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Anotações sobre Princípios SOLID</title><link href="http://localhost:4000/solid/" rel="alternate" type="text/html" title="Anotações sobre Princípios SOLID" /><published>2021-10-09T00:00:00+02:00</published><updated>2021-10-09T00:00:00+02:00</updated><id>http://localhost:4000/solid</id><content type="html" xml:base="http://localhost:4000/solid/">&lt;p&gt;Anotações sobre SOLID&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-12T22:26:17+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Beatriz Uezu Page</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Kubernetes Notes - Part 2</title><link href="http://localhost:4000/kubernetes-notes-part-2/" rel="alternate" type="text/html" title="Kubernetes Notes - Part 2" /><published>2021-10-12T00:00:00+02:00</published><updated>2021-10-12T00:00:00+02:00</updated><id>http://localhost:4000/kubernetes-notes-part-2</id><content type="html" xml:base="http://localhost:4000/kubernetes-notes-part-2/">&lt;p&gt;Some kubernetes studies notes 🎉&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h1 id=&quot;kubernetes&quot;&gt;Kubernetes&lt;/h1&gt;
+
+&lt;h2 id=&quot;concepts-and-architecture&quot;&gt;Concepts and Architecture&lt;/h2&gt;
+
+&lt;h3 id=&quot;master-node-components&quot;&gt;Master node components&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;kube-apiserver: cordinates all the administratives tasks.&lt;/li&gt;
+  &lt;li&gt;kube-scheduler: is to assign new workload objects, such as pods, to nodes.&lt;/li&gt;
+  &lt;li&gt;controller managers: are control plane components on the master node running controllers to regulate the state of the Kubernetes cluster.&lt;/li&gt;
+  &lt;li&gt;kube-controller-manager: responsible to act when nodes become unavailable, to ensure pod counts are as expected, to create endpoints, service accounts, and API access tokens.&lt;/li&gt;
+  &lt;li&gt;cloud-controller-manager: interact with the underlying infrastructure of a cloud provider when nodes become unavailable, to manage storage volumes when provided by a cloud service, and to manage load balancing and routing.&lt;/li&gt;
+  &lt;li&gt;etcd: distributed key-value data store used to persist a Kubernetes cluster’s state.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;worker-node&quot;&gt;Worker node&lt;/h3&gt;
+&lt;p&gt;It provides a running environment for client applications&lt;/p&gt;
+
+&lt;h4 id=&quot;components&quot;&gt;Components&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Container Runtime: to Manage a container’s lifecycle, such as Docker, containered..&lt;/li&gt;
+  &lt;li&gt;Node Agent - kubelet: it is an agent running on each node and communicates with the control plane components from the master node.&lt;/li&gt;
+  &lt;li&gt;Proxy - kube-proxy: it is the network agent which runs on each node responsible for dynamic updates and maintenance of all networking rules on the node. It abstracts the details of Pods networking and forwards connection requests to Pods.&lt;/li&gt;
+  &lt;li&gt;Addons for DNS, Dashboard user interface, cluster-level monitoring and logging.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;network&quot;&gt;Network&lt;/h3&gt;
+
+&lt;p&gt;We can have pods communicating with other pods, containers inside pods communicating with each other, deployments communicating with each other, nodes communicatins with each other…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.superbytehosting.com/wp-content/uploads/2020/07/Kubernetes-Networking-Model.jpg&quot; alt=&quot;Kubernetes Networking&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kubernetes has an internal DNS
+You can set a resolved DNS like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;your-service-name.your-namespace-name.svc.cluster.local&lt;/code&gt;. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cluster.local&lt;/code&gt; means the internal host.&lt;/p&gt;
+
+&lt;h4 id=&quot;services&quot;&gt;Services&lt;/h4&gt;
+
+&lt;p&gt;They are the way we can expose the services to outside from kubernetes&lt;/p&gt;
+
+&lt;h4 id=&quot;sources&quot;&gt;Sources:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Post - &lt;a href=&quot;https://www.cncf.io/phippy/the-childrens-illustrated-guide-to-kubernetes/&quot;&gt;The Illustrated Children’s Guide to Kubernetes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Youtube Video - &lt;a href=&quot;https://www.youtube.com/watch?v=4ht22ReBjno&quot;&gt;The Illustrated Children’s Guide to Kubernetes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Course - &lt;a href=&quot;https://www.edx.org/course/introduction-to-kubernetes&quot;&gt;Introduction to Kubernetes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;GitHub - &lt;a href=&quot;https://github.com/badtuxx/DescomplicandoKubernetes&quot;&gt;Descomplicando Kuberntes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Bootcamp - &lt;a href=&quot;https://channel9.msdn.com/Series/AKS-Bootcamp-From-zero-to-container-hero&quot;&gt;Maratona AKS: Tudo sobre Kubernetes de A a Z&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Youtube Video - &lt;a href=&quot;https://youtu.be/X48VuDVv0do&quot;&gt;Kubernetes Tutorial for Beginners - FULL COURSE in 4 Hours&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="kubernetes" /><category term="notes" /><category term="studies" /><summary type="html">Some kubernetes studies notes 🎉</summary></entry><entry><title type="html">Kubernetes Notes - Part 1</title><link href="http://localhost:4000/kubernetes-notes-part-1/" rel="alternate" type="text/html" title="Kubernetes Notes - Part 1" /><published>2021-10-09T00:00:00+02:00</published><updated>2021-10-09T00:00:00+02:00</updated><id>http://localhost:4000/kubernetes-notes-part-1</id><content type="html" xml:base="http://localhost:4000/kubernetes-notes-part-1/">&lt;p&gt;Some kubernetes studies notes 🎉&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h1 id=&quot;kubernetes&quot;&gt;Kubernetes&lt;/h1&gt;
+
+&lt;h2 id=&quot;what-do-i-need-to-know-first-to-undestand-kubernetes&quot;&gt;What do I need to know first to undestand Kubernetes?&lt;/h2&gt;
+&lt;h3 id=&quot;containers&quot;&gt;Containers&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;To provide portable and isolated virtual environment&lt;/li&gt;
+  &lt;li&gt;Need to be managed and connected to external world&lt;/li&gt;
+  &lt;li&gt;Must be scheduled, distribuited and load balanced and the data persisted somewhere&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;containers-orchestration&quot;&gt;Containers Orchestration&lt;/h3&gt;
+
+&lt;h2 id=&quot;what-is-kubernetes&quot;&gt;What is Kubernetes&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;“Kubernetes” is the Greek word which means helmsman or ship pilot. With this analogy in mind, we can think of Kubernetes as the pilot on a ship of containers.&lt;/li&gt;
+  &lt;li&gt;Referred to as k8s&lt;/li&gt;
+  &lt;li&gt;The Kubernetes project focuses on building a robust platform (a fault-tolerant and scalable solution) for running thousands of containers in production.&lt;/li&gt;
+  &lt;li&gt;Can be achieved by creating a single controller/management unit, after connecting multiple nodes together. This controller/management unit is generally referred to as a container orchestrator.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;features&quot;&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Automatic bin packing&lt;/li&gt;
+  &lt;li&gt;Self-healing: Kubernetes automatically replaces and reschedules containers from failed nodes&lt;/li&gt;
+  &lt;li&gt;Horizontal scaling: scaled manually or automatically based on CPU or custom metrics utilization.&lt;/li&gt;
+  &lt;li&gt;Service discovery and Load balancing&lt;/li&gt;
+  &lt;li&gt;Automated rollouts and rollbacks: to prevent any downtime&lt;/li&gt;
+  &lt;li&gt;Secret and configuration management&lt;/li&gt;
+  &lt;li&gt;Storage orchestration&lt;/li&gt;
+  &lt;li&gt;Batch execution: supports batch execution, long-running jobs, and replaces failed containers.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;why-use-kubernetes&quot;&gt;Why use Kubernetes?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Can be deployed in many environments such as local or remote Virtual Machines, bare metal, or in public/private/hybrid/multi-cloud setups&lt;/li&gt;
+  &lt;li&gt;Kubernetes’ architecture is modular and pluggable&lt;/li&gt;
+  &lt;li&gt;Kubernetes’ functionality can be extended&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;importants-terms&quot;&gt;Importants terms&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Node: or workers, it runs proccess. It contains the app, proxy and kubelet, it can has one or more pods.&lt;/li&gt;
+  &lt;li&gt;Kubelet (Node Agent): responsible to inform to control plane how many cpu, memory the node has.&lt;/li&gt;
+  &lt;li&gt;Control plane: virtual machine, it run a lot of services, such as scheduler service, API server, node controller and state storage (etcd).&lt;/li&gt;
+  &lt;li&gt;etcd: it is a distributed key-value store which only holds cluster state related data, no client workload data.&lt;/li&gt;
+  &lt;li&gt;Kubectl: Kubernetes CLI, point of control for all apps based in Kubernetes, based in configuration files.&lt;/li&gt;
+  &lt;li&gt;Workloads: everthing you can put inside of kubernetes that generate a work rules, like apps and DNS. The workloads are:
+    &lt;ul&gt;
+      &lt;li&gt;Pod&lt;/li&gt;
+      &lt;li&gt;Deployment&lt;/li&gt;
+      &lt;li&gt;ReplicaSet&lt;/li&gt;
+      &lt;li&gt;Secret&lt;/li&gt;
+      &lt;li&gt;Configmap&lt;/li&gt;
+      &lt;li&gt;HorizontalPodAutoscaler&lt;/li&gt;
+      &lt;li&gt;Service&lt;/li&gt;
+      &lt;li&gt;Ingress&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Pods: the smallest unit in Kubernetes, you can run one or more containers. Each pod contains an internal IP, it runs the application in the container and it can has or not a volume. Volume is a pre-existing data structure to use in the pod to share files or to use a temporary files.
+&lt;img src=&quot;/assets/images/k8s-pods.png&quot; alt=&quot;Pods&quot; class=&quot;center-image&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Labels: as “nametags” to identify things, it can be used to query based on the labels.&lt;/li&gt;
+  &lt;li&gt;Deployments: deployments manages and adds “intelligence” to pods, and it can group pods by an label. Also, you can define the number of replicas inside of the deployment&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/k8s-deployment.png&quot; alt=&quot;Deployment&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/k8s-deployment-file-example.png&quot; alt=&quot;Deployment File example&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Replicaset: it created by a deployment. It manage the number of replicas inside of the cluster. Each one contains a different image version, it is able to create versions of images. It always keep the desired number state.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Replication Controllers: responsible to manage the numbers of pods, pods’ lifecycle, scaling up and down, rolling deployments, and monitoring.&lt;/li&gt;
+  &lt;li&gt;Services: Responsible to tell to the rest of the Kubernetes environment what services your application provides, the service IP addresses and ports remain the same.&lt;/li&gt;
+  &lt;li&gt;Volume: Location where containers can access and store information.&lt;/li&gt;
+  &lt;li&gt;Namespaces: group of services, pods, replication controllers, and volumes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/k8s-concepts.png&quot; alt=&quot;Some Kubernetes terms&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;sources&quot;&gt;Sources:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Post - &lt;a href=&quot;https://www.cncf.io/phippy/the-childrens-illustrated-guide-to-kubernetes/&quot;&gt;The Illustrated Children’s Guide to Kubernetes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Youtube Video - &lt;a href=&quot;https://www.youtube.com/watch?v=4ht22ReBjno&quot;&gt;The Illustrated Children’s Guide to Kubernetes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Course - &lt;a href=&quot;https://www.edx.org/course/introduction-to-kubernetes&quot;&gt;Introduction to Kubernetes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;GitHub - &lt;a href=&quot;https://github.com/badtuxx/DescomplicandoKubernetes&quot;&gt;Descomplicando Kuberntes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Bootcamp - &lt;a href=&quot;https://channel9.msdn.com/Series/AKS-Bootcamp-From-zero-to-container-hero&quot;&gt;Maratona AKS: Tudo sobre Kubernetes de A a Z&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Youtube Video - &lt;a href=&quot;https://youtu.be/X48VuDVv0do&quot;&gt;Kubernetes Tutorial for Beginners - FULL COURSE in 4 Hours&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="kubernetes" /><category term="notes" /><category term="studies" /><summary type="html">Some kubernetes studies notes 🎉</summary></entry><entry><title type="html">Anotações sobre Princípios SOLID</title><link href="http://localhost:4000/solid/" rel="alternate" type="text/html" title="Anotações sobre Princípios SOLID" /><published>2021-10-05T00:00:00+02:00</published><updated>2021-10-05T00:00:00+02:00</updated><id>http://localhost:4000/solid</id><content type="html" xml:base="http://localhost:4000/solid/">&lt;p&gt;Anotações sobre SOLID&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -91,100 +236,7 @@ Isso também é aplicado para funções, métodos e módulos.&lt;/p&gt;
 
 &lt;p&gt;Obrigada por ter lido &amp;lt;3&lt;/p&gt;
 
-&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="solid" /><category term="orientação a objetos" /><summary type="html">Anotações sobre SOLID</summary></entry><entry><title type="html">Kubernetes Notes - Introduction - Part 1</title><link href="http://localhost:4000/kubernetes-notes/" rel="alternate" type="text/html" title="Kubernetes Notes - Introduction - Part 1" /><published>2021-10-05T00:00:00+02:00</published><updated>2021-10-05T00:00:00+02:00</updated><id>http://localhost:4000/kubernetes-notes</id><content type="html" xml:base="http://localhost:4000/kubernetes-notes/">&lt;p&gt;Some kubernetes studies notes 🎉&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;h1 id=&quot;kubernetes&quot;&gt;Kubernetes&lt;/h1&gt;
-
-&lt;h2 id=&quot;what-do-i-need-to-know-first-to-undestand-kubernetes&quot;&gt;What do I need to know first to undestand Kubernetes?&lt;/h2&gt;
-&lt;h3 id=&quot;containers&quot;&gt;Containers&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;To provide portable and isolated virtual environment&lt;/li&gt;
-  &lt;li&gt;Need to be managed and connected to external world&lt;/li&gt;
-  &lt;li&gt;Must be scheduled, distribuited and load balanced and the data persisted somewhere&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;containers-orchestration&quot;&gt;Containers Orchestration&lt;/h3&gt;
-
-&lt;h2 id=&quot;what-is-kubernetes&quot;&gt;What is Kubernetes&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;“Kubernetes” is the Greek word which means helmsman or ship pilot. With this analogy in mind, we can think of Kubernetes as the pilot on a ship of containers.&lt;/li&gt;
-  &lt;li&gt;Referred to as k8s&lt;/li&gt;
-  &lt;li&gt;The Kubernetes project focuses on building a robust platform (a fault-tolerant and scalable solution) for running thousands of containers in production.&lt;/li&gt;
-  &lt;li&gt;Can be achieved by creating a single controller/management unit, after connecting multiple nodes together. This controller/management unit is generally referred to as a container orchestrator.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;features&quot;&gt;Features&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Automatic bin packing&lt;/li&gt;
-  &lt;li&gt;Self-healing: Kubernetes automatically replaces and reschedules containers from failed nodes&lt;/li&gt;
-  &lt;li&gt;Horizontal scaling: scaled manually or automatically based on CPU or custom metrics utilization.&lt;/li&gt;
-  &lt;li&gt;Service discovery and Load balancing&lt;/li&gt;
-  &lt;li&gt;Automated rollouts and rollbacks: to prevent any downtime&lt;/li&gt;
-  &lt;li&gt;Secret and configuration management&lt;/li&gt;
-  &lt;li&gt;Storage orchestration&lt;/li&gt;
-  &lt;li&gt;Batch execution: supports batch execution, long-running jobs, and replaces failed containers.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;why-use-kubernetes&quot;&gt;Why use Kubernetes?&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Can be deployed in many environments such as local or remote Virtual Machines, bare metal, or in public/private/hybrid/multi-cloud setups&lt;/li&gt;
-  &lt;li&gt;Kubernetes’ architecture is modular and pluggable&lt;/li&gt;
-  &lt;li&gt;Kubernetes’ functionality can be extended&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;importants-terms&quot;&gt;Importants terms&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Node: or workers, it runs proccess. It contains the app, proxy and kubelet, it can has one or more pods.&lt;/li&gt;
-  &lt;li&gt;Kubelet: responsible to inform to control plane how many cpu, memory the node has.&lt;/li&gt;
-  &lt;li&gt;Control plane: virtual machine, it run a lot of services, such as scheduler service, API server, node controller and state storage (etcd).&lt;/li&gt;
-  &lt;li&gt;Kubectl: Kubernetes CLI, point of control for all apps based in Kubernetes, based in configuration files.&lt;/li&gt;
-  &lt;li&gt;Workloads: everthing you can put inside of kubernetes that generate a work rules, like apps and DNS. The workloads are:
-    &lt;ul&gt;
-      &lt;li&gt;Pod&lt;/li&gt;
-      &lt;li&gt;Deployment&lt;/li&gt;
-      &lt;li&gt;ReplicaSet&lt;/li&gt;
-      &lt;li&gt;Secret&lt;/li&gt;
-      &lt;li&gt;Configmap&lt;/li&gt;
-      &lt;li&gt;HorizontalPodAutoscaler&lt;/li&gt;
-      &lt;li&gt;Service&lt;/li&gt;
-      &lt;li&gt;Ingress&lt;/li&gt;
-      &lt;li&gt;…&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Pods: the smallest unit in Kubernetes, you can run one or more containers. Each pod contains an internal IP, it runs the application in the container and it can has or not a volume. Volume is a pre-existing data structure to use in the pod to share files or to use a temporary files.
-&lt;img src=&quot;/assets/images/k8s-pods.png&quot; alt=&quot;Pods&quot; class=&quot;center-image&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Labels: as “nametags” to identify things, it can be used to query based on the labels.&lt;/li&gt;
-  &lt;li&gt;Deployments: deployments manages and adds “intelligence” to pods, and it can group pods by an label. Also, you can define the number of replicas inside of the deployment&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/k8s-deployment.png&quot; alt=&quot;Deployment&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/k8s-deployment-file-example.png&quot; alt=&quot;Deployment File example&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Replicaset: it created by a deployment. It manage the number of replicas inside of the cluster. Each one contains a different image version, it is able to create versions of images. It always keep the desired number state.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Replication Controllers: responsible to manage the numbers of pods, pods’ lifecycle, scaling up and down, rolling deployments, and monitoring.&lt;/li&gt;
-  &lt;li&gt;Services: Responsible to tell to the rest of the Kubernetes environment what services your application provides, the service IP addresses and ports remain the same.&lt;/li&gt;
-  &lt;li&gt;Volume: Location where containers can access and store information.&lt;/li&gt;
-  &lt;li&gt;Namespaces: group of services, pods, replication controllers, and volumes.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/k8s-concepts.png&quot; alt=&quot;Some Kubernetes terms&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;sources&quot;&gt;Sources:&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Post - &lt;a href=&quot;https://www.cncf.io/phippy/the-childrens-illustrated-guide-to-kubernetes/&quot;&gt;The Illustrated Children’s Guide to Kubernetes&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Youtube Video - &lt;a href=&quot;https://www.youtube.com/watch?v=4ht22ReBjno&quot;&gt;The Illustrated Children’s Guide to Kubernetes&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Course - &lt;a href=&quot;https://www.edx.org/course/introduction-to-kubernetes&quot;&gt;Introduction to Kubernetes&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;GitHub - &lt;a href=&quot;https://github.com/badtuxx/DescomplicandoKubernetes&quot;&gt;Descomplicando Kuberntes&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Bootcamp - &lt;a href=&quot;https://channel9.msdn.com/Series/AKS-Bootcamp-From-zero-to-container-hero&quot;&gt;Maratona AKS: Tudo sobre Kubernetes de A a Z&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Youtube Video - &lt;a href=&quot;https://youtu.be/X48VuDVv0do&quot;&gt;Kubernetes Tutorial for Beginners - FULL COURSE in 4 Hours&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="kubernetes" /><category term="notes" /><category term="studies" /><summary type="html">Some kubernetes studies notes 🎉</summary></entry><entry><title type="html">My Work Out Process</title><link href="http://localhost:4000/work-out-process/" rel="alternate" type="text/html" title="My Work Out Process" /><published>2021-08-31T00:00:00+02:00</published><updated>2021-08-31T00:00:00+02:00</updated><id>http://localhost:4000/work-out-process</id><content type="html" xml:base="http://localhost:4000/work-out-process/">&lt;p&gt;I have completed 1 year working out at home consistently. 
+&lt;hr /&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="solid" /><category term="orientação a objetos" /><summary type="html">Anotações sobre SOLID</summary></entry><entry><title type="html">My Work Out Process</title><link href="http://localhost:4000/work-out-process/" rel="alternate" type="text/html" title="My Work Out Process" /><published>2021-08-31T00:00:00+02:00</published><updated>2021-08-31T00:00:00+02:00</updated><id>http://localhost:4000/work-out-process</id><content type="html" xml:base="http://localhost:4000/work-out-process/">&lt;p&gt;I have completed 1 year working out at home consistently. 
  🎉&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -1608,63 +1660,4 @@ LOGGING = {
 
 &lt;p&gt;Obrigada ❤&lt;/p&gt;
 
-&lt;p&gt;esse post foi originalmente escrito no &lt;a href=&quot;https://medium.com/@beatrizuezu/visualizando-query-sql-a-partir-do-orm-django-5771370a9c55&quot;&gt;Medium&lt;/a&gt; no dia 07/08/2017&lt;/p&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="django" /><category term="orm" /><category term="sql" /><summary type="html">Falei sobre esse assunto na palestra que fiz na TDC 2017 (The Developer’s Conference) e vou mostrar como visualizar query SQL do ORM do Django.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/relacao-tabela-vs-classes.png" /><media:content medium="image" url="http://localhost:4000/assets/images/relacao-tabela-vs-classes.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">PyLadies &amp;amp; Django Girls: do medo ao incentivo</title><link href="http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo/" rel="alternate" type="text/html" title="PyLadies &amp;amp; Django Girls: do medo ao incentivo" /><published>2018-03-16T22:44:00+01:00</published><updated>2018-03-16T22:44:00+01:00</updated><id>http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo</id><content type="html" xml:base="http://localhost:4000/pyladies-e-django-girls-do-medo-ao-incentivo/">&lt;p&gt;Na época que fazia faculdade gostava de mexer com HTML e CSS até que eu cheguei a estagiar como Front-End. Chegou um momento do estágio que eu não me via naquilo e queria entrar na área de Banco de dados e Big Data. Como eu gostava de ler sobre o tema de Big Data ouvia falar sobre as linguagens Python e Java. Porém tinha dificuldade em programar e achava difícil, só queria entrar em Banco de Dados e Big Data porque não iria programar. (Sabe de nada, inocente).&lt;/p&gt;
-
-&lt;p&gt;Foi aí que eu decidi a procurar vagas de Banco de Dados e até que comecei a trabalhar com desenvolvimento de software com a linguagem VB.net e SQL Server. Tive medo de ser demitida nos primeiros meses por não saber a programar, achava que precisava documentar tudo e fiquei surpresa por terem me colocado em um projeto em menos de 3 meses. Corri atrás de cursos de orientação a objetos para entender melhor o código.&lt;/p&gt;
-
-&lt;p&gt;Consegui me formar na faculdade e uns meses depois comecei a estudar uma nova linguagem: Ruby On Rails. Ainda acho a linguagem bem legal, naquela época estava empolgada com o mundo novo, mesmo tendo estagiado como Front-end, eu estava aprendendo termos novos de Back-end e ferramentas novas!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/grupo-estudo-ruby.png&quot; alt=&quot;Grupo de estudos de Ruby on Rails&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-&lt;figcaption class=&quot;caption&quot;&gt;Grupo de estudos de Ruby on Rails&lt;/figcaption&gt;
-
-&lt;p&gt;Comecei a procurar mais sobre a comunidade de Ruby. Acabei caindo num evento que seria no final do mês de novembro (de 2015), porém tinha que me inscrever e já estavam encerradas as inscrições :( . Fiquei chateada por não ter pesquisado antes e por não poder participar do evento. Continuei a pesquisar pela internet e por coincidência ia ter no mesmo dia o evento de Ruby um curso de Python! Fiz logo a minha inscrição para participar do curso básico de Python. E foi assim que eu conheci o PyLadies São Paulo ❤. Uhuuul, iria fazer um curso de Python, mais uma linguagem que eu iria conhecer. Estava empolgada para o dia, mesmo tendo que acordar cedo em um sábado de manhã e ficar o dia todo codando.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/cat-typing.gif&quot; alt=&quot;gatinho codando&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;No dia do curso entrei tímida na sala, sentei ao lado de uma moça e fiquei na minha. Durante o exercícios propostos, percebia que a moça tinha um pouco de dificuldade e como já tinha uma noção de programação por conta do trabalho, passei a ajudá-la com a sintaxe que eu também desconhecia. Ainda lembro do que eu senti quando comecei a reparar nas pessoas que estavam ao meu redor, nas pessoas que estavam participando do curso, nas que estavam ajudando na monitoria e nas que organizaram tudo aquilo. Senti uma sensação tão boa que eu queria também fazer parte daquilo e poder ajudar com o pouco do que eu sabia e fazer trabalho voluntário.&lt;/p&gt;
-
-&lt;p&gt;No final do curso cheguei pra Pat e perguntei como fazia para ser monitora do próximo curso. A moça que eu ajudei ouviu o meu comentário e acabou por me elogiar. Coincidentemente ela conhecia a Alini que havia ministrado a aula.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/curso-iniciante-python.jpeg&quot; alt=&quot;Curso iniciante de Python pelo PyLadies São Paulo&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-&lt;figcaption class=&quot;caption&quot;&gt;Curso Iniciante de Python pelo PyLadies São Paulo&lt;/figcaption&gt;
-
-&lt;p&gt;No primeiro curso do ano de 2016 fui umas das monitoras. Acabei conhecendo outras monitoras que também foram alunas. Nem parecia que era a primeira vez que nos encontrávamos, parecia que nos conhecíamos há muito tempo. Ser monitora me ensinou que &lt;strong&gt;o pouco que eu sei pode ser muito para quem não sabe&lt;/strong&gt; e de não ter vergonha de falar &lt;strong&gt;eu também não sei, vamos pesquisar?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/as-monitoras.jpeg&quot; alt=&quot;As monitoras - Alini, eu, Carol, Ariadyne, Élida, Pat&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-&lt;figcaption class=&quot;caption&quot;&gt;As monitoras (Alini, eu, Carol, Ariadyne, Élida, Pat)&lt;/figcaption&gt;
-
-&lt;p&gt;Para o curso seguinte brinquei que poderia dar a aula, pois tinha gostado muito de ter sido monitora, e as meninas da organização levaram a sério, rs. Então elas me chamaram para dar o segundo curso de iniciante. Aceitei na hora! Foi a minha primeira experiência em lecionar para um monte de gente! É claro que fiquei nervosa e ansiosa no dia anterior, fiquei treinando os slides e pensando no modo que eu poderia explicar, com receio de falar algo errado ou das meninas não entenderem nada do que eu estava falando, ainda mais quando eu via que elas olhavam com uma cara de interrogação para a tela. Daí foi chegar junto e ver se a menina estava concentrada ou realmente com dúvida, nem sempre elas falam que não estão entendendo.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/beatriz-ensinando.jpeg&quot; alt=&quot;Beatriz ensinando&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Nunca pensei que pudesse ensinar tantas pessoas juntas dentro de um única sala de aula. No término da aula saí super feliz com a sensação de um dever cumprido e de quebrar uma barreira: falar em público.&lt;/p&gt;
-
-&lt;p&gt;Fazer parte do PyLadies não é apenas aprender, ensinar e conversar sobre Python. É também conhecer outras meninas incríveis que se interessam em programação e poder falar sobre qualquer assunto! É uma irmandade ❤&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/amigas-meetup.jpeg&quot; alt=&quot;Amigas no meetup&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-&lt;figcaption class=&quot;caption&quot;&gt;Eliete, Roberta, Carol, Duda, eu, Alini&lt;/figcaption&gt;
-
-&lt;p&gt;Em umas das conversas com a Alini sobre frameworks, comentei que poderia ter um Django Girls em São Paulo e ela dizia: ‘Por que você não tenta organizar ? ‘, daí eu ficava pensativa por não conhecer o framework e nem saber mexer com Django. Eu estava tão envolvida com a comunidade Python que eu decidi sair da minha zona de conforto e comecei a procurar vagas de Python. Pouco tempo depois fui contratada para trabalhar com Django!&lt;/p&gt;
-
-&lt;p&gt;Olhar para o ano de 2016 e perceber o que eu fiz na comunidade me permitiu muitas experiências novas: palestrei na TDC (The Developer Conference) e no RoadSec, fui para a Python Brasil em Florianópolis, participei do Django Girls Rio de Janeiro para trazer o Django Girls para São Paulo e conheci pessoas incríveis nesse tempo.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/palestra-tdc.jpeg&quot; alt=&quot;Palestra na The Developer Conferece&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-&lt;figcaption class=&quot;caption&quot;&gt;Palestra na The Developer Conferece
-&lt;/figcaption&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/pyladies-roadsec.jpeg&quot; alt=&quot;PyLadies São Paulo, Campinas e São Carlos na RoadSec&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-&lt;figcaption class=&quot;caption&quot;&gt;PyLadies São Paulo, Campinas e São Carlos na RoadSec&lt;/figcaption&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/pyladies-sp-python-br.jpeg&quot; alt=&quot;PyLadies São Paulo na Python Brasil&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-&lt;figcaption class=&quot;caption&quot;&gt;PyLadies São Paulo na Python Brasil&lt;/figcaption&gt;
-
-&lt;p&gt;Hoje sou uma das organizadoras do Django Girls São Paulo e a quantidade de inscrições que recebemos ( 369 inscrições!!) para o primeiro workshop não imaginava que o evento tomaria essa proporção. Não foi fácil selecionar as participantes, os treinadores e correr atrás de patrocínios. Não tenho palavras que descrevem o quão gratificante foi ver as meninas saindo com o sorriso no rosto, incentivadas a investir na área, comemorando a cada acerto e cada dificuldade superada. O primeiro Django Girls São Paulo me mostrou que eu sou capaz de ajudar e transformar a vida de outras pessoas com um simples ato.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/dg-1.jpeg&quot; alt=&quot;Primeiro Django Girls São Paulo&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-&lt;figcaption class=&quot;caption&quot;&gt;#1 Django Girls São Paulo ❤&lt;/figcaption&gt;
-
-&lt;p&gt;Um pouco mais de um ano, fui de aluna para a co-organização do PyLadies São Paulo e Django Girls São Paulo, esse texto é para contar um pouco da minha trajetória na programação e na comunidade Python. Também é a forma que encontrei para agradecer à coordenação do PyLadies e do Django Girls por terem acreditado em mim e no meu trabalho dentro da comunidade, cada pessoa que pude ajudar, incentivar, que me ajudou a chegar até aqui e a você que leu esse texto.&lt;/p&gt;
-
-&lt;p&gt;Obrigada ❤&lt;/p&gt;
-
-&lt;p&gt;esse post foi originalmente escrito no &lt;a href=&quot;https://medium.com/@beatrizuezu/pyladies-django-girls-do-medo-ao-incentivo-e23c0f8bad38&quot;&gt;Medium&lt;/a&gt; no dia 28/03/2017&lt;/p&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="pyladies" /><category term="django girls" /><category term="comunidade" /><category term="ensinar" /><category term="incentivar" /><summary type="html">Na época que fazia faculdade gostava de mexer com HTML e CSS até que eu cheguei a estagiar como Front-End. Chegou um momento do estágio que eu não me via naquilo e queria entrar na área de Banco de dados e Big Data. Como eu gostava de ler sobre o tema de Big Data ouvia falar sobre as linguagens Python e Java. Porém tinha dificuldade em programar e achava difícil, só queria entrar em Banco de Dados e Big Data porque não iria programar. (Sabe de nada, inocente).</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/dg-1.jpeg" /><media:content medium="image" url="http://localhost:4000/assets/images/dg-1.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;esse post foi originalmente escrito no &lt;a href=&quot;https://medium.com/@beatrizuezu/visualizando-query-sql-a-partir-do-orm-django-5771370a9c55&quot;&gt;Medium&lt;/a&gt; no dia 07/08/2017&lt;/p&gt;</content><author><name>beatrizuezu</name></author><category term="blog" /><category term="django" /><category term="orm" /><category term="sql" /><summary type="html">Falei sobre esse assunto na palestra que fiz na TDC 2017 (The Developer’s Conference) e vou mostrar como visualizar query SQL do ORM do Django.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/relacao-tabela-vs-classes.png" /><media:content medium="image" url="http://localhost:4000/assets/images/relacao-tabela-vs-classes.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

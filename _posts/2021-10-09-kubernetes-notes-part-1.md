@@ -1,7 +1,7 @@
 ---
-title: "Kubernetes Notes - Introduction - Part 1"
+title: "Kubernetes Notes - Part 1"
 layout: post
-date: 2021-10-05
+date: 2021-10-09
 headerImage: false
 tag:
 - kubernetes
@@ -50,8 +50,9 @@ Some kubernetes studies notes 🎉
 
 ## Importants terms
 - Node: or workers, it runs proccess. It contains the app, proxy and kubelet, it can has one or more pods.
-- Kubelet: responsible to inform to control plane how many cpu, memory the node has.
+- Kubelet (Node Agent): responsible to inform to control plane how many cpu, memory the node has.
 - Control plane: virtual machine, it run a lot of services, such as scheduler service, API server, node controller and state storage (etcd).
+- etcd: it is a distributed key-value store which only holds cluster state related data, no client workload data.
 - Kubectl: Kubernetes CLI, point of control for all apps based in Kubernetes, based in configuration files.
 - Workloads: everthing you can put inside of kubernetes that generate a work rules, like apps and DNS. The workloads are:
   - Pod

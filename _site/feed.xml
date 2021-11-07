@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-12T22:26:17+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Beatriz Uezu Page</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Kubernetes Notes - Part 2</title><link href="http://localhost:4000/kubernetes-notes-part-2/" rel="alternate" type="text/html" title="Kubernetes Notes - Part 2" /><published>2021-10-12T00:00:00+02:00</published><updated>2021-10-12T00:00:00+02:00</updated><id>http://localhost:4000/kubernetes-notes-part-2</id><content type="html" xml:base="http://localhost:4000/kubernetes-notes-part-2/">&lt;p&gt;Some kubernetes studies notes 🎉&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-07T16:21:04+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Beatriz Uezu Page</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Kubernetes Notes - Part 2</title><link href="http://localhost:4000/kubernetes-notes-part-2/" rel="alternate" type="text/html" title="Kubernetes Notes - Part 2" /><published>2021-10-12T00:00:00+02:00</published><updated>2021-10-12T00:00:00+02:00</updated><id>http://localhost:4000/kubernetes-notes-part-2</id><content type="html" xml:base="http://localhost:4000/kubernetes-notes-part-2/">&lt;p&gt;Some kubernetes studies notes 🎉&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;h1 id=&quot;kubernetes&quot;&gt;Kubernetes&lt;/h1&gt;
@@ -37,7 +37,36 @@ You can set a resolved DNS like &lt;code class=&quot;language-plaintext highligh
 
 &lt;h4 id=&quot;services&quot;&gt;Services&lt;/h4&gt;
 
-&lt;p&gt;They are the way we can expose the services to outside from kubernetes&lt;/p&gt;
+&lt;p&gt;They are the way we can expose the services to outside from kubernetes, it’s considerated as network abstraction, and kind a “physical portforward”.&lt;/p&gt;
+
+&lt;p&gt;The services receives a selector with the label, entry and exit port. We can choose which deployment or other workload are gonna be inside of the service through labels, with that we can aggregate the apps inside the same IP&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/k8s-services.png&quot; alt=&quot;Services&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;types-of-service&quot;&gt;Types of service&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ClusterIP: intern IP&lt;/li&gt;
+  &lt;li&gt;NodePort: opens a fixed port on the node for external access via IP&lt;/li&gt;
+  &lt;li&gt;ExternalName: expose the service with a defined name, it doesn’t use proxy and it uses a DNS CNAME record&lt;/li&gt;
+  &lt;li&gt;LoadBalancer: creates a load balance solution and gives a external and fixed IP address&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;ingress&quot;&gt;Ingress&lt;/h4&gt;
+
+&lt;p&gt;Ingress is a network workload, it exposes the application to the external world, also there is a set of rules to allow the entry in the cluster. For default, all external request outside from kubernet are blocked, but all request to outside are allowed. Always is related to a service, it never comes alone. The service redirects the traffic to the pods. It can add a digital certificate&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/k8s-ingress.png&quot; alt=&quot;Services&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;ingress-controllers&quot;&gt;Ingress Controllers&lt;/h4&gt;
+&lt;h5 id=&quot;reverse-proxy&quot;&gt;Reverse Proxy&lt;/h5&gt;
+&lt;p&gt;we receive requests from the users in one place, and the reverse proxy forwards the requests that the place received to the service.&lt;/p&gt;
+
+&lt;h5 id=&quot;what-is-ingress-controllers&quot;&gt;What is ingress controllers?&lt;/h5&gt;
+&lt;p&gt;It’s kind of a reverse proxy. It acts as a proxy and route to the pods. Also, it detects automatically new ingresses to add this new domain in an allowed list.&lt;/p&gt;
+
+&lt;h4 id=&quot;port-forward&quot;&gt;Port Forward&lt;/h4&gt;
+&lt;p&gt;It gets a localhost port and forwards to an internal Kubernetes port&lt;/p&gt;
 
 &lt;h4 id=&quot;sources&quot;&gt;Sources:&lt;/h4&gt;
 &lt;ul&gt;

@@ -79,6 +79,39 @@ It's kind of a reverse proxy. It acts as a proxy and route to the pods. Also, it
 It gets a localhost port and forwards to an internal Kubernetes port
 
 
+#### Namespaces
+Namespaces are a logic division so that you can divide apps without they're split by nodes.
+There are some default namespaces, such as kube-public, kube-system and default.
+
+We can have different permissions for different roles as well
+
+#### RBAC
+RBAC means Role-based access control. It is a method of regulating access to computer or network resources based on the roles of individual users within your organization (access policies based per roles).
+
+![Namespaces](/assets/images/k8s-namespaces.png){: .center-image }
+
+
+#### Secrets
+It's a file that you can add sensible data that will be encode to base-64.
+You can use the secrets as:
+- read envvars;
+- as files in volume mount;
+- download private images.
+
+
+![Secrets as a file](/assets/images/k8s-secrets-as-file.png){: .center-image }
+![Secrets as env](/assets/images/k8s-secrets-as-env.png){: .center-image }
+
+#### Config Maps
+Very similar to secrets, but it's simpler. The difference is the data isn't encoded
+
+![ConfigMaps](/assets/images/k8s-configmaps.png){: .center-image }
+![ConfigMaps as file](/assets/images/k8s-configmaps-as-file.png){: .center-image }
+![ConfigMaps as env](/assets/images/k8s-configmaps-as-env.png){: .center-image }
+
+the config maps propagate automatically to the pods. We can set the propagation type, the configmaps changes can be observer by the pods or it can have a TTL.
+
+
 #### Sources:
 - Post - [The Illustrated Children’s Guide to Kubernetes](https://www.cncf.io/phippy/the-childrens-illustrated-guide-to-kubernetes/)
 - Youtube Video - [The Illustrated Children's Guide to Kubernetes](https://www.youtube.com/watch?v=4ht22ReBjno)

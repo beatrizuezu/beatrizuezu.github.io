@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-07T16:21:04+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Beatriz Uezu Page</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Kubernetes Notes - Part 2</title><link href="http://localhost:4000/kubernetes-notes-part-2/" rel="alternate" type="text/html" title="Kubernetes Notes - Part 2" /><published>2021-10-12T00:00:00+02:00</published><updated>2021-10-12T00:00:00+02:00</updated><id>http://localhost:4000/kubernetes-notes-part-2</id><content type="html" xml:base="http://localhost:4000/kubernetes-notes-part-2/">&lt;p&gt;Some kubernetes studies notes 🎉&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-11T22:15:49+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Beatriz Uezu Page</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Kubernetes Notes - Part 2</title><link href="http://localhost:4000/kubernetes-notes-part-2/" rel="alternate" type="text/html" title="Kubernetes Notes - Part 2" /><published>2021-11-07T00:00:00+01:00</published><updated>2021-11-07T00:00:00+01:00</updated><id>http://localhost:4000/kubernetes-notes-part-2</id><content type="html" xml:base="http://localhost:4000/kubernetes-notes-part-2/">&lt;p&gt;Some kubernetes studies notes 🎉&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;h1 id=&quot;kubernetes&quot;&gt;Kubernetes&lt;/h1&gt;
@@ -67,6 +67,38 @@ You can set a resolved DNS like &lt;code class=&quot;language-plaintext highligh
 
 &lt;h4 id=&quot;port-forward&quot;&gt;Port Forward&lt;/h4&gt;
 &lt;p&gt;It gets a localhost port and forwards to an internal Kubernetes port&lt;/p&gt;
+
+&lt;h4 id=&quot;namespaces&quot;&gt;Namespaces&lt;/h4&gt;
+&lt;p&gt;Namespaces are a logic division so that you can divide apps without they’re split by nodes.
+There are some default namespaces, such as kube-public, kube-system and default.&lt;/p&gt;
+
+&lt;p&gt;We can have different permissions for different roles as well&lt;/p&gt;
+
+&lt;h4 id=&quot;rbac&quot;&gt;RBAC&lt;/h4&gt;
+&lt;p&gt;RBAC means Role-based access control. It is a method of regulating access to computer or network resources based on the roles of individual users within your organization (access policies based per roles).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/k8s-namespaces.png&quot; alt=&quot;Namespaces&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;secrets&quot;&gt;Secrets&lt;/h4&gt;
+&lt;p&gt;It’s a file that you can add sensible data that will be encode to base-64.
+You can use the secrets as:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;read envvars;&lt;/li&gt;
+  &lt;li&gt;as files in volume mount;&lt;/li&gt;
+  &lt;li&gt;download private images.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/k8s-secrets-as-file.png&quot; alt=&quot;Secrets as a file&quot; class=&quot;center-image&quot; /&gt;
+&lt;img src=&quot;/assets/images/k8s-secrets-as-env.png&quot; alt=&quot;Secrets as env&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;config-maps&quot;&gt;Config Maps&lt;/h4&gt;
+&lt;p&gt;Very similar to secrets, but it’s simpler. The difference is the data isn’t encoded&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/k8s-configmaps.png&quot; alt=&quot;ConfigMaps&quot; class=&quot;center-image&quot; /&gt;
+&lt;img src=&quot;/assets/images/k8s-configmaps-as-file.png&quot; alt=&quot;ConfigMaps as file&quot; class=&quot;center-image&quot; /&gt;
+&lt;img src=&quot;/assets/images/k8s-configmaps-as-env.png&quot; alt=&quot;ConfigMaps as env&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;the config maps propagate automatically to the pods. We can set the propagation type, the configmaps changes can be observer by the pods or it can have a TTL.&lt;/p&gt;
 
 &lt;h4 id=&quot;sources&quot;&gt;Sources:&lt;/h4&gt;
 &lt;ul&gt;

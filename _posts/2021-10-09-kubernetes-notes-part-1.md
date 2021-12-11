@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes Notes - Part 1"
+title: "[EN] Kubernetes Notes - Part 1"
 layout: post
 date: 2021-10-09
 headerImage: false

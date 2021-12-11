@@ -1,5 +1,5 @@
 ---
-title: "My Work Out Process"
+title: "[EN] My Work Out Process"
 layout: post
 date: 2021-08-31
 headerImage: false

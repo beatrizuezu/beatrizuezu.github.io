@@ -1,7 +1,7 @@
 ---
 title: "Elasticsearch notes - part 1"
 layout: post
-date: 2021-12-11
+date: 2022-01-29
 headerImage: false
 tag:
 - elasticsearch
@@ -11,7 +11,7 @@ author: beatrizuezu
 description: Elasticseach notes - Part 1
 ---
 
-Some Elasticsearch studies notes 🎉
+Some Elasticsearch studies notes - Part 1 🎉
 
 ---
 

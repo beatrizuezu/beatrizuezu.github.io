@@ -109,9 +109,76 @@ PUT /indice_com_sinonimo_2
 }
 ```
 
-Fuzzy matching
+Fuzzy matching -> suggestion about the user is searching
+https://www.elastic.co/guide/en/elasticsearch/guide/current/fuzzy-matching.html
 
 ## Adding synonyms to index
+
+The word `esporte` can be handled different than `esportes`. We can repeat the same rule for both words. But when we do this, we inflate the index, like a ballon. Making the search inefficient.
+
+We can improve it using the Portuguese analyzer. 
+
+```
+GET /indice_com_sinonimo_2/_analyze
+{
+  "analyzer": "portuguese",
+  "text": "esporte"
+}
+```
+
+and the result is gonna be:
+```
+{
+  "tokens" : [
+    {
+      "token" : "esport",
+      "start_offset" : 0,
+      "end_offset" : 7,
+      "type" : "<ALPHANUM>",
+      "position" : 0
+    }
+  ]
+}
+```
+
+So, our synonyms' list gonna have `esport`
+
+```
+PUT /indice_com_sinonimo_2
+{
+  "settings": {
+    "index": {
+      "number_of_shards": 3,
+      "number_of_replicas": 0
+    },
+    "analysis": {
+      "filter": {
+        "filtro_de_sinonimos": {
+            "type": "synonym",
+            "synonyms": [
+    "futebol => futebol,society",
+    "society => society,futebol",
+    "esport => esport,futebol,society,volei,basquet",
+            ]
+        }
+      },
+      "analyzer": {
+        "sinonimos": {
+          "tokenizer":  "standard",
+          "filter": [
+            "lowercase",
+            "filtro_de_sinonimos"
+          ]
+        }
+      }
+    }
+  }
+}
+```
+The `analyzer` field is used to index the tokens of the document used every time you to add or to update a document
+
+The `search_analyzer` is used only on the search
+
 ## Loading data
 
 ## Query language

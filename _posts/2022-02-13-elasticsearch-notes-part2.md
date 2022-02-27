@@ -181,6 +181,40 @@ The `search_analyzer` is used only on the search
 
 ## Loading data
 
+### String types
+When we store a new document on the index, we have to preserve the original data. When data is stored in an inverted index, it will first go through parsing, to not have a issue with the data in the inverted index we can use a new property called `fields`
+
+```
+...
+"nome": {
+  "type": "text",
+  "fields": {"original": {"type": "text", "index":true}},
+  "index": true,
+  "analyzer:"portuguese"
+}
+...
+```
+
+Every time we have a `"type": "text"` field we have to remember that this attribute can be parsed before being added to the inverted index. So to fix it and preserve the field, we have to use `"type":"keyword"` instead.
+
+To summarize, we have two types of strings:
+- text: this type will always be indexed and analized, that is, it is modified before being added to the inverted index
+- keyword: we ensure that it won't be analized
+
+
+### Add data in bulk
+We have to use the `{"index": {}}` plus the document in json, 
+
+```
+POST /pessoas/_bulk
+
+{"index": {}}
+{"nome": "Abdalla Yussef Tauil Neto", "cidade": "São José do Rio Claro", "formação": "Letras", "estado": "MT", "país": "Brasil", "interesses": ["futebol","society","volei"] }
+{"index": {}}
+{"nome": "Barbara de Mariz Silva", "cidade": "Beruri", "formação": "Música", "estado": "AM", "país": "Brasil", "interesses": ["computação","artes"] }
+...
+```
+
 ## Query language
 Elastic Search vs SQL
 

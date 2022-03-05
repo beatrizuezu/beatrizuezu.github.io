@@ -218,12 +218,388 @@ POST /pessoas/_bulk
 ## Query language
 Elastic Search vs SQL
 
-### Exact correspondence
+```sql
+select * from _doc
+```
+
+```elasticsearch
+GET pessoas/_search
+```
+
+
+`match_all`: return all documents of the index and all of them have a "score", with a relevance value equal 1.
+```elasticsearch
+GET pessoas/_search
+{
+  "query": {
+    "match_all":{}
+  }
+}
+```
+
+`exists`: we can seach by a field name, and it'll return all the documents that contain that field on the index. If the field doesn't exist, it returns anything, but the `hits.total.value` is gonna be 0. If the mapping attribute has `index=false` it means the doc isn't indexed.
+
+```elasticsearch
+GET pessoas/_search
+{
+  "query": {
+    "exists":{
+      "field": "cidade"
+    }
+  }
+}
+```
+
+### Exact match
+
+```sql
+select * from _doc where estado='BA'
+```
+
+```elasticsearch
+GET pessoas/_search
+{
+  "query": {
+    "term": {
+      "FIELD": {
+        "value": "VALUE"
+      }
+    }
+  }
+}
+```
+
+`term`: we want the documents that have an exact match value
+
+```
+GET pessoas/_search
+{
+  "query": {
+    "term": {
+      "estado": {
+        "value": "BA"
+      }
+    }
+  }
+}
+```
 ### Selecting attributes
+
+```SQL
+select nome, cidade, formacao from _doc where estado='BA'
+```
+
+```elasticsearch
+GET pessoas/_search
+{
+  "_source":["field", "field"]
+  "query": {
+    "term": {
+      "FIELD": {
+        "value": "VALUE"
+      }
+    }
+  }
+}
+```
+
+`_source`: list of name fields to be returned in the result
+
+```
+GET pessoas/_search
+{
+  "_source": ["nome", "cidade", "formação"], 
+  "query": {
+    "term": { "estado": "BA" }
+  }
+}
+```
 ### Matching criteria
-#### Should
+
+```sql
+select nome, cidade, formacao
+from _doc
+where estado='BA'
+AND formaca='fisica'
+```
+
+```elasticsearch
+GET pessoas/_search
+{
+  "_source": ["nome", "cidade", "formação"], 
+  "query": {
+    "bool": {
+      "must": [
+        {"term": { "estado": "BA" }}
+        {"term": { "formacao": "fisica" }}
+      ]
+    }
+  }
+}
+```
+
+`bool`: 
+`must`: the document must match the condition, exact match
+`should`: the document should match the condition, it's fine if it doesn't find the condition, if it finds, the document gains relevance with a higher score
+`must_not`: the document must not match the condition
+`filter`: we can filter in a range
+
+
+```
+GET pessoas/_search
+{
+  "_source": ["nome", "cidade", "formação"], 
+  "query": {
+    "bool": {
+      "must": [
+        {"term": { "estado": "BA" }}
+        {"term": { "formacao": "física" }}
+      ]
+    }
+  }
+}
+```
+When we run the query above, it won't return any result due to the field `formacao` be a analised field in the inverted index(in other words, it's a field that can not have accents and it should be `fisic`) and the term is in `must`.
+
+if the field is a analised field, we have to use the original field, like `field.original`, then the query should be:
+
+```
+{
+  "_source": ["nome", "cidade", "formação"], 
+  "query": {
+    "bool": {
+      "must": [
+        {"term": { "estado": "BA" }}
+        {"term": { "formacao.original": "Física" }}
+      ]
+    }
+  }
+}
+```
+
 #### Must
+```
+GET pessoas/_search
+{
+  "_source": ["nome", "cidade", "formação"], 
+  "query": {
+    "bool": {
+      "must": [
+        {"term": { "estado": "BA" }}
+        {"term": { "formacao": "física" }}
+      ]
+    }
+  }
+}
+```
+When we run the query above, it won't return any result due to the field `formacao` be a analised field in the inverted index(in other words, it's a field that can not have accents and it should be `fisic`) and the term is in `must`.
+
+if the field is a analised field, we have to use the original field, like `field.original`, then the query should be:
+
+```
+{
+  "_source": ["nome", "cidade", "formação"], 
+  "query": {
+    "bool": {
+      "must": [
+        {"term": { "estado": "BA" }}
+        {"term": { "formacao.original": "Física" }}
+      ]
+    }
+  }
+}
+```
+
+or 
+
+```
+GET pessoas/_search
+{
+  "_source": ["nome", "cidade", "formação"], 
+  "query": {
+    "bool": {
+      "must": [
+        {"term": { "estado": "BA" }}
+        {"term": { "formacao": "física" }}
+      ]
+    }
+  }
+}
+```
+When we run the query above, it won't return any result due to the field `formacao` be a analised field in the inverted index(in other words, it's a field that can not have accents and it should be `fisic`) and the term is in `must`.
+
+if the field is a analised field, we have to use the original field, like `field.original`, then the query should be:
+
+```
+{
+  "_source": ["nome", "cidade", "formação"], 
+  "query": {
+    "bool": {
+      "must": [
+        {"term": { "estado": "BA" }}
+        {"term": { "formacao.original": "Física" }}
+      ]
+    }
+  }
+}
+```
+
+#### Should
+or we can have:
+
+```
+{
+  "_source": ["nome", "cidade", "formação"], 
+  "query": {
+    "bool": {
+      "must": [
+        {"term": { "estado": "BA" }}
+      ],
+      "should": [
+        {"term": { "formacao.original": "Física" }}
+      ]
+    }
+  }
+}
+```
+
+The documents that contain `formacao: Física` have a higher score than the other ones that don't have 
+
 #### Must not
+```
+{
+  "_source": ["nome", "cidade", "formação"], 
+  "query": {
+    "bool": {
+      "must": [
+        {"term": { "estado": "BA" }}
+      ],
+      "must_not": [
+        {"term": { "formacao.original": "Física" }}
+      ]
+    }
+  }
+}
+```
+#### Filter
+
+"filter": {
+  "range": {
+    "nome.original": {
+      "gte": "A",
+      "lte": "Czzz"
+    }
+  }
+}
+
+
+```
+{
+  "_source": ["nome", "cidade", "formação"], 
+  "query": {
+    "bool": {
+      "must": [
+        {"term": { "estado": "BA" }}
+      ],
+      "must_not": [
+        {"term": { "formacao.original": "Física" }}
+      ],
+      "filter": {
+        "range": {
+          "nome.original": {
+            "gte": "A",
+            "lte": "Czzz"
+          }
+        }
+      }
+    }
+  }
+}
+```
 ### Non-exact correspondence
+
+```sql
+select nome, cidade, formacao
+from _doc
+where estado='BA'
+and formacao like '%fisica%'
+```
+
+```elasticsearch
+GET pessoas/_search
+{
+  "_source": ["nome", "cidade", "formação"], 
+  "query": {
+    "bool": {
+      "must": [
+        {"term": { "estado": "BA" }}
+        {"match": { "formacao": "fisica" }}
+      ]
+    }
+  }
+}
+```
+
 ### Sorting result
+
+```sql
+select cidade, nome, formacao
+from _doc
+where estado='BA'
+and formacao like '%fisica%'
+order by cidade asc, nome desc
+```
+
+```elasticsearch
+GET pessoas/_search
+{
+  "_source": ["nome", "cidade", "formação"], 
+  "query": {
+    "bool": {
+      "must": [
+        {"term": { "estado": "BA" }},
+        {"match": {"formação": "fisica" }}
+      ]
+    }
+  },
+  "sort": [
+    {
+      "cidade.original": { "order": "asc"},
+      "nome.original": { "order": "desc"}
+    }
+  ]
+}
+```
+
+### Aggregate
+
+```sql
+select estado, count(*)
+from _doc
+where formacao = 'fisica'
+group by estado
+```
+
+```elasticsearch
+GET pessoas/_search
+{
+  "query": {
+    "match": {
+      "formação": "fisica"
+    }
+  },
+  "aggs": {
+    "pessoas formadas em física por estado": {
+      "terms": {
+        "field": "estado"
+      }
+    }
+  }
+}
+```
+
 ## Dashboard Kibana
+
+Index patterns - you can creat a new index and see all the fields, the type, if the field is searchable, aggregatable and so on 
+
+Discovery - gonna see all docs

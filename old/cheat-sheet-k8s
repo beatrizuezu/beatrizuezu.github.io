@@ -1,0 +1,24 @@
+kubectl get nodes
+kubectl config get-contexts
+kubect get nodes 
+kubectl top nodes
+kubectl get replicaset
+kubectl explain deployment
+kubectl create -f <file> --dry-run=client
+kubectl get deploy <name>
+kubectl logs deploy/<name>
+
+kubectl port-forward service/<service-name> local-port:remote-port
+
+https://uploaddeimagens.com.br/images/002/667/919/full/Kubernetes-Comandos.png
+
+kubectl apply -f <file.yaml> --dry-run=client # to run locally
+kubectl apply -f <file.yaml> --dry-run=server # to run server
+
+
+kubectl scale deployment/shop-article-images-api-service --replicas=20
+kubectl describe hpa
+
+kubectl config view
+kubectl cluster-info
+minikube dashboard 

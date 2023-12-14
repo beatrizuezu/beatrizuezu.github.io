@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "beatrizuezu-github-io"
+version = "0.1.0"
+description = ""
+authors = ["Beatriz Uezu"]
+readme = "README.md"
+packages = [{include = "beatrizuezu"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pelican = "^4.9.1"
+jinja2 = "^3.1.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
